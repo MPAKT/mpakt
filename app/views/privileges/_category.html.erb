@@ -1,6 +1,9 @@
 <div class="category">
   <%= simple_form_for category do |ff| %>
-    <h5><%= ff.label category.name %></h5>
+    <h4><%= ff.label category.name %></h4>
+
+    <p><%= t("categories.#{category.name}.note_html") %></p>
+
     <% questions = ["a", "b", "c", "d"] %>
 
     <% questions.each do |question_id| %>
