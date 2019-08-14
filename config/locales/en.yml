@@ -43,3 +43,16 @@ en:
       title: "DIPpy"
     footer:
       no_cookies: "DIPpy does not use cookies"
+
+  activerecord:
+    attributes:
+      privileges:
+        salaries:
+          under_twenty: "Up to $20,000"
+          twenty_to_thirty_five: "$20,001 - $35,000"
+          thirty_five_to_fifty_five: "$35,001 - $55,000"
+          fifty_five_to_eighty: "$55,001 - $80,000"
+          eighty_to_hundred_and_ten: "$80,001 - $110,000"
+          over_hundred_and_ten: "More than $110,001"
+          not_say: "Prefer not to say"
+

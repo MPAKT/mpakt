@@ -31,6 +31,9 @@ gem "jbuilder", "~> 2.5"
 # Manage JS modules
 gem "webpacker"
 
+# Form helpers
+gem "simple_form"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

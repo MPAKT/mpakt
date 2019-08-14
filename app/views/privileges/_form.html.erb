@@ -1,0 +1,7 @@
+<div class="form privilege">
+  <%= simple_form_for privilege do |f| %>
+    <div><%= f.input :salary, collection: salary_collection %></div>
+    <% max_year = Time.zone.now.year - 15 %>
+    <div><%= f.input :year, input_html: { step: 1, min: 1899, max: max_year, value: 1975 }%></div>
+  <% end %>
+</div>
