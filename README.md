@@ -1,6 +1,29 @@
 # README
 
 README for the dippy app
+
+## Test
+
+### Execute test suite
+
+Setup the test database:
+
+```sh
+$ bundle exec rails db:test:prepare
+```
+
+Then run the tests:
+
+```sh
+$ bundle exec bin\test # windows
+(Linux / unix script still todo)
+```
+
+By default the spec tests are run against chromedriver in headless mode.
+If you want to see a test run live, set this environment variable:
+
+`UI_DEBUG=true`
+
 #### Troubleshooting
 
 1) If you see this error, you need to install chromedriver:
