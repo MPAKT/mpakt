@@ -1,0 +1,11 @@
+<div class="category">
+  <%= simple_form_for category do |ff| %>
+    <h5><%= ff.label category.name %></h5>
+    <% questions = ["a", "b", "c", "d"] %>
+
+    <% questions.each do |question_id| %>
+      <%= label_tag t("categories.#{category.name}.#{question_id}.text") %>
+      <%= ff.input question_id, label: false, collection: category_answers_collection(category.name, question_id) %>
+    <% end %>
+  <% end %>
+</div>

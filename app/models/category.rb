@@ -4,9 +4,9 @@ class Category < ApplicationRecord
   belongs_to :privilege
 
   enum name: %i[
-    gender
-    race
-    class
     ability
+    class
+    race
+    gender
   ]
 end

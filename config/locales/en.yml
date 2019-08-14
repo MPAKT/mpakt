@@ -44,9 +44,64 @@ en:
     footer:
       no_cookies: "DIPpy does not use cookies"
 
+  privileges:
+    index:
+      title: "Privilege score"
+      subtitle: "Compare your privilege with your friends"
+      preamble: "There is no perfect model for privilege. This page is mostly for fun, and completely anonymous.
+      We look at how your family background (parents, grandparents) in the four privilege areas of ability, class, race,
+      and gender correlate with your salary now. We plan to refine the model over time as we get more information. We
+      do not store any personal information. We do keep a summary of the anonymised data, which can not be tracked back to you."
+      optional: "All question sets and questions are optional. We'll score with the highest privilege for and that you leave blank."
+      retired: "If you are lucky enough to have retired, please answer these questions based on your experiences for the last job you
+      remember well, including your health / ability status at the time."
+
+  # Do not change the order of these, we have no other way to interpret the DB contents!!
+  categories:
+    ability:
+      a:
+        text: "Wheelchair use"
+        description: "Answer for your medical / necessary wheelchair use. If you participate in wheelchair sports, but do not normally
+        need a wheelchair, that is great, but please ignore it here."
+        answers:
+          a: "I do not use a wheelchair for medical purposes"
+          b: "I use a wheelchair sometimes, or temporarily"
+          c: "I use a wheelchair fulltime, permanently"
+      b:
+        text: "Sight"
+        description: "Answer for conditions that are not corrected by glasses. If you use regular optician glasses or contact
+        lenses for distance or near sight, or for astigmatism, and your vision is fine when you remember to wear them, please
+         ignore them here."
+        answers:
+          a: "My eyesight is normal (with glasses if I need them)"
+          b: "I am partially sighted in one or both eyes"
+          c: "I am completely blind in both eyes"
+      c:
+        text: "Hearing"
+        description: "Answer for conditions that are not corrected by hearing aids. If you use regular hearing aids, and your
+        hearing is fine when you remember to wear them, please ignore them here."
+        answers:
+          a: "My hearing is normal (with hearing aids if I need them)"
+          b: "I am partially deaf in one or both ears"
+          c: "I am completely deaf in both ears"
+      d:
+        text: "Support"
+        description: "If you require support or an allowance for your disabilities, for example you have an adapted car,
+        a disabled parking permit, or assistance at home or work, mention it here."
+        answers:
+          a: "I do not have disability support"
+          b: "I recieve disability support"
+
+    #class:
+    #  a: "Education level of first parent"
+    #  b: "Education level of second parent"
+    #  c: "My education level"
+
   activerecord:
     attributes:
-      privileges:
+      privilege:
+        salary: "Salary"
+        year: "Year of birth"
         salaries:
           under_twenty: "Up to $20,000"
           twenty_to_thirty_five: "$20,001 - $35,000"
@@ -55,4 +110,10 @@ en:
           eighty_to_hundred_and_ten: "$80,001 - $110,000"
           over_hundred_and_ten: "More than $110,001"
           not_say: "Prefer not to say"
+      category:
+        names:
+          gender: "Gender"
+          race: "Race"
+          class: "Class"
+          ability: "Ability"
 
