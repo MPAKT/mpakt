@@ -1,24 +1,61 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+README for the dippy app
 
-Things you may want to cover:
+## Test
 
-* Ruby version
+### Execute test suite
 
-* System dependencies
+Setup the test database:
 
-* Configuration
+```sh
+$ bundle exec rails db:test:prepare
+```
 
-* Database creation
+Then run the tests:
 
-* Database initialization
+```sh
+$ bundle exec bin\test # windows
+(Linux / unix script still todo)
+```
 
-* How to run the test suite
+By default the spec tests are run against chromedriver in headless mode.
+If you want to see a test run live, set this environment variable:
 
-* Services (job queues, cache servers, search engines, etc.)
+`UI_DEBUG=true`
 
-* Deployment instructions
+#### Troubleshooting
 
-* ...
+1) If you see this error, you need to install chromedriver:
+
+`Selenium::WebDriver::Error::WebDriverError: Unable to find Mozilla geckodriver.`
+
+2) If you see a webpacker error that has an empty manifest file then use `bin/test` or compile the JS before running the test suite with this command:
+
+```sh
+$ RAILS_ENV=test bundle exec rails webpacker:compile
+```
+
+### Install chrome driver
+
+#### Unix
+
+```
+$ brew install chromedriver
+```
+
+#### Windows
+
+Download chromedriver from here:
+<http://chromedriver.storage.googleapis.com/index.html>
+
+Extract the contents of the zip to your project location, for example C:\fflow\chromedriver.exe
+
+If you see this error:
+
+```
+[18992:9784:0619/142315.893:ERROR:install_util.cc(589)] Unable to create registry key HKLM\SOFTWARE\Policies\Google\Chrome for reading result=2
+```
+
+Create missing registry keys as documented here:
+<https://github.com/SeleniumHQ/selenium/issues/5966>

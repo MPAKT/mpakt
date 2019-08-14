@@ -30,4 +30,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  welcome:
+    index:
+      title: "Welcome to DIPpy"
+      subtitle: "Diversity, inclusion and privilege"
+      safe: "DIPpy is a moderated safe space for anonymous conversations about diversity, inclusion, and privilege"
+      calculator: "Check out our privilege calculator!"
+
+  layouts:
+    header:
+      title: "DIPpy"
+    footer:
+      no_cookies: "DIPpy does not use cookies"
