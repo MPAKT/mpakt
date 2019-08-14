@@ -1,0 +1,13 @@
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: font-url('lato/Lato-Regular.eot'); /* IE9 Compat Modes */
+  src: local('Lato'), local('Lato-Regular'),
+       font-url('lato/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       font-url('lato/Lato-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       font-url('lato/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       font-url('lato/Lato-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       font-url('lato/Lato-Regular.svg#GothicA1') format('svg'); /* Legacy iOS */
+}
