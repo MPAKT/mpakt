@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module CollectionHelper
-
   def salary_collection
     Privilege.salaries.keys.map do |salary_range|
       [t(salary_range, scope: salary_range_scope), salary_range]
@@ -11,8 +10,6 @@ module CollectionHelper
   def category_answers_collection(category_name, question_index)
     answers = answers_for_question(category_name, question_index)
     answers.map do |answer_index|
-      puts answer_index
-      puts I18n.t("categories.#{category_name}.#{question_index}.answers.#{answer_index}")
       [t(answer_index, scope: category_answer_scope(category_name, question_index)), answer_index]
     end
   end
@@ -28,24 +25,34 @@ module CollectionHelper
   end
 
   def answers_for_question(category_name, question_index)
-    if category_name == "ability"
-      return ["a", "b"] if question_index == "d"
-    end
+    answers = custom_answers_for_question(category_name, question_index)
+    return answers if answers
 
-    if category_name == "class"
-      return ["a", "b", "c", "d"] unless question_index == "d"
-    end
+    %w[a b c]
+  end
 
-    if category_name == "race"
-      return ["a", "b", "c", "d"] if question_index == "e"
-      return ["a", "b", "c", "d", "e", "f"]
+  def custom_answers_for_question(category_name, question_index)
+    case category_name
+    when "caste"
+      answers_for_caste(question_index)
+    when "race"
+      answers_for_race(question_index)
+    when "gender"
+      answers_for_gender(question_index)
     end
+  end
 
-    if category_name == "gender"
-      return ["a", "b", "c", "d"] if question_index == "a"
-      return ["a", "b", "c", "d", "e", "f"] if question_index == "d"
-    end
+  def answers_for_caste(question_index)
+    return %w[a b c d] unless question_index == "d"
+  end
 
-    ["a", "b", "c"]
+  def answers_for_race(question_index)
+    return %w[a b c d] if question_index == "e"
+    %w[a b c d e f]
+  end
+
+  def answers_for_gender(question_index)
+    return %w[a b c d] if question_index == "a"
+    return %w[a b c d e f] if question_index == "d"
   end
 end

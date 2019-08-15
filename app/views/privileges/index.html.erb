@@ -5,4 +5,5 @@
 <p><%= t(".retired") %></p>
 <p><%= t(".optional") %></p>
 
-<%= render "privileges/form", privilege: Privilege.new %>
+<%= render "privileges/form", privilege: Privilege.new if @subtype.negative? %>
+<%= render "privileges/category", subtype: @subtype, privilege_id: @privilege_id if @subtype.between? 0, 3 %>

@@ -1,15 +1,15 @@
-<div class="form privilege">
-  <h3><%= t(".background") %></h3>
+<h3><%= t(".now") %></h3>
+
+<div class="privilege">
   <%= simple_form_for privilege do |f| %>
-    <% 4.times do |index| %>
-      <% category = Category.new(name: index) %>
-      <%= render "privileges/category", category: category %>
-    <% end %>
+    <div>
+      <%= f.input :salary, collection: salary_collection %>
+    </div>
+    <div>
+      <% max_year = Time.zone.now.year - 15 %>
+      <%= f.input :year, input_html: { step: 1, min: 1899, max: max_year, value: 1975 } %>
+    </div>
 
-    <h3><%= t(".now") %></h3>
-
-    <div><%= f.input :salary, collection: salary_collection %></div>
-    <% max_year = Time.zone.now.year - 15 %>
-    <div><%= f.input :year, input_html: { step: 1, min: 1899, max: max_year, value: 1975 }%></div>
+    <%= f.submit t(".save"), class:"btn" %>
   <% end %>
 </div>

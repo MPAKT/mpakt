@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 2019_08_14_131841) do
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.integer "name"
+    t.integer "subtype"
     t.integer "a"
     t.integer "b"
     t.integer "c"
     t.integer "d"
     t.integer "e"
-    t.bigint "privileges_id"
-    t.index ["privileges_id"], name: "index_categories_on_privileges_id"
+    t.bigint "privilege_id"
+    t.index ["privilege_id"], name: "index_categories_on_privilege_id"
   end
 
   create_table "privileges", force: :cascade do |t|

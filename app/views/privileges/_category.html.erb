@@ -1,16 +1,22 @@
 <div class="category">
-  <%= simple_form_for category do |ff| %>
-    <h4><%= ff.label category.name %></h4>
+  <% category = Category.new(subtype: subtype) %>
+  <%= simple_form_for category do |f| %>
+    <%= f.hidden_field :privilege_id, value: privilege_id %>
+    <%= f.hidden_field :subtype, value: Category.subtypes.index(subtype) %>
+    <h4><%= f.label category.subtype %></h4>
 
-    <p><%= t("categories.#{category.name}.note_html") %></p>
+    <p><%= t("categories.#{category.subtype}.note_html") %></p>
 
     <% questions = ["a", "b", "c", "d"] %>
-    <% questions << "e" if category.name == "race" %>
+    <% questions << "e" if category.subtype == "race" %>
 
     <% questions.each do |question_id| %>
-      <%= label_tag t("categories.#{category.name}.#{question_id}.text") %>
-      <%= ff.input question_id, label: false, collection: category_answers_collection(category.name, question_id) %>
-      <p><%= t("categories.#{category.name}.#{question_id}.description") %></p>
+      <%= label_tag t("categories.#{category.subtype}.#{question_id}.text") %>
+      <%= f.input question_id, label: false, collection: category_answers_collection(category.subtype, question_id) %>
+      <p><%= t("categories.#{category.subtype}.#{question_id}.description") %></p>
     <% end %>
+
+    <% save_text = subtype < 3 ? t(".save", name: category.subtype) : t(".last_save") %>
+    <%= f.submit save_text, class:"btn" %>
   <% end %>
 </div>
