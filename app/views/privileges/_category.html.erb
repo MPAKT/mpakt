@@ -5,10 +5,12 @@
     <p><%= t("categories.#{category.name}.note_html") %></p>
 
     <% questions = ["a", "b", "c", "d"] %>
+    <% questions << "e" if category.name == "race" %>
 
     <% questions.each do |question_id| %>
       <%= label_tag t("categories.#{category.name}.#{question_id}.text") %>
       <%= ff.input question_id, label: false, collection: category_answers_collection(category.name, question_id) %>
+      <p><%= t("categories.#{category.name}.#{question_id}.description") %></p>
     <% end %>
   <% end %>
 </div>

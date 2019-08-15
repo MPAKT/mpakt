@@ -13,6 +13,7 @@ class CreatePrivileges < ActiveRecord::Migration[5.2]
       t.integer :b
       t.integer :c
       t.integer :d
+      t.integer :e
 
       t.references :privileges
     end

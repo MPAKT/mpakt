@@ -132,11 +132,96 @@ en:
           d: "No further education after leaving school"
       d:
         text: "Typical university discussions at school"
-        description: "Tell us about the discussions you and your classmates had in the last year or so of school"
+        description: "Tell us about the discussions you and your classmates had in the last year or so of school. You discussed:"
         answers:
-          a: "We discussed which university and/or course we were planning to study"
-          b: "We discussed whether we would go to university"
-          c: "We discussed the best ways to get a job"
+          a: "Which university and/or course we were planning to study"
+          b: "Whether we would go to university"
+          c: "The best ways to get a job"
+    race:
+      note_html: "There are no great definitions of race, please pick the category that seems to fit closest to your
+      instinctive description."
+      a:
+        text: "Ethnicity of first grandparent"
+        description: "Tell us about how one of your grandparents would define themselves, or how you would define them"
+        answers:
+          a: "White"
+          b: "Asian"
+          c: "Latinx"
+          d: "Black"
+          e: "Mixed"
+          f: "Do not know or prefer not to say"
+      b:
+        text: "Ethnicity of second grandparent"
+        description: "Tell us about how another of your grandparents would define themselves, or how you would define them"
+        answers:
+          a: "White"
+          b: "Asian"
+          c: "Latinx"
+          d: "Black"
+          e: "Mixed"
+          f: "Do not know or prefer not to say"
+      c:
+        text: "Ethnicity of third grandparent"
+        description: "Tell us about how the third of your grandparents would define themselves, or how you would define them"
+        answers:
+          a: "White"
+          b: "Asian"
+          c: "Latinx"
+          d: "Black"
+          e: "Mixed"
+          f: "Do not know or prefer not to say"
+      d:
+        text: "Ethnicity of fourth grandparent"
+        description: "Tell us about how the fourth of your grandparents would define themselves, or how you would define them"
+        answers:
+          a: "White"
+          b: "Asian"
+          c: "Latinx"
+          d: "Black"
+          e: "Mixed"
+          f: "Do not know or prefer not to say"
+      e:
+        text: "My skin colour"
+        description: "Relative to other people with a similar ethnicity and gender to me, I am"
+        answers:
+          a: "Paler than average"
+          b: "About average"
+          c: "Darker than average"
+          d: "Prefer not to say"
+    gender:
+      note_html: ""
+      a:
+        text: "Current gender"
+        description: "I currently identify as"
+        answers:
+          a: "Male"
+          b: "Female"
+          c: "Transitioning"
+          d: "Prefer not to say"
+      b:
+        text: "Gender at birth"
+        description: "When I was born, I was"
+        answers:
+          a: "The same gender I now identify with"
+          b: "Assigned a gender I no longer identify with"
+          c: "Prefer not to say"
+      c:
+        text: "My height"
+        description: "Relative to other people with a similar gender to me, I am"
+        answers:
+          a: "Taller than average"
+          b: "About average"
+          c: "Shorter than average"
+      d:
+        text: "Sexuality"
+        description: "I currently identify as"
+        answers:
+          a: "Straight"
+          b: "Gay"
+          c: "Bisexual"
+          d: "Transgender"
+          e: "I'm undefined, still working it out, or don't fit the categories above"
+          f: "I prefer not to say"
 
   activerecord:
     attributes:
@@ -154,7 +239,7 @@ en:
       category:
         names:
           gender: "Gender"
-          race: "Race"
+          race: "Ethnicity"
           class: "Class"
           ability: "Ability"
 

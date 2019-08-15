@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_08_14_131841) do
     t.integer "b"
     t.integer "c"
     t.integer "d"
+    t.integer "e"
     t.bigint "privileges_id"
     t.index ["privileges_id"], name: "index_categories_on_privileges_id"
   end

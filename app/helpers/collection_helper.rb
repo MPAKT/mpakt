@@ -35,7 +35,17 @@ module CollectionHelper
     if category_name == "class"
       return ["a", "b", "c", "d"] unless question_index == "d"
     end
-       
+
+    if category_name == "race"
+      return ["a", "b", "c", "d"] if question_index == "e"
+      return ["a", "b", "c", "d", "e", "f"]
+    end
+
+    if category_name == "gender"
+      return ["a", "b", "c", "d"] if question_index == "a"
+      return ["a", "b", "c", "d", "e", "f"] if question_index == "d"
+    end
+
     ["a", "b", "c"]
   end
 end
