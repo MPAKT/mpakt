@@ -1,10 +1,14 @@
-<h2><%= t(".title") %></h2>
-<h3><%= t(".subtitle") %></h3>
+<div class="privilege">
+  <h2><%= t(".title") %></h2>
 
-<p><%= t(".preamble") %></p>
-<p><%= t(".retired") %></p>
-<p><%= t(".optional") %></p>
+  <% if @subtype < 4 %>
+    <h3><%= t(".subtitle") %></h3>
+    <p><%= t(".preamble") %></p>
+    <p><%= t(".retired") %></p>
+    <p><%= t(".optional") %></p>
+  <% end %>
 
-<%= render "privileges/form", privilege: Privilege.new if @subtype.negative? %>
-<%= render "privileges/category", subtype: @subtype, privilege_id: @privilege_id if @subtype.between? 0, 3 %>
-<%= render "privileges/summary", privilege: @privilege if @subtype > 3 %>
+  <%= render "privileges/form", privilege: Privilege.new if @subtype.negative? %>
+  <%= render "privileges/category", subtype: @subtype, privilege_id: @privilege_id if @subtype.between? 0, 3 %>
+  <%= render "privileges/summary", privilege: @privilege if @subtype > 3 %>
+</div>

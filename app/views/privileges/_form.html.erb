@@ -1,19 +1,17 @@
 <h3><%= t(".now") %></h3>
 
-<div class="privilege">
-  <%= simple_form_for privilege do |f| %>
-    <div>
-      <%= f.label :salary %>
-      <p><%= t(".full_time") %></p>
-      <p><%= t(".convert_html") %></p>
-      <%= f.input :salary, collection: salary_collection, label: false %>
-    </div>
-    <div>
-      <%= f.label :year %>
-      <p><%= t(".birth_year") %></p>
-      <%= f.input :year, input_html: { step: 1, min: 16, max: 109, value: 35 }, label: false %>
-    </div>
+<%= simple_form_for privilege do |f| %>
+  <div>
+    <%= f.label :salary %>
+    <p><%= t(".full_time") %></p>
+    <p><%= t(".convert_html") %></p>
+    <%= f.input :salary, collection: salary_collection, label: false %>
+  </div>
+  <div>
+    <%= f.label :year %>
+    <p><%= t(".birth_year") %></p>
+    <%= f.input :year, input_html: { step: 1, min: 16, max: 109, value: 35 }, label: false %>
+  </div>
 
-    <%= f.submit t(".save"), class:"btn" %>
-  <% end %>
-</div>
+  <%= f.submit t(".save"), class:"btn" %>
+<% end %>

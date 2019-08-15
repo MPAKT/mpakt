@@ -12,4 +12,13 @@ class Privilege < ApplicationRecord
     over_hundred_and_ten
     not_say
   ]
+
+  def percent
+    score = 0
+    categories.each do |category|
+      score += category.percent_for_subtype
+    end
+
+    score / 4
+  end
 end

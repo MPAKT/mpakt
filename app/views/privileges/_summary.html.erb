@@ -23,4 +23,24 @@
       </div>
     </div>
   <% end %>
+
+  <div class="chart-container overall">
+    <h3><%= t(".overall") %></h3>
+    <div class="chart">
+      <svg viewBox="0 0 36 36" class="pie">
+        <path class="circle"
+          d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <path class="circle-border"
+          stroke-dasharray="<%= @privilege.percent %>, 100"
+          d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <div class="percent"><%= "#{@privilege.percent}%" %></div>
+      </svg>
+    </div>
+  </div>
 </div>

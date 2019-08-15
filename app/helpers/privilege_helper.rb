@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module CollectionHelper
+module PrivilegeHelper
   def salary_collection
     Privilege.salaries.keys.map do |salary_range|
       [t(salary_range, scope: salary_range_scope), salary_range]
@@ -52,7 +52,7 @@ module CollectionHelper
   end
 
   def answers_for_gender(question_index)
-    return %w[a b c d] if question_index == "a"
     return %w[a b c d e f] if question_index == "d"
+    %w[a b c d] if question_index == "a"
   end
 end

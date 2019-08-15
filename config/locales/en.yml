@@ -71,8 +71,9 @@ en:
       save: "Save and next"
       last_save: "Calculate my privilege score"
     summary:
-      title: "Privilege score"
+      title: "Your results"
       privilege: "%{name} privilege"
+      overall: "Combined privilege"
 
   # Do not change the order of these, we have no other way to interpret the DB contents!!
   categories:
