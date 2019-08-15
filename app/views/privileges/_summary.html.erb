@@ -1,0 +1,26 @@
+<div class="summary">
+  <h3><%= t(".title") %></h3>
+  <% @privilege.categories.each do |category| %>
+    <div class="chart-container">
+      <% subtype_name = t("activerecord.attributes.category.#{category.subtype}") %>
+      <h4><%= t(".privilege", name: subtype_name) %>
+
+      <div class="chart <%= category.subtype %>">
+        <svg viewBox="0 0 36 36" class="pie">
+          <path class="circle"
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+          <path class="circle-border"
+            stroke-dasharray="<%= category.percent_for_subtype %>, 100"
+            d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+          <div class="percent"><%= "#{category.percent_for_subtype}%" %></div>
+        </svg>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -8,8 +8,9 @@ class PrivilegesController < ApplicationController
 
   def index
     @subtype = -1
-    @privilege_id = params[:privilege_id]
     @subtype = params[:subtype].to_i if params[:subtype]
+    @privilege_id = params[:privilege_id]
+    @privilege = Privilege.find(@privilege_id) if @subtype > 3
   end
 
   private

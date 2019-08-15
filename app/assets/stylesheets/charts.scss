@@ -1,0 +1,39 @@
+.chart-container {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+
+
+  .chart {
+    width: 100%;
+    height: 100%;
+  }
+
+  .percent {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 48px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    top: -130px;
+  }
+
+  .circle {
+    fill: lightgrey;
+  }
+
+  .circle-border {
+    fill: none;
+    stroke-width: 2.8;
+  }
+
+  .gender {
+    .circle-border, .percent {
+      stroke: blue;
+      color: blue;
+    }
+  }
+}

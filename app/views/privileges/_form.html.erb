@@ -3,11 +3,15 @@
 <div class="privilege">
   <%= simple_form_for privilege do |f| %>
     <div>
-      <%= f.input :salary, collection: salary_collection %>
+      <%= f.label :salary %>
+      <p><%= t(".full_time") %></p>
+      <p><%= t(".convert_html") %></p>
+      <%= f.input :salary, collection: salary_collection, label: false %>
     </div>
     <div>
-      <% max_year = Time.zone.now.year - 15 %>
-      <%= f.input :year, input_html: { step: 1, min: 1899, max: max_year, value: 1975 } %>
+      <%= f.label :year %>
+      <p><%= t(".birth_year") %></p>
+      <%= f.input :year, input_html: { step: 1, min: 16, max: 109, value: 35 }, label: false %>
     </div>
 
     <%= f.submit t(".save"), class:"btn" %>

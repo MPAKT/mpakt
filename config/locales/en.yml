@@ -62,9 +62,17 @@ en:
       background: "About your background"
       now: "You and your current or last job"
       save: "Save and next"
+      full_time: "Use the full time equivalent of your salary if you do not work full time"
+      convert_html: "If you are not paid in US dollars, please calculate the $ version using your preferred currency converter
+      or <a target='_blank' href='https://www.xe.com/'>XE</a>"
+      birth_year: "Your age for the year when you earned this salary. Why do we need this? Typically salaries change over your working life, so it will help us to work out how far
+      along you are in your career."
     category:
       save: "Save and next"
       last_save: "Calculate my privilege score"
+    summary:
+      title: "Privilege score"
+      privilege: "%{name} privilege"
 
   # Do not change the order of these, we have no other way to interpret the DB contents!!
   categories:
@@ -234,7 +242,7 @@ en:
     attributes:
       privilege:
         salary: "Salary"
-        year: "Year of birth"
+        year: "Age for salary"
         salaries:
           under_twenty: "Up to $20,000"
           twenty_to_thirty_five: "$20,001 - $35,000"
