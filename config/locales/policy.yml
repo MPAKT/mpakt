@@ -132,7 +132,7 @@ en:
     privacy:
       title: "Privacy Policy"
       us_title_html: "DIPpy committed to protecting and respecting your privacy."
-      us_1_html: "This policy, together with our <a href='/ts_and_cs'>terms of use</a> sets out the basis on which any
+      us_1_html: "This policy, together with our <a target='_blank' href='/ts_and_cs'>Terms and Conditions</a> sets out the basis on which any
       data we collect from you, or that you provide to us, will be processed by us. Please read the following carefully
       to understand our views and practices regarding your personal data and how we will treat it. By visiting DIPpy you
       are accepting and consenting to the practices described in this policy."
@@ -149,7 +149,7 @@ en:
       disclosure_title: "Disclosure of your information"
       disclosure_list_html: "We wil only share your information if we are under a duty to disclose or share your
       personal data in order to comply with any legal obligation, or in order to enforce or apply our
-      <a href='/ts_and_cs' target='_blank'>terms of use</a> and other agreements; or to protect the rights, property,
+      <a href='/ts_and_cs' target='_blank'>Terms and Conditions</a> and other agreements; or to protect the rights, property,
       or safety of DIPpy."
       store_title: "Where we store your personal data"
       store_1: "The data that we collect from you will be transferred to, and stored at, our cloud provider and their
