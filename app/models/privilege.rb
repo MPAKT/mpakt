@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Privilege < ApplicationRecord
-  has_many :categories, dependent: :nullify
+  has_many :categories, dependent: :destroy
 
   enum salary: %i[
     under_twenty

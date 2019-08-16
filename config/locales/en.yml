@@ -78,7 +78,9 @@ en:
   categories:
     ability:
       note_html: "Your physical ability privilege. If you have stopped working or never worked, please answer based on your
-      experiences and physical status for an adult period you remember well, for your health and abilities at the time."
+      experiences and physical status for an adult period you remember well, for your health and abilities at the time. There
+      isn't space here to list all abilities: if you have a condition that is not covered, use the support and/or wheelchair
+      categories as nearest equivalents."
       a:
         text: "Wheelchair use"
         description: "Your medical wheelchair use. If you participate in wheelchair sports, but do not normally
@@ -205,7 +207,7 @@ en:
           a: "Paler than average"
           b: "About average"
           c: "Darker than average"
-          d: "Prefer not to say"
+          d: "Not sure or prefer not to say"
     gender:
       note_html: "Describe your gender identity. This survey focuses on how your privilege affects your working life,
       so if you fit multiple categories, think about how your colleagues at work would identify you and use this to decide"
@@ -239,8 +241,8 @@ en:
           b: "Gay"
           c: "Bisexual"
           d: "Transgender"
-          e: "I'm undefined, still working it out, or don't fit the categories above"
-          f: "I prefer not to say"
+          e: "Undefined, still working it out, or don't fit the categories above"
+          f: "Prefer not to say"
 
   activerecord:
     attributes:

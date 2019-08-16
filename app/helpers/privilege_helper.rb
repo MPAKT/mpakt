@@ -32,6 +32,8 @@ module PrivilegeHelper
   end
 
   def custom_answers_for_question(category_name, question_index)
+    # Ability doesn't feature in this list because currently all the ability questions have
+    # the default number of options (three).
     case category_name
     when "caste"
       answers_for_caste(question_index)
