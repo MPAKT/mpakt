@@ -37,3 +37,95 @@ en:
       block: "You block cookies by activating the setting on your browser that allows you to refuse the setting of all
       or some cookies. However, if you use your browser settings to block all cookies (including essential cookies) you
       may not be able to access all or parts of our site."
+
+    ts_and_cs:
+      title: "DIPpy Terms and Conditions of Use"
+      summary_title: "Summary"
+      summary: "DIPpy is a not-for-profit moderated safe space for anonymous conversations about diversity, inclusion, and
+      privilege. We intend your experience of DIPpy to be smooth and safe. We work with our cloud provider
+      to keep the site alive, look after your data, protect you from data loss, and protect you from data breaches.
+      If we discover any part of our site or responsibilities fail to meet our standards, we will post information
+      on the site as quickly as possible. Many users visit this site anonymously. We only notify users of a
+      security breach if you have signed in and provided us with your contact details, for example an email address."
+      summary_1: "We expect you will be friendly when you use DIPpy and respect other users. If you sign in, keep your
+      password safe."
+      legal_title: "Legal terms and conditions"
+      legal_html: "By using our website, you acknowledge that you have read, understood and accept these Terms and Conditions
+      of Use and that you agree to be bound by them. You also accept our <a href='privacy;' target='_blank'>Data Privacy
+      Policy</a>. If you do not agree to these terms of use, you must stop using our website. DIPpy is a not-for-profit
+      website operated by volunteers (referred to as 'us', 'we' or 'our')."
+      third_party: "Third Parties and Links from our Website to Other Websites"
+      third_party_para1: "Our website may contain links to other websites and resources provided by third parties –
+      these links are provided for your information only. As we have no control over the contents of third party
+      websites or resources, we cannot accept responsibility for them, their content or any loss or damage that may
+      arise from your use of them."
+      third_party_para2: "When accessing another website via our website, we advise you to check their terms of use and
+      privacy policies to ensure compliance and determine how they may use your information."
+      third_party_para3: "Our inclusion of hyperlinks to third party websites does not imply any endorsement of or
+      responsibility for any views, statements or information contained in those websites."
+      security: "Security and Use of the Website"
+      security_para: "It is a condition of using the website that you do not do anything to impair the performance,
+      corrupt the content or reduce the overall functionality of the website. This includes doing anything that would
+      compromise the security of the website, including, but not limited to: trying to gain access to secured areas of
+      the website or sensitive information and introducing viruses, Trojans, worms, logic bombs or other material that
+      is malicious or technologically harmful."
+      viruses: "Viruses, Hacking and Other Offences"
+      viruses_para1: "By doing any of the prohibited activities mentioned in the last section, you might commit a
+      criminal offence under the Computer Misuse Act 1990 or any other related legislation. We may be bound by law to
+      co-operate in any related investigations."
+      viruses_para2: "While we will make reasonable attempts to exclude harmful viruses and malware from our website,
+      we cannot guarantee total exclusion. We recommend that you take appropriate measures to protect yourself before
+      downloading any content."
+      ip: "Intellectual Property Rights"
+      ip_para1: "By using the website you agree to refrain from copying, downloading, transmitting, reproducing,
+      printing, or exploiting for commercial purpose(s) any material contained within the website."
+      limitation: "Limitation of Liability"
+      limitation_para1: "DIPpy will not, under any circumstances, be liable for indirect, special, or
+      consequential damages, including any loss of business, revenue, profits or data in relation to your use of the
+      website."
+      limitation_para2: "Nothing within these Terms and Conditions of Use will operate to include any liability for
+      death or personal injury arising as result of the negligence of the volunteers who maintain DIPpys"
+      law: "Governing Law and Jurisdiction"
+      law_para: "These Terms and Conditions of Use will be governed by the laws of England and Wales and any user of the
+       website agrees to be bound exclusively by the jurisdiction of English courts, should any dispute or claim arise
+       from, or in connection with, them or their subject matter or formation (including non-contractual disputes or
+       claims)."
+      about_us: "About Us"
+      about_us_para: "The DIPpy site is built and maintained by volunteers who may be found anywhere in the world. The
+      users of DIPpy are also global. We ask you to respect all volunteers and users of DIPpy."
+      anonymous: "Anonymous"
+      anonymous_para: "DIPpy is an anonymous site"
+      anonymous_para_1: "Most parts of the site are fully anonymous, and do not require you to tell us anything about yourself
+      in order to visit and read content in DIPpy"
+      anonymous_para_2: "The DIPpy forum is semi-anonymous. In order to contribute the forum, you need to sign in, and you
+      must tell us an email address which we will use to identify you uniquely. This means that when you return to the site,
+      you can see your own posting history. We will not share this email address with other users."
+      anonymous_para_3: "We will not share your email address with any third parties, for commercial or any other reasons,
+      except if requested with a recognised court order. The two reasons for your email address is to identify you uniquely,
+       and so that we can send you password reset information if you forget your password"
+      anonymous_para_4: "When you sign up for DIPpy, you create a short user name of your own choice which should not identify
+      you. This is the name which other users will see. In this way, when users see your posts, they can not identify anything
+      else about you except the short user name. Do not share your short user name with anyone."
+
+      moderated: "Moderated"
+      moderated_para: "DIPpy is a moderated site."
+      moderated_para_1: "This site is intended to be a safe space, and to keep your details private. But with anonymity
+      comes the risk that users will indulge in inappropriate or harrassing behaviour."
+      moderated_para_2: "Some DIPpy volunteers administer the site, and are able to remove content if it is considered
+      harmful."
+      moderated_para_3: "The DIPpy volunteers have absolute discretion over what content is used, how it is managed, where
+      it is posted, and to move or delete any content at any time."
+      moderated_para_4: "We don't intend this moderation to be onerous for us or frustrating for you: we will only use
+                         moderation to remove your content if we believe it is harmful to the users of this site, or to
+                         the site's reputation"
+      harmful: "Harmful content:"
+      harmful_content: "Harmful content will be removed, and will include posts that are considered:"
+      harmful_content_1: "unlawful"
+      harmful_content_2: "defamatory"
+      harmful_content_3: "obscene"
+      harmful_content_4: "threatening"
+      harmful_content_5: "offensive"
+      harmful_content_6: "objectionable"
+      harmful_content_7: "violate the legal rights of others"
+      harmful_content_8: "could damage a computer"
+      free_para: "DIPpy is a not-for-profit site, we may remove content that appears to include any form of advertisement"
