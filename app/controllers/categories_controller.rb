@@ -3,9 +3,7 @@
 class CategoriesController < ApplicationController
   def create
     old_subtype_id = Category.subtypes[category_params[:subtype]]
-    if (old_subtype_id < 4)
-      @category = Category.create(category_params)
-    end
+    @category = Category.create(category_params) if old_subtype_id < 4
     redirect_to privileges_path(subtype: old_subtype_id + 1, privilege_id: category_params[:privilege_id])
   end
 
