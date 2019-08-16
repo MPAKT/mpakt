@@ -29,21 +29,16 @@ class Category < ApplicationRecord
   end
 
   def gender_percent
-    score = 0
-    score += 15 if a.positive?
-    score += 5 if b.positive?
-    score += 5 if c.zero?
+    score = calculations(gender_weights_a)
+    score += calculations(gender_weights_b)
+
     score -= 5 if c == 2 && score.positive?
 
     score
   end
 
   def ability_percent
-    score = 0
-
-    score += ability_weights[a]
-    score += ability_weights[b]
-    score += ability_weights[c]
+    score = calculations(ability_weights)
 
     score += 7 if d == 2
     score += 5 if d == 1
@@ -52,44 +47,51 @@ class Category < ApplicationRecord
   end
 
   def caste_percent
-    score = caste_calculations
+    score = calculations(caste_weights)
 
-    score += 1 if d.zero?
+    score += 1 if d.blank? || d.zero?
     score -= 1 if d == 2 && score.positive?
 
     score
   end
 
   def race_percent
-    score = 0
+    score = calculations(race_weights)
 
-    score += race_weights[a]
-    score += race_weights[b]
-    score += race_weights[c]
-
-    score += 1 if d.zero?
+    score += 1 if d.blank? || d.zero?
     score -= 1 if d == 2 && score.positive?
 
     score
+  end
+
+  def gender_weights_a
+    [15, 0]
+  end
+
+  def gender_weights_b
+    [5, 0]
   end
 
   def ability_weights
     [6, 3, 0]
   end
 
-  def caste_calculations
-    caste_weights = [8, 5, 1, 0]
-    score = 0
-
-    [a, b, c].each do |param|
-      param = 0 if param.blank?
-      score += caste_weights[param]
-    end
-
-    score
+  def caste_weights
+    [8, 5, 1, 0]
   end
 
   def race_weights
     [5, 2, 1, 0, 1, 4]
+  end
+
+  def calculations(weights)
+    score = 0
+
+    [a, b, c].each do |param|
+      param = 0 if param.blank?
+      score += weights[param]
+    end
+
+    score
   end
 end
