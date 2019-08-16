@@ -9,8 +9,8 @@ module PrivilegeHelper
 
   def category_answers_collection(category_name, question_index)
     answers = answers_for_question(category_name, question_index)
-    answers.map do |answer_index|
-      [t(answer_index, scope: category_answer_scope(category_name, question_index)), answer_index]
+    answers.each_with_index.map do |answer_index, index|
+      [t(answer_index, scope: category_answer_scope(category_name, question_index)), index]
     end
   end
 

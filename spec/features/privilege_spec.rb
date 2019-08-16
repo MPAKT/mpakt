@@ -37,7 +37,7 @@ RSpec.feature "Privilege" do
         select I18n.t("categories.ethnicity.b.answers.e"), from: :category_b
         select I18n.t("categories.ethnicity.c.answers.d"), from: :category_c
         select I18n.t("categories.ethnicity.d.answers.c"), from: :category_d
-        select I18n.t("categories.ethnicity.e.answers.b"), from: :category_e
+        select I18n.t("categories.ethnicity.e.answers.c"), from: :category_e
 
         page.find(".btn").click
       end
@@ -50,7 +50,7 @@ RSpec.feature "Privilege" do
         page.find(".btn").click
       end
 
-      ability_percent = 16 * 100 / 25
+      ability_percent = 15 * 100 / 25
       within ".ability" do
         expect(page).to have_content "#{ability_percent}%"
       end
@@ -60,7 +60,7 @@ RSpec.feature "Privilege" do
         expect(page).to have_content "#{caste_percent}%"
       end
 
-      ethnicity_percent = 9 * 100 / 25
+      ethnicity_percent = 5 * 100 / 25
       within ".ethnicity" do
         expect(page).to have_content "#{ethnicity_percent}%"
       end
@@ -71,7 +71,8 @@ RSpec.feature "Privilege" do
       end
 
       within ".overall" do
-        percent = ability_percent + caste_percent + ethnicity_percent + gender_percent
+        total = ability_percent + caste_percent + ethnicity_percent + gender_percent
+        percent = total / 4
         expect(page).to have_content "#{percent}%"
       end
     end

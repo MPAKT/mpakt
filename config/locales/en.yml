@@ -112,7 +112,7 @@ en:
         a disabled parking permit, or assistance at home or work."
         answers:
           a: "I do not receive or need disability support"
-          b: "I have applied for disability support"
+          b: "I have applied for disability support, or have tried and failed to get disability support"
           c: "I receive disability support"
     caste:
       note_html: "For you and your parents, if they have more than one degree or university experience, choose the first
