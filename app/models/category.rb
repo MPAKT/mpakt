@@ -63,7 +63,7 @@ class Category < ApplicationRecord
   end
 
   def ethnicity_score
-    score = calculations(ethnicity_weights, [a,b,c,d])
+    score = calculations(ethnicity_weights, [a, b, c, d])
 
     return score + 1 if e.blank? || e.zero?
     score -= 1 if e == 2 && score.positive?
