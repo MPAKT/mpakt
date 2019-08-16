@@ -1,0 +1,19 @@
+<h3><%= t(".now") %></h3>
+
+<%= simple_form_for privilege do |f| %>
+  <div>
+    <%= f.label :salary %>
+    <%= f.input :salary, collection: salary_collection, label: false %>
+    <p><%= t(".full_time") %></p>
+    <p><%= t(".convert_html") %></p>
+  </div>
+  <div>
+    <%= f.label :year %>
+    <%= f.input :year, input_html: { step: 1, min: 16, max: 109, value: 35 }, label: false %>
+    <p><%= t(".birth_year") %></p>
+  </div>
+
+  <div>
+    <%= f.submit t(".save"), class:"btn" %>
+  </div>
+<% end %>

@@ -9,7 +9,12 @@ body {
 .header, .footer {
   height: 40px;
   line-height: 40px;
-  background-color: grey;
+  background-color: $darkgrey;
   color: white;
   text-align: center;
+}
+
+.privilege {
+  max-width: 820px;
+  margin: 0 auto;
 }

@@ -1,0 +1,76 @@
+.chart-container {
+  display: inline-block;
+  width: 160px;
+  height: 220px;
+  margin: 0 20px;
+
+  .chart {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+  }
+
+  .percent {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 48px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    top: -113px;
+  }
+
+  .circle {
+    fill: lightgrey;
+  }
+
+  .circle-border {
+    fill: none;
+    stroke-width: 2.8;
+  }
+
+  .circle-border, .percent {
+    stroke: $darkgrey;
+    color: $darkgrey;
+  }
+
+  .gender {
+    .circle-border, .percent {
+      stroke: $purple;
+      color: $purple;
+    }
+  }
+
+  .ability {
+    .circle-border, .percent {
+      stroke: $green;
+      color: $green;
+    }
+  }
+
+  .ethnicity {
+    .circle-border, .percent {
+      stroke: $blue;
+      color: $blue;
+    }
+  }
+
+  .caste {
+    .circle-border, .percent {
+      stroke: $gold;
+      color: $gold;
+    }
+  }
+}
+
+.overall {
+  margin: 0 auto;
+  width: 200px;
+  height: 250px;
+  display: block;
+
+  .percent {
+    top: -130px;
+  }
+}
