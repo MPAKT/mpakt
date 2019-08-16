@@ -75,14 +75,15 @@ en:
       privilege: "%{name} privilege"
       overall: "Combined privilege"
 
-  # Do not change the order of these, we have no other way to interpret the DB contents!!
+  # Do not change the order of these, they are directly mapped to the the DB values, in order
+  # to improve anonymity of the data in the DB
   categories:
     ability:
       note_html: "Your physical ability privilege. If you have stopped working or never worked, please answer based on your
       experiences and physical status for an adult period you remember well, for your health and abilities at the time."
       a:
         text: "Wheelchair use"
-        description: "Answer for your medical / necessary wheelchair use. If you participate in wheelchair sports, but do not normally
+        description: "Your medical wheelchair use. If you participate in wheelchair sports, but do not normally
         need a wheelchair, that is great, but please ignore it here."
         answers:
           a: "I do not use a wheelchair for medical purposes"
@@ -90,17 +91,17 @@ en:
           c: "I use a wheelchair fulltime, permanently"
       b:
         text: "Sight"
-        description: "Answer for conditions that are not corrected by glasses. If you use regular optician glasses or contact
+        description: "Conditions that are not corrected by glasses. If you use regular optician glasses or contact
         lenses for distance or near sight, or for astigmatism, and your vision is fine when you remember to wear them, please
-         ignore them here."
+         ignore them."
         answers:
           a: "My eyesight is normal (with glasses if I need them)"
           b: "I am partially sighted in one or both eyes"
           c: "I am completely blind in both eyes"
       c:
         text: "Hearing"
-        description: "Answer for conditions that are not corrected by hearing aids. If you use regular hearing aids, and your
-        hearing is fine when you remember to wear them, please ignore them here."
+        description: "Conditions that are not corrected by hearing aids. If you use regular hearing aids, and your
+        hearing is fine when you remember to wear them, please ignore them."
         answers:
           a: "My hearing is normal (with hearing aids if I need them)"
           b: "I am partially deaf in one or both ears"
@@ -108,104 +109,108 @@ en:
       d:
         text: "Support"
         description: "If you require support or an allowance for your disabilities, for example you have an adapted car,
-        a disabled parking permit, or assistance at home or work, mention it here."
+        a disabled parking permit, or assistance at home or work."
         answers:
-          a: "I do not receive disability support"
+          a: "I do not receive or need disability support"
           b: "I have applied for disability support"
           c: "I receive disability support"
     caste:
-      note_html: "For each person, if they have more than one degree or university experience, answer for the first undergraduate
-      studies they made after leaving high school, and ignore second and later degrees. For studies in the US, superior / elite schools are
-      <a target='_blank' href='https://en.wikipedia.org/wiki/Ivy_League#Ivy_Plus'>Ivy Plus</a>. For studies in the UK, superior / elite universities
-      are <a target='_blank' href='https://en.wikipedia.org/wiki/Russell_Group'>Russell Group</a>. For studies in India, superior / elite universities
-       include <a target='_blank' href='https://en.wikipedia.org/wiki/Indian_Institutes_of_Technology'>IITs</a>. Other elite universities include Sciences Po
-       in Paris (France), and EPFZ in Zurich (Switzerland). If a university isn't covered here, think about its international
-       reputation and how difficult it is to gain entry when deciding whether it's elite or not."
+      note_html: "For you and your parents, if they have more than one degree or university experience, choose the first
+      undergraduate studies they made after leaving high school. Ignore masters, second and later degrees. In the US, elite
+      universities are <a target='_blank' href='https://en.wikipedia.org/wiki/Ivy_League#Ivy_Plus'>Ivy Plus</a>. In the UK,
+      elite universities are <a target='_blank' href='https://en.wikipedia.org/wiki/Russell_Group'>Russell Group</a>. In
+      India, elite universities are
+      <a target='_blank' href='https://en.wikipedia.org/wiki/Indian_Institutes_of_Technology'>IITs</a>. Other elite
+      universities include Sciences Po in Paris (France), and EPFZ in Zurich (Switzerland). For other countries, think about
+      the university and its international reputation, how often it appears in top 10 lists, and how difficult
+      it is to gain entry, and choose whether you consider it elite or regular."
 
       a:
         text: "Undergraduate education of first parent"
         description: "Tell us about the university one of your parents attended."
         answers:
-          a: "Superior / elite university"
+          a: "Elite university"
           b: "Regular university"
-          c: "Community college, polytechnic, or night school studies"
+          c: "Community college, polytechnic, or night school"
           d: "No further education after leaving school"
       b:
         text: "Undergraduate education of second parent"
         description: "Tell us about the university your other parent attended."
         answers:
-          a: "Superior / elite university"
+          a: "Elite university"
           b: "Regular university"
-          c: "Community college, polytechnic, or night school studies"
+          c: "Community college, polytechnic, or night school"
           d: "No further education after leaving school"
       c:
         text: "My undergraduate education"
         description: "Tell us about your own university education."
         answers:
-          a: "Superior / elite university"
+          a: "Elite university"
           b: "Regular university"
-          c: "Community college, polytechnic, or night school studies"
+          c: "Community college, polytechnic, or night school"
           d: "No further education after leaving school"
       d:
         text: "Typical university discussions at school"
-        description: "Tell us about the discussions you and your classmates had in the last year or so of school. You discussed:"
+        description: "Tell us about the discussions you and your classmates had in the last year or so of school."
         answers:
-          a: "Which university and/or course we were planning to study"
+          a: "Which university and course we were planning to study"
           b: "Whether we would go to university"
           c: "The best ways to get a job"
     ethnicity:
-      note_html: "There are no great definitions of ethnicity, please pick the category that seems to fit closest to your
-      instinctive description."
+      note_html: "There are no great definitions of ethnicity, and it is difficult to capture all the variation in a few
+      options. We've tried to cater for some of this by going back to your grandparents, but even so it is
+      not going to be an exact science. Please pick the category that feels closest to your instinctive description."
       a:
         text: "Ethnicity of first grandparent"
-        description: "Tell us about how one of your grandparents would define themselves, or how you would define them"
+        description: "How one of your grandparents would define themselves, or how you would define them"
         answers:
           a: "White"
           b: "Asian"
           c: "Latinx"
-          d: "Black"
+          d: "Black or native"
           e: "Mixed"
           f: "Do not know or prefer not to say"
       b:
         text: "Ethnicity of second grandparent"
-        description: "Tell us about how another of your grandparents would define themselves, or how you would define them"
+        description: "How the second of your grandparents would define themselves, or how you would define them"
         answers:
           a: "White"
           b: "Asian"
           c: "Latinx"
-          d: "Black"
+          d: "Black or native"
           e: "Mixed"
           f: "Do not know or prefer not to say"
       c:
         text: "Ethnicity of third grandparent"
-        description: "Tell us about how the third of your grandparents would define themselves, or how you would define them"
+        description: "How the third of your grandparents would define themselves, or how you would define them"
         answers:
           a: "White"
           b: "Asian"
           c: "Latinx"
-          d: "Black"
+          d: "Black or native"
           e: "Mixed"
           f: "Do not know or prefer not to say"
       d:
         text: "Ethnicity of fourth grandparent"
-        description: "Tell us about how the fourth of your grandparents would define themselves, or how you would define them"
+        description: "How the fourth of your grandparents would define themselves, or how you would define them"
         answers:
           a: "White"
           b: "Asian"
           c: "Latinx"
-          d: "Black"
+          d: "Black or native"
           e: "Mixed"
           f: "Do not know or prefer not to say"
       e:
-        text: "My skin colour"
-        description: "Relative to other people with a similar ethnicity and gender to me, I am"
+        text: "Skin colour"
+        description: "Your skin colour relative to other people with a similar ethnicity and gender"
         answers:
           a: "Paler than average"
           b: "About average"
           c: "Darker than average"
           d: "Prefer not to say"
     gender:
-      note_html: ""
+      note_html: "Describe your gender identity. This survey focuses on how your privilege affects your working life,
+      so if you fit multiple categories, think about how your colleagues at work would identify you and use this to decide"
       a:
         text: "Current gender"
         description: "The gender you currently identify as"
@@ -216,14 +221,14 @@ en:
           d: "Prefer not to say"
       b:
         text: "Gender at birth"
-        description: "When I was born, I was"
+        description: "The gender you were assigned at birth"
         answers:
-          a: "The same gender I now identify with"
-          b: "Assigned a gender I no longer identify with"
+          a: "The same gender I now identify as"
+          b: "Assigned a gender I no longer identify as"
           c: "Prefer not to say"
       c:
-        text: "My height"
-        description: "Relative to other people with a similar gender to me, I am"
+        text: "Height"
+        description: "Your height relative to other people with the same gender and ethnicity"
         answers:
           a: "Taller than average"
           b: "About average"

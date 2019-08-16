@@ -34,6 +34,8 @@ class Category < ApplicationRecord
     return score + 5 if c.blank? || c.zero?
     score -= 3 if c == 2 && score.positive?
 
+    # Category d is saved in the database, but currently not scored. If we get analysis that show it has an
+    # impact on salaries, we should add it here.
     score
   end
 
@@ -61,10 +63,10 @@ class Category < ApplicationRecord
   end
 
   def ethnicity_score
-    score = calculations(ethnicity_weights)
+    score = calculations(ethnicity_weights, [a,b,c,d])
 
-    return score + 1 if d.blank? || d.zero?
-    score -= 1 if d == 2 && score.positive?
+    return score + 1 if e.blank? || e.zero?
+    score -= 1 if e == 2 && score.positive?
 
     score
   end
@@ -78,7 +80,7 @@ class Category < ApplicationRecord
   end
 
   def ability_weights
-    [6, 3, 0]
+    [6, 2, 0]
   end
 
   def caste_weights
@@ -86,7 +88,7 @@ class Category < ApplicationRecord
   end
 
   def ethnicity_weights
-    [6, 2, 1, 0, 1, 6]
+    [6, 2, 1, 0, 1, 4]
   end
 
   def calculations(weights, keys = [a, b, c])
