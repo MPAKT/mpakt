@@ -18,58 +18,59 @@ class Category < ApplicationRecord
   def value_for_subtype
     case subtype
     when "gender"
-      gender_percent
+      gender_score
     when "ability"
-      ability_percent
+      ability_score
     when "caste"
-      caste_percent
+      caste_score
     when "race"
-      race_percent
+      race_score
     end
   end
 
-  def gender_percent
-    score = calculations(gender_weights_a)
-    score += calculations(gender_weights_b)
+  def gender_score
+    score = calculations(gender_weights_a, [a])
+    score += calculations(gender_weights_b, [b])
 
-    score -= 5 if c == 2 && score.positive?
+    return score + 5 if c.blank? || c.zero?
+    score -= 3 if c == 2 && score.positive?
 
     score
   end
 
-  def ability_percent
+  def ability_score
     score = calculations(ability_weights)
 
-    score += 7 if d == 2
-    score += 5 if d == 1
+    return score + 7 if d.blank? || d.zero?
+    score += 2 if d == 1
 
     score
   end
 
-  def caste_percent
+  def caste_score
     score = calculations(caste_weights)
 
-    score += 1 if d.blank? || d.zero?
+    return score + 1 if d.blank? || d.zero?
     score -= 1 if d == 2 && score.positive?
 
     score
   end
 
-  def race_percent
+  def race_score
     score = calculations(race_weights)
 
-    score += 1 if d.blank? || d.zero?
+    return score + 1 if d.blank? || d.zero?
     score -= 1 if d == 2 && score.positive?
 
     score
   end
 
   def gender_weights_a
-    [15, 0]
+    [15, 0, 0, 12]
   end
 
   def gender_weights_b
-    [5, 0]
+    [5, 0, 3]
   end
 
   def ability_weights
@@ -81,15 +82,15 @@ class Category < ApplicationRecord
   end
 
   def race_weights
-    [5, 2, 1, 0, 1, 4]
+    [6, 2, 1, 0, 1, 6]
   end
 
-  def calculations(weights)
+  def calculations(weights, keys=[a,b,c])
     score = 0
 
-    [a, b, c].each do |param|
-      param = 0 if param.blank?
-      score += weights[param]
+    keys.each do |param|
+      score_to_add = param.blank? ? weights[0] : weights[param]
+      score += score_to_add
     end
 
     score
