@@ -1,42 +1,38 @@
-<div class="policy-holder">
-  <%= content_for(:title, t("layouts.application.title") + ' ' + t("legal.cookies_policy.title")) %>
+<div class="policy">
+  <h2><%= t(".title")%></h2>
 
-  <div class="policy">
-    <h2><%= t(".title")%></h2>
+  <h3><%= t(".subtitle") %></h3>
+  <p><%= t(".information_1") %></p>
+  <p><%= t(".information_2") %></p>
 
-    <h3><%= t(".subtitle") %></h3>
-    <p><%= t(".information_1") %></p>
-    <p><%= t(".information_2") %></p>
+  <h4><%= t(".we_use") %></h4>
+  <p><%= t(".necessary") %></p>
+  <p><%= t(".analytics") %></p>
+  <p><%= t(".functional") %></p>
+  <p><%= t(".target") %></p>
+  <p><%= t(".more_information") %></p>
 
-    <h4><%= t(".we_use") %></h4>
-    <p><%= t(".necessary") %></p>
-    <p><%= t(".analytics") %></p>
-    <p><%= t(".functional") %></p>
-    <p><%= t(".target") %></p>
-    <p><%= t(".more_information") %></p>
+  <table class="cookies-table">
+    <thead>
+      <th><%= t(".ct_name") %></th>
+      <th><%= t(".ct_type") %></th>
+      <th><%= t(".ct_purpose") %></th>
+      <th><%= t(".ct_more") %></th>
+    </thead>
+    <tr>
+      <td><%= t(".ct_dippy") %></td>
+      <td><%= t(".ct_dippy_type") %></td>
+      <td><%= t(".ct_dippy_for") %></td>
+      <td><%= t(".ct_dippy_more") %></td>
+    </tr>
+    <tr>
+      <td><%= t(".ct_cookies") %></td>
+      <td><%= t(".ct_cookies_type") %></td>
+      <td><%= t(".ct_cookies_for") %></td>
+      <td><%= t(".ct_cookies_more") %></td>
+    </tr>
+  </table>
 
-    <table class="cookies-table">
-      <thead>
-        <th><%= t(".ct_name") %></th>
-        <th><%= t(".ct_type") %></th>
-        <th><%= t(".ct_purpose") %></th>
-        <th><%= t(".ct_more") %></th>
-      </thead>
-      <tr>
-        <td><%= t(".ct_dippy") %></td>
-        <td><%= t(".ct_dippy_type") %></td>
-        <td><%= t(".ct_dippy_for") %></td>
-        <td><%= t(".ct_dippy_more") %></td>
-      </tr>
-      <tr>
-        <td><%= t(".ct_cookies") %></td>
-        <td><%= t(".ct_cookies_type") %></td>
-        <td><%= t(".ct_cookies_for") %></td>
-        <td><%= t(".ct_cookies_more") %></td>
-      </tr>
-    </table>
-
-    <p><%= t(".note") %></p>
-    <p><%= t(".block") %></p>
-  </div>
+  <p><%= t(".note") %></p>
+  <p><%= t(".block") %></p>
 </div>

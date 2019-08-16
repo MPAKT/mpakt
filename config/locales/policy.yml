@@ -3,10 +3,9 @@ en:
     cookies:
       title: "Cookie policy"
       subtitle: "Information about our use of cookies"
-      information_1: "Our website uses cookies to make sure your visit to the website is consistent, so that we
-       can keep track of users when several of you sign in at once. This cookie is not saved anywhere permanent and expires
-       as soon as you close your browser or tab. We care about your privacy, and we keep cookies to a minimum. By continuing
-       to browse the site, you agree to our use of cookies."
+      information_1: "Our website uses cookies to distinguish you from other users of our website. This cookie is not
+      saved anywhere permanent and expires as soon as you close your browser or tab. We care about your privacy, and we
+      keep cookies to a minimum. By continuing to browse the site, you agree to our use of cookies."
       information_2: "A cookie is a small file of letters and numbers that your browser stores to remember useful
           information about you. Every normal (not incognito) tab in your browser has access to all your cookies, and your
           browser may also store your cookies on your own hard drive."
@@ -129,3 +128,47 @@ en:
       harmful_content_7: "violate the legal rights of others"
       harmful_content_8: "could damage a computer"
       free_para: "DIPpy is a not-for-profit site, we may remove content that appears to include any form of advertisement"
+
+    privacy:
+      title: "Privacy Policy"
+      us_title_html: "DIPpy committed to protecting and respecting your privacy."
+      us_1_html: "This policy, together with our <a href='/ts_and_cs'>terms of use</a> sets out the basis on which any
+      data we collect from you, or that you provide to us, will be processed by us. Please read the following carefully
+      to understand our views and practices regarding your personal data and how we will treat it. By visiting DIPpy you
+      are accepting and consenting to the practices described in this policy."
+      information_title: "Information we collect from you"
+      information_1: "We will collect and process information about you that you give us by registering with DIPpy, or by
+      corresponding with us by e-mail or otherwise. It includes information you provide when you participate in discussions
+      or forums, and when you report a problem with our site. The information you give us may include your name, e-mail address,
+      and any other information you choose to share."
+      cookies_title: "Cookies"
+      cookies_1_html: "Our website uses cookies to distinguish you from other users of our website. This helps us to provide
+      you with a good experience when you browse our website and also allows us to improve our site. For detailed
+      information on the cookies we use and the purposes for which we use them see our <a href='/cookies' target='_blank'>Cookie
+      policy</a>"
+      disclosure_title: "Disclosure of your information"
+      disclosure_list_html: "We wil only share your information if we are under a duty to disclose or share your
+      personal data in order to comply with any legal obligation, or in order to enforce or apply our
+      <a href='/ts_and_cs' target='_blank'>terms of use</a> and other agreements; or to protect the rights, property,
+      or safety of DIPpy."
+      store_title: "Where we store your personal data"
+      store_1: "The data that we collect from you will be transferred to, and stored at, our cloud provider and their
+      data centres. By submitting your personal data, you agree to this transfer, storing or processing.
+      We will take all steps reasonably necessary to ensure that your data is treated securely and in
+      accordance with this privacy policy."
+      store_2: "All information you provide to us is stored on our secure servers. Where we have given you or you have chosen
+       a password, you are responsible for keeping this password confidential. You not share your password with anyone."
+      store_3: "Unfortunately, the transmission of information via the internet is not completely secure. Although we
+      do our best to protect your personal data, we cannot guarantee the security of data transmitted to our
+      site; any transmission is at your own risk. Once we have received your information, we will use strict procedures
+      and security features to try to prevent unauthorised access."
+      access_title: "Access to information"
+      access_1: "You may ask us to let you know what information we hold about you, which is very little."
+      changes_title: "Changes to our privacy policy"
+      changes_1: "Any changes we make to our privacy policy in the future will be posted on this page and, if
+       there are major changes, we may also announce them elsewhere in the DIPpy website. We probably won't send
+       emails to users, partly because not all users share their email addresses with us. Please check back frequently
+       to see any updates or changes to our privacy policy."
+      contact_title: "Contact"
+      contact_1: "This site is currently under development. As soon as it's ready, we will provide you with an email address
+      where you can send questions, comments and requests regarding this privacy policy"
