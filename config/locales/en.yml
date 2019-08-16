@@ -49,7 +49,7 @@ en:
       title: "Privilege score"
       subtitle: "Compare your privilege with your friends and colleagues"
       preamble: "There is no perfect model for privilege. This page is mostly for fun, and completely anonymous.
-      We look at how your family background (parents, grandparents) in the four privilege areas of ability, class, race,
+      We look at how your family background (parents, grandparents) in the four privilege areas of ability, class, ethnicity,
       and gender correlate with your work experiences, primarily captured through your salary bracket. We plan to refine the model
       over time as more of you share your data. We do not store any personal information. We do keep a summary of the anonymised
       data, which can not be tracked back to you."
@@ -153,8 +153,8 @@ en:
           a: "Which university and/or course we were planning to study"
           b: "Whether we would go to university"
           c: "The best ways to get a job"
-    race:
-      note_html: "There are no great definitions of race, please pick the category that seems to fit closest to your
+    ethnicity:
+      note_html: "There are no great definitions of ethnicity, please pick the category that seems to fit closest to your
       instinctive description."
       a:
         text: "Ethnicity of first grandparent"
@@ -254,7 +254,7 @@ en:
           not_say: "Prefer not to say"
       category:
         caste: "Class"
-        race: "Ethnicity"
+        ethnicity: "Ethnicity"
         gender: "Gender"
         ability: "Ability"
 

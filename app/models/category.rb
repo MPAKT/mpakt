@@ -6,7 +6,7 @@ class Category < ApplicationRecord
   enum subtype: %i[
     ability
     caste
-    race
+    ethnicity
     gender
   ]
 
@@ -23,19 +23,23 @@ class Category < ApplicationRecord
       ability_score
     when "caste"
       caste_score
-    when "race"
-      race_score
+    when "ethnicity"
+      ethnicity_score
     end
   end
 
   def gender_score
-    score = calculations(gender_weights_a, [a])
-    score += calculations(gender_weights_b, [b])
+    score = gender_calculations
 
     return score + 5 if c.blank? || c.zero?
     score -= 3 if c == 2 && score.positive?
 
     score
+  end
+
+  def gender_calculations
+    score = calculations(gender_weights_a, [a])
+    score + calculations(gender_weights_b, [b])
   end
 
   def ability_score
@@ -56,8 +60,8 @@ class Category < ApplicationRecord
     score
   end
 
-  def race_score
-    score = calculations(race_weights)
+  def ethnicity_score
+    score = calculations(ethnicity_weights)
 
     return score + 1 if d.blank? || d.zero?
     score -= 1 if d == 2 && score.positive?
@@ -81,11 +85,11 @@ class Category < ApplicationRecord
     [8, 5, 1, 0]
   end
 
-  def race_weights
+  def ethnicity_weights
     [6, 2, 1, 0, 1, 6]
   end
 
-  def calculations(weights, keys=[a,b,c])
+  def calculations(weights, keys = [a, b, c])
     score = 0
 
     keys.each do |param|

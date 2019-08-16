@@ -1,8 +1,8 @@
 <div class="summary">
   <h3><%= t(".title") %></h3>
   <% privilege.categories.each do |category| %>
-    <div class="chart-container">
-      <% subtype_name = t("activerecord.attributes.category.#{category.subtype}") %>
+    <% subtype_name = t("activerecord.attributes.category.#{category.subtype}") %>
+    <div class="chart-container <%= subtype_name %>">
       <h4><%= t(".privilege", name: subtype_name) %>
 
       <div class="chart <%= category.subtype %>">

@@ -35,8 +35,8 @@ module PrivilegeHelper
     case category_name
     when "caste"
       answers_for_caste(question_index)
-    when "race"
-      answers_for_race(question_index)
+    when "ethnicity"
+      answers_for_ethnicity(question_index)
     when "gender"
       answers_for_gender(question_index)
     end
@@ -46,7 +46,7 @@ module PrivilegeHelper
     return %w[a b c d] unless question_index == "d"
   end
 
-  def answers_for_race(question_index)
+  def answers_for_ethnicity(question_index)
     return %w[a b c d] if question_index == "e"
     %w[a b c d e f]
   end

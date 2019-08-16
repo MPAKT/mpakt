@@ -38,25 +38,25 @@ RSpec.describe Category do
     end
   end
 
-  describe "#race_score=" do
+  describe "#ethnicity_score=" do
     it "should calculate the score correctly" do
-      category = Category.new(subtype: :race, a: 5, b: 5, c: 5, d: 5, e: 2)
-      expect(category.race_score).to eq 25
+      category = Category.new(subtype: :ethnicity, a: 5, b: 5, c: 5, d: 5, e: 2)
+      expect(category.ethnicity_score).to eq 25
 
-      category = Category.new(subtype: :race, a: 4, b: 4, c: 4, d: 4, e: 1)
-      expect(category.race_score).to eq 4
+      category = Category.new(subtype: :ethnicity, a: 4, b: 4, c: 4, d: 4, e: 1)
+      expect(category.ethnicity_score).to eq 4
 
-      category = Category.new(subtype: :race, a: 3, b: 3, c: 3, d: 3, e: 1)
-      expect(category.race_score).to be_zero
+      category = Category.new(subtype: :ethnicity, a: 3, b: 3, c: 3, d: 3, e: 1)
+      expect(category.ethnicity_score).to be_zero
 
-      category = Category.new(subtype: :race, a: 1, b: 1, c: 1, d: 1, e: 0)
-      expect(category.race_score).to eq 8
+      category = Category.new(subtype: :ethnicity, a: 1, b: 1, c: 1, d: 1, e: 0)
+      expect(category.ethnicity_score).to eq 8
 
-      category = Category.new(subtype: :race, a: 0, b: 0, c: 0, d: 0, e: 0)
-      expect(category.race_score).to eq 25
+      category = Category.new(subtype: :ethnicity, a: 0, b: 0, c: 0, d: 0, e: 0)
+      expect(category.ethnicity_score).to eq 25
 
-      category = Category.new(subtype: :race)
-      expect(category.race_score).to eq 25
+      category = Category.new(subtype: :ethnicity)
+      expect(category.ethnicity_score).to eq 25
     end
   end
 

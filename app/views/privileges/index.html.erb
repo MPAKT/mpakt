@@ -1,7 +1,7 @@
 <div class="privilege">
   <h2><%= t(".title") %></h2>
 
-  <% if @subtype < 4 %>
+  <% if @subtype.negative? %>
     <h3><%= t(".subtitle") %></h3>
     <p><%= t(".preamble") %></p>
     <p><%= t(".retired") %></p>
