@@ -1,1 +1,39 @@
 en:
+  policies:
+    cookies:
+      title: "Cookie policy"
+      subtitle: "Information about our use of cookies"
+      information_1: "Our website uses cookies to make sure your visit to the website is consistent, so that we
+       can keep track of users when several of you sign in at once. This cookie is not saved anywhere permanent and expires
+       as soon as you close your browser or tab. We care about your privacy, and we keep cookies to a minimum. By continuing
+       to browse the site, you agree to our use of cookies."
+      information_2: "A cookie is a small file of letters and numbers that your browser stores to remember useful
+          information about you. Every normal (not incognito) tab in your browser has access to all your cookies, and your
+          browser may also store your cookies on your own hard drive."
+      we_use: "We use the following cookies"
+      necessary: "Strictly necessary cookies. These are cookies that are required for the operation of our website."
+      analytics: "We do not use any analytics cookies, and we do not track your visit. "
+      functional: "Functionality cookies. The only functionality cookie we use is the one that says you have agreed to
+      our use of cookies. With apologies, it appears that even with a minimalist cookie approach, we still need cookies.
+      But it should mean that you don't need to keep clicking on the 'I accept cookies' button"
+      more_information: "You can find more information about the individual cookies we use and the purposes for which
+          we use them in the table below:"
+      ct_name: "Cookie / name"
+      ct_purpose: "Purpose"
+      ct_type: "Type"
+      ct_more: "More information"
+      ct_dippy: "_dippy_session"
+      ct_dippy_type: "Strictly Necessary"
+      ct_dippy_for: "To authenticate the user in the secure area of DIPpy, this is a strictly necessary cookie."
+      ct_dippy_more: "Temporary cookie, expires at the end of the session"
+      ct_cookies: "cookie_eu_consented"
+      ct_cookies_type: "Functionality"
+      ct_cookies_for: "Stores the information that you have accepted our cookies. Does not hold any other information."
+      ct_cookies_more: "Persistent cookie, deleted after 1 year."
+
+      note: "Please note that third parties (including, for example, advertising networks and providers of external
+      services like web traffic analysis services) may also use cookies, and we have no control over these cookies.
+      Your browser tracks cookies from all your open tabs and you may see cookies that are not relevant to DIPpy"
+      block: "You block cookies by activating the setting on your browser that allows you to refuse the setting of all
+      or some cookies. However, if you use your browser settings to block all cookies (including essential cookies) you
+      may not be able to access all or parts of our site."
