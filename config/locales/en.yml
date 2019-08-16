@@ -48,14 +48,12 @@ en:
     index:
       title: "Privilege score"
       subtitle: "Compare your privilege with your friends and colleagues"
-      preamble: "There is no perfect model for privilege. This page is mostly for fun, and completely anonymous.
-      We look at how your family background (parents, grandparents) in the four privilege areas of ability, class, ethnicity,
-      and gender correlate with your work experiences, primarily captured through your salary bracket. We plan to refine the model
-      over time as more of you share your data. We do not store any personal information. We do keep a summary of the anonymised
-      data, which can not be tracked back to you."
-      optional: "All question sets and questions are optional. We'll score with the highest privilege for and that you leave blank.
-      It is difficult to get the categories right for each question: we have tried our best not to box anyone into a corner, simply
-      to understand if your background gives you more or less privilege than others."
+      preamble: "There is no perfect model for privilege. We look at how your family background (parents, grandparents) in the
+      four privilege areas of ability, class, ethnicity, and gender correlate with your work experiences, primarily captured
+      through your salary bracket. We plan to refine the model over time as more of you share your data. We do not store any
+      personal information. We do keep a summary of the anonymised data, this can not be tracked back to you."
+      optional: "All question sets and questions are optional. If you leave out a question, we will score it with the highest
+      privilege."
       retired: "If you have stopped working or never worked, please answer based on your experiences for an adult period you
       remember well, including your health / abilities / gender / education status at the time."
     form:
