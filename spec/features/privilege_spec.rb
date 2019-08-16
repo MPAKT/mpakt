@@ -75,6 +75,27 @@ RSpec.feature "Privilege" do
         percent = total / 4
         expect(page).to have_content "#{percent}%"
       end
+
+      page.go_back
+
+      within ".gender" do
+        select I18n.t("categories.gender.a.answers.c"), from: :category_a
+        select I18n.t("categories.gender.b.answers.b"), from: :category_b
+        select I18n.t("categories.gender.c.answers.b"), from: :category_c
+
+        page.find(".btn").click
+      end
+
+      gender_percent = 0
+      within ".gender" do
+        expect(page).to have_content "#{gender_percent}%"
+      end
+
+      within ".overall" do
+        total = ability_percent + caste_percent + ethnicity_percent + gender_percent
+        percent = total / 4
+        expect(page).to have_content "#{percent}%"
+      end
     end
 
     scenario "I can leave all the fields blank" do
