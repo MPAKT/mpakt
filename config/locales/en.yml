@@ -40,8 +40,8 @@ en:
       this helps us to compare the salary with others in a similar era."
       redundancy: "Whether or not you have been made redundant. We're interested to find out how different diversity
       scores affect the likelihood of you being made redundant."
-      role: "The role or job title for this salary. Salaries are different between industries, this helps us to
-      compare the salaries with others in a similar role or job family."
+      role: "The job family for this salary. Salaries are different between industries, this helps us to
+      compare the salaries with others in a similar job family."
       country: "The country where this salary was paid. Salaries are different between countries, this helps us to
       compare the salaries with others from the same country."
     category:
@@ -235,6 +235,7 @@ en:
           fifty_five_to_eighty: "$55,001 - $80,000"
           eighty_to_hundred_and_ten: "$80,001 - $110,000"
           over_hundred_and_ten: "More than $110,001"
+          non_paid: "Home-maker or otherwise not in paid work"
           not_say: "Prefer not to say"
         redundancies:
           never: "Never been made redundant"
@@ -242,6 +243,18 @@ en:
           once: "Made redundant once"
           more_than_once: "Made redundant more than once"
           r_not_say: "Prefer not to say"
+        roles:
+          manager: "Manager"
+          professional: "Professional, medical, scientific, educators, and engineers"
+          technician: "Technician and associate professionals"
+          clerical: "Clerical and administrative"
+          service: "Services and shop sales"
+          agriculture: "Agriculture, forestry, and fishery"
+          craft: "Building, electrical, and garment trades"
+          factory: "Plant and machine operators"
+          armed: "Armed forces"
+          domestic: "Food industry and domestic workers"
+          other: "Other"
       category:
         caste: "Class"
         ethnicity: "Ethnicity"

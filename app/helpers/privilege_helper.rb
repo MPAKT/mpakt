@@ -13,6 +13,12 @@ module PrivilegeHelper
     end
   end
 
+  def role_collection
+    Privilege.roles.keys.map do |role_category|
+      [t(role_category, scope: role_category_scope), role_category]
+    end
+  end
+
   def category_answers_collection(category_name, question_index)
     answers = answers_for_question(category_name, question_index)
     answers.each_with_index.map do |answer_index, index|
@@ -28,6 +34,10 @@ module PrivilegeHelper
 
   def redundancy_category_scope
     "activerecord.attributes.privilege.redundancies"
+  end
+
+  def role_category_scope
+    "activerecord.attributes.privilege.roles"
   end
 
   def category_answer_scope(category_name, question_index)

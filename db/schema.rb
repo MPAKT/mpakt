@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_101145) do
     t.datetime "updated_at", null: false
     t.text "country_code"
     t.integer "redundancy"
-    t.text "role"
+    t.integer "role"
     t.integer "salary_year"
   end
 

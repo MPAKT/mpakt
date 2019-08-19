@@ -10,6 +10,7 @@ class Privilege < ApplicationRecord
     fifty_five_to_eighty
     eighty_to_hundred_and_ten
     over_hundred_and_ten
+    non_paid
     not_say
   ]
 
@@ -19,6 +20,21 @@ class Privilege < ApplicationRecord
     once
     more_than_once
     r_not_say
+  ]
+
+  # Role categories (mostl) taken from https://en.wikipedia.org/wiki/International_Standard_Classification_of_Occupations
+  enum role: %i[
+    manager
+    professional
+    technician
+    clerical
+    service
+    agriculture
+    craft
+    factory
+    armed
+    domestic
+    other
   ]
 
   def percent
