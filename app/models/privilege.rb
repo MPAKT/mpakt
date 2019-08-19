@@ -47,6 +47,6 @@ class Privilege < ApplicationRecord
   end
 
   def self.priority_countries
-    ["GB", "US"]
+    %w[US GB]
   end
 end

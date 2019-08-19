@@ -14,7 +14,7 @@ RSpec.feature "Privilege" do
         select "Algeria", from: :privilege_country_code
         fill_in :privilege_year, with: 51
         fill_in :privilege_salary_year, with: last_year
-        fill_in :privilege_role, with: "Chief tea maker"
+        select I18n.t("activerecord.attributes.privilege.roles.professional"), from: :privilege_role
         select I18n.t("activerecord.attributes.privilege.redundancies.once"), from: :privilege_redundancy
 
         page.find(".btn").click
@@ -25,7 +25,7 @@ RSpec.feature "Privilege" do
       expect(privilege.country_code).to eq "DZ"
       expect(privilege.year).to eq 51
       expect(privilege.salary_year).to eq last_year
-      expect(privilege.role).to eq  "Chief tea maker"
+      expect(privilege.role).to eq  "professional"
       expect(privilege.redundancy).to eq "once"
 
       within ".ability" do
