@@ -13,6 +13,14 @@ class Privilege < ApplicationRecord
     not_say
   ]
 
+  enum redundancy: %i[
+    never
+    voluntary
+    once
+    more_than_once
+    r_not_say
+  ]
+
   def percent
     score = 0
     categories.each do |category|
@@ -20,5 +28,9 @@ class Privilege < ApplicationRecord
     end
 
     score / 4
+  end
+
+  def self.priority_countries
+    ["GB", "US"]
   end
 end

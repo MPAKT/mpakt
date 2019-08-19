@@ -7,6 +7,12 @@ module PrivilegeHelper
     end
   end
 
+  def redundancy_collection
+    Privilege.redundancies.keys.map do |redundancy_category|
+      [t(redundancy_category, scope: redundancy_category_scope), redundancy_category]
+    end
+  end
+
   def category_answers_collection(category_name, question_index)
     answers = answers_for_question(category_name, question_index)
     answers.each_with_index.map do |answer_index, index|
@@ -18,6 +24,10 @@ module PrivilegeHelper
 
   def salary_range_scope
     "activerecord.attributes.privilege.salaries"
+  end
+
+  def redundancy_category_scope
+    "activerecord.attributes.privilege.redundancies"
   end
 
   def category_answer_scope(category_name, question_index)

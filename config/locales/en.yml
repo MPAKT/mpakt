@@ -34,8 +34,14 @@ en:
       full_time: "Use the full time equivalent of your salary if you do not work full time"
       convert_html: "If you are not paid in US dollars, please calculate the $ version using your preferred currency converter
       or <a target='_blank' href='https://www.xe.com/'>XE</a>"
-      birth_year: "Your age for the year when you earned this salary. Why do we need this? Typically salaries change over your working life, so it will help us to work out how far
-      along you are in your career."
+      salary_age: "Your age for the year when you earned this salary. Salaries change over
+      your working life, this helps us to compare the salary with other employees of a similar age."
+      salary_year: "The year when you earned this salary. Salaries change for everyone over time,
+      this helps us to compare the salary with others in a similar era."
+      redundancy: "Whether or not you have been made redundant. We're interested to find out how different diversity
+      scores affect the likelihood of you being made redundant."
+      role: "The role or job title for this salary. Salaries are different between industries, this helps us to
+      compare the salaries within the same role or job family."
     category:
       save: "Save and next"
       last_save: "Calculate my privilege score"
@@ -98,7 +104,7 @@ en:
 
       a:
         text: "Undergraduate education of first parent"
-        description: "Tell us about the university one of your parents attended."
+        description: "The university one of your parents attended."
         answers:
           a: "Elite university"
           b: "Regular university"
@@ -106,7 +112,7 @@ en:
           d: "No further education after leaving school"
       b:
         text: "Undergraduate education of second parent"
-        description: "Tell us about the university your other parent attended."
+        description: "The university your other parent attended."
         answers:
           a: "Elite university"
           b: "Regular university"
@@ -114,7 +120,7 @@ en:
           d: "No further education after leaving school"
       c:
         text: "My undergraduate education"
-        description: "Tell us about your own university education."
+        description: "Your own university education."
         answers:
           a: "Elite university"
           b: "Regular university"
@@ -122,7 +128,7 @@ en:
           d: "No further education after leaving school"
       d:
         text: "Typical university discussions at school"
-        description: "Tell us about the discussions you and your classmates had in the last year or so of school."
+        description: "The discussions you and your classmates had in the last year or so of school."
         answers:
           a: "Which university and course we were planning to study"
           b: "Whether we would go to university"
@@ -228,6 +234,12 @@ en:
           eighty_to_hundred_and_ten: "$80,001 - $110,000"
           over_hundred_and_ten: "More than $110,001"
           not_say: "Prefer not to say"
+        redundancies:
+          never: "Never been made redundant"
+          voluntary: "Chose voluntary redundancy"
+          once: "Been made redundant once"
+          more_than_once: "Been made redundant more than once"
+          r_not_say: "Prefer not to say"
       category:
         caste: "Class"
         ethnicity: "Ethnicity"
