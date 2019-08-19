@@ -4,7 +4,7 @@ RSpec.feature "Ts and Cs" do
   include TranslationHelpers::StaticPages
 
   scenario "I can visit the terms and conditions page when logged out" do
-    visit "/"
+    visit "/ts_and_cs"
 
     within ".footer" do
       click_on I18n.t("layouts.footer.ts_and_cs")
@@ -21,7 +21,7 @@ RSpec.feature "Ts and Cs" do
   end
 
   scenario "I can visit the cookies page when logged out" do
-    visit "/"
+    visit "/cookies"
 
     within ".footer" do
       click_on I18n.t("layouts.footer.cookies")
@@ -36,11 +36,7 @@ RSpec.feature "Ts and Cs" do
   end
 
   scenario "I can visit the data privacy page when logged out" do
-    visit "/"
-
-    within ".footer" do
-      click_on I18n.t("layouts.footer.privacy")
-    end
+    visit "/privacy"
 
     within ".policy" do
       expect_page_to_have_all_translations(
