@@ -86,9 +86,6 @@ en:
       full_time: "Use the full time equivalent of your salary if you do not work full time"
       convert_html: "If you are not paid in US dollars, please calculate the $ version using your preferred currency converter
       or <a target='_blank' href='https://www.xe.com/'>XE</a>"
-      comparers: "The following questions are for statistical analysis. They help us to compare this salary against others who
-      have a similar age, role, and work in the same country as you, and how different diversity scores affect the likelihood of
-      someone being made redundant. We won't record your name against this information, it is saved anonymously."
     category:
       save: "Save and next"
       last_save: "Calculate my privilege score"
@@ -280,7 +277,7 @@ en:
           fifty_five_to_eighty: "$55,001 - $80,000"
           eighty_to_hundred_and_ten: "$80,001 - $110,000"
           over_hundred_and_ten: "More than $110,001"
-          non_paid: "Home-maker or otherwise not in paid work"
+          non_paid: "Home-maker or not in paid work"
           not_say: "Prefer not to say"
         redundancies:
           never: "Never been made redundant"
@@ -290,7 +287,7 @@ en:
           r_not_say: "Prefer not to say"
         roles:
           manager: "Manager"
-          professional: "Professional, medical, scientific, educators, and engineers"
+          professional: "Professional, medical, scientific"
           technician: "Technician and associate professionals"
           clerical: "Clerical and administrative"
           service: "Services and shop sales"
