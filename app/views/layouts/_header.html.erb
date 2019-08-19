@@ -1,3 +1,12 @@
 <div class="header">
-  <span><%= t(".title") %></span>
+  <span class="logo"><%= t(".title") %></span>
+  <span class="logo2"><%= t(".title") %></span>
+  <span class="logo3"><%= t(".title") %></span>
+</div>
+<div class="menu">
+  <div class="link-holder">
+    <%= link_to privileges_path do %>
+      <div class="link"><%= t(".privilege") %></div>
+    <% end %>
+  </div>
 </div>

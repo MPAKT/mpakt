@@ -16,6 +16,6 @@ class PrivilegesController < ApplicationController
   private
 
   def privilege_params
-    params.require(:privilege).permit(:salary, :year)
+    params.require(:privilege).permit(:salary, :year, :country_code, :redundancy, :role, :salary_year)
   end
 end

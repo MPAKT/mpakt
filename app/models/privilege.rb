@@ -10,7 +10,31 @@ class Privilege < ApplicationRecord
     fifty_five_to_eighty
     eighty_to_hundred_and_ten
     over_hundred_and_ten
+    non_paid
     not_say
+  ]
+
+  enum redundancy: %i[
+    never
+    voluntary
+    once
+    more_than_once
+    r_not_say
+  ]
+
+  # Role categories (mostly) taken from https://en.wikipedia.org/wiki/International_Standard_Classification_of_Occupations
+  enum role: %i[
+    manager
+    professional
+    technician
+    clerical
+    service
+    agriculture
+    craft
+    factory
+    armed
+    domestic
+    other
   ]
 
   def percent
@@ -20,5 +44,9 @@ class Privilege < ApplicationRecord
     end
 
     score / 4
+  end
+
+  def self.priority_countries
+    %w[US GB]
   end
 end

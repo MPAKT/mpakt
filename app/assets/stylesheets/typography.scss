@@ -39,6 +39,46 @@
        font-url('lato/lato-v16-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+  font-family: 'Caveat Brush';
+  font-style: normal;
+  font-weight: 400;
+  src: url('caveat-brush/caveat-brush-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Caveat Brush'), local('CaveatBrush-Regular'),
+       url('caveat-brush/caveat-brush-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('caveat-brush/caveat-brush-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('caveat-brush/caveat-brush-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('caveat-brush/caveat-brush-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('caveat-brush/caveat-brush-v5-latin-regular.svg#CaveatBrush') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Nanum Brush Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url('nanum-brush/nanum-brush-script-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Nanum Brush Script'), local('NanumBrush'),
+       url('nanum-brush/nanum-brush-script-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('nanum-brush/nanum-brush-script-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('nanum-brush/nanum-brush-script-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('nanum-brush/nanum-brush-script-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('nanum-brush/nanum-brush-script-v17-latin-regular.svg#NanumBrushScript') format('svg'); /* Legacy iOS */
+}
+
+/* just-me-again-down-here-regular - latin */
+@font-face {
+  font-family: 'Just Me Again Down Here';
+  font-style: normal;
+  font-weight: 400;
+  src: url('just-me/just-me-again-down-here-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Just Me Again Down Here'), local('JustMeAgainDownHere'),
+       url('just-me/just-me-again-down-here-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('just-me/just-me-again-down-here-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('just-me/just-me-again-down-here-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('just-me/just-me-again-down-here-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('just-me/just-me-again-down-here-v11-latin-regular.svg#JustMeAgainDownHere') format('svg'); /* Legacy iOS */
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -54,4 +94,22 @@ p, td, li {
   font-family: 'Lato Light', sans-serif;
   font-weight: 300;
   font-size: 14px;
+}
+
+.logo {
+  font-family: 'Caveat Brush', cursive;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.logo2 {
+  font-family: 'Nanum Brush Script', cursive;
+  font-weight: 550;
+  font-size: 30px;
+}
+
+.logo3 {
+  font-family: 'Just Me Again Down Here', cursive;
+  font-weight: 550;
+  font-size: 30px;
 }

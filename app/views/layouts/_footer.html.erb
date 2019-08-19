@@ -1,8 +1,14 @@
 
 <div class="footer">
   <div class="link-holder">
-    <div class="link"><%= link_to t(".cookies"), cookies_path %></div>
-    <div class="link"><%= link_to t(".ts_and_cs"), ts_and_cs_path %></div>
-    <div class="link"><%= link_to t(".privacy"), privacy_path %></div>
+    <%= link_to cookies_path do %>
+      <div class="link"><%= t(".cookies") %></div>
+    <% end %>
+    <%= link_to ts_and_cs_path do %>
+      <div class="link"><%= t(".ts_and_cs") %></div>
+    <% end %>
+    <%= link_to privacy_path do %>
+      <div class="link"><%= t(".privacy") %></div>
+    <% end %>
   </div>
 </div>

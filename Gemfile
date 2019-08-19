@@ -34,6 +34,9 @@ gem "webpacker"
 # Form helpers
 gem "simple_form"
 
+# Countries of the world
+gem "country_select"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
