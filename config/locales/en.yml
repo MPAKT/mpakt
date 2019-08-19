@@ -3,8 +3,57 @@ en:
   welcome:
     index:
       subtitle: "Diversity, Inclusion and Privilege"
-      safe: "DIPpy is a moderated safe space for anonymous conversations about diversity, inclusion, and privilege"
+      safe: "DIPpy is a moderated safe space for anonymous conversations about diversity, inclusion, and privilege.
+      It's built and moderated by volunteers, and we do not make any financial revenue from this site."
       calculator_html: "Calculate your privilege score with the <a href='/privileges'>privilege calculator</a>"
+      why: "Why did we build DIPpy?"
+      safe_space: "Safe space"
+      safe_space_1: "As members of several diversity groups on Facebook, we have seen a trend where one individual
+      posts a personal post or anecdote that resonates with the group, who follow up with a lot of comments around
+      'me too' or 'how brave you are'. It seems like a lot of us are too scared to post our own stories in a forum
+      like Facebook, where even closed or private groups may be read by government authorities, or have a friend-of-a-friend
+      in the membership. Plus, the facebook model of curated content and the page layouts don't lend themselves to
+      deeper or forum-style conversations."
+      safe_space_2: "We have also seen some of these conversations look like they might kick off in slack.
+      But this has the opposite challenge: a busy community has so much traffic that most of it scrolls
+      out of sight before you can keep up with it, and the newish threading feature doesn't seem to provide a
+      good solution."
+      safe_space_3: "It seemed like there was a gap between Facebook and slack, somewhere that is structured by forum
+      and thread, as well as anonymised. Once you have anonymous content, there's the risk of trolls, which means we
+      also need moderators."
+      safe_space_4: "For all these reasons, we are building DIPpy with an anonymous, moderated forum where you can discuss diversity,
+      inclusion, and privilege. The forum currently still work in progress, please have patience, we are a volunteer organisation."
+      more_diversity: "More diversity"
+      ability: "Ability"
+      ability_1: "While not everything is fixed yet, it does feel as though there is a lot of discussion about gender and race
+      privilege (and lack of) in both social and traditional media: at least the profile is raised and the discussions are
+      happening. But there seems to be much less conversation about ability and class privileges."
+      ability_2: "For ability privileges the lack of awareness and debate seems harsh, those who are not fully-abled have enough physical
+      challenges without also facing prejudice, ability-ism, and invisibility. We thought we would encourage ability conversations, by way
+       of support, and as a side effect, remind the rest of us how privileged we are if we don't need wheelchairs, screen readers, or
+       extensive bed rest in order to navigate our lives."
+      caste: "Class"
+      caste_html: "Class privilege is currently floating almost completely under the radar, and we believe this should change. A lot of
+      organisations who have a bias towards an elite group, for example <a href='https://en.wikipedia.org/wiki/White_Anglo-Saxon_Protestant'
+      target='_blank'>WASPs</a> in America. If the conversation and data analytics only capture 'white males', this allows them to muddy
+      the waters by looking more diverse and less biased than they really are."
+      caste_1: "Importantly, males who do not have class privilege get lumped into categories with privileged males and they
+      resent it strongly, with some justification. Their university experiences, career options and salary expectations are likely
+      to be very different from males and females who have both white and class privilege. And it seems to be members of the
+       non-class-privileged male group who fuel populist votes that currently affect politics in so many countries. We thought we
+       would try and redress the balance here."
+      caste_2: "Defining class privilege is incredibly difficult in any country, and even more so on a global scale. The UK and
+      India (as just two examples) have complex multi-layered class distinctions, and the US has a significant dose of denial."
+      caste_3: "Rather than trying to define class directly, we have chosen a proxy instead. We ask you to identify whether or not you
+      and both your parents went to university. If they did we also ask you to distinguish between the various kinds of universities.
+      It's not ideal, because some factors like age make a big difference. For example in the UK, around 5% of the population
+      attended university in 1960, compared with nearly 40% in 2018. In spite of these limitations, we concluded that it would be the
+      best compromise in capturing your parents' background without asking more intrusive questions or trying to define distinctions
+       between different grains of sand."
+      more_diversity_1: "For all these reasons, we built the anonymous privilege calculator, so that we could start to build
+      a database of diversity, with primary focus on how it affects your working life. For the moment it has four key areas,
+      equally weighted: the areas and weights may change in future as we collect data about privilege and its impact on your
+      working life, so please do come back and check your privilege score again."
 
   layouts:
     header:
