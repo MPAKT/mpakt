@@ -23,8 +23,8 @@ RSpec.feature "Privilege" do
       privilege = Privilege.first.reload
       expect(privilege.salary).to eq "thirty_five_to_fifty_five"
       expect(privilege.country_code).to eq "DZ"
-      expect(privilege.year).to eq "51"
-      expect(privilege.salary_year).to eq last_year.to_s
+      expect(privilege.year).to eq 51
+      expect(privilege.salary_year).to eq last_year
       expect(privilege.role).to eq  "Chief tea maker"
       expect(privilege.redundancy).to eq "once"
 
