@@ -34,16 +34,9 @@ en:
       full_time: "Use the full time equivalent of your salary if you do not work full time"
       convert_html: "If you are not paid in US dollars, please calculate the $ version using your preferred currency converter
       or <a target='_blank' href='https://www.xe.com/'>XE</a>"
-      salary_age: "Your age for the year when you earned this salary. Salaries change over
-      your working life, this helps us to compare the salary with other employees of a similar age."
-      salary_year: "The year when you earned this salary. Salaries change for everyone over time,
-      this helps us to compare the salary with others in a similar era."
-      redundancy: "Whether or not you have been made redundant. We're interested to find out how different diversity
-      scores affect the likelihood of you being made redundant."
-      role: "The job family for this salary. Salaries are different between industries, this helps us to
-      compare the salaries with others in a similar job family."
-      country: "The country where this salary was paid. Salaries are different between countries, this helps us to
-      compare the salaries with others from the same country."
+      comparers: "The following questions are for statistical analysis. They help us to compare this salary against others who
+      have a similar age, role, and work in the same country as you, and how different diversity scores affect the likelihood of
+      someone being made redundant. We won't record your name against this information, it is saved anonymously."
     category:
       save: "Save and next"
       last_save: "Calculate my privilege score"
