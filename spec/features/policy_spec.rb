@@ -6,10 +6,6 @@ RSpec.feature "Ts and Cs" do
   scenario "I can visit the terms and conditions page when logged out" do
     visit "/ts_and_cs"
 
-    within ".footer" do
-      click_on I18n.t("layouts.footer.ts_and_cs")
-    end
-
     within ".policy" do
       expect_page_to_have_all_translations(
         scope: "policies.ts_and_cs",
@@ -22,10 +18,6 @@ RSpec.feature "Ts and Cs" do
 
   scenario "I can visit the cookies page when logged out" do
     visit "/cookies"
-
-    within ".footer" do
-      click_on I18n.t("layouts.footer.cookies")
-    end
 
     within ".policy" do
       expect_page_to_have_all_translations(
