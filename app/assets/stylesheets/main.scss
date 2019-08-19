@@ -21,12 +21,11 @@ body {
   line-height: 40px;
   background-color: $darkgrey;
   color: white;
-  text-align: center;
 }
 
-.link-holder {
-  width: 560px;
+.footer .link-holder {
   margin: 0 auto;
+  width: 560px;
 }
 
 .link {
@@ -37,6 +36,7 @@ body {
   color: white;
   display: inline-block;
   border: 2px solid grey;
+  text-align: center;
 
   &:hover {
     background-color: white;
