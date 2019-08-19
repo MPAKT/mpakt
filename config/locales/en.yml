@@ -2,8 +2,7 @@ en:
 
   welcome:
     index:
-      title: "Welcome to DIPpy"
-      subtitle: "Diversity, inclusion and privilege"
+      subtitle: "Diversity, Inclusion and Privilege"
       safe: "DIPpy is a moderated safe space for anonymous conversations about diversity, inclusion, and privilege"
       calculator: "Check out our privilege calculator!"
 

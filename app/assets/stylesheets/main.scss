@@ -6,7 +6,17 @@ body {
   margin: 20px;
 }
 
-.header, .footer {
+.header {
+  height: 40px;
+  line-height: 40px;
+  margin: 4px 20px;
+
+  span {
+    margin: 0 8px;
+  }
+}
+
+.menu, .footer {
   height: 40px;
   line-height: 40px;
   background-color: $darkgrey;
