@@ -22,7 +22,7 @@ class Privilege < ApplicationRecord
     r_not_say
   ]
 
-  # Role categories (mostl) taken from https://en.wikipedia.org/wiki/International_Standard_Classification_of_Occupations
+  # Role categories (mostly) taken from https://en.wikipedia.org/wiki/International_Standard_Classification_of_Occupations
   enum role: %i[
     manager
     professional
