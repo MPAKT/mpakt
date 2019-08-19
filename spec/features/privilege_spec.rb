@@ -7,14 +7,26 @@ RSpec.feature "Privilege" do
 
       expect(page).to have_content I18n.t("privileges.index.optional")
 
+      last_year = Time.zone.now.year - 1
+
       within ".simple_form" do
         select I18n.t("activerecord.attributes.privilege.salaries.thirty_five_to_fifty_five"), from: :privilege_salary
-        select I18n.t("activerecord.attributes.privilege.salaries.thirty_five_to_fifty_five"), from: :privilege_salary
+        select "Algeria", from: :privilege_country_code
         fill_in :privilege_year, with: 51
-        fill_in :privilege_salary_year, with: Time.zone.now.year - 1
+        fill_in :privilege_salary_year, with: last_year
+        fill_in :privilege_role, with: "Chief tea maker"
+        select I18n.t("activerecord.attributes.privilege.redundancies.once"), from: :privilege_redundancy
 
         page.find(".btn").click
       end
+
+      privilege = Privilege.first.reload
+      expect(privilege.salary).to eq "thirty_five_to_fifty_five"
+      expect(privilege.country_code).to eq "DZ"
+      expect(privilege.year).to eq "51"
+      expect(privilege.salary_year).to eq last_year.to_s
+      expect(privilege.role).to eq  "Chief tea maker"
+      expect(privilege.redundancy).to eq "once"
 
       within ".ability" do
         select I18n.t("categories.ability.a.answers.a"), from: :category_a
