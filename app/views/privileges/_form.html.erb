@@ -10,28 +10,23 @@
   <div>
     <%= f.label :country %>
     <div class="input"><%= f.country_select :country_code, { priority_countries: Privilege.priority_countries }, label: false %></div>
-    <p><%= t(".country") %></p>
   </div>
   <div>
     <%= f.label :year %>
     <%= f.input :year, input_html: { step: 1, min: 16, max: 109, value: 35 }, label: false %>
-    <p><%= t(".salary_age") %></p>
   </div>
   <div>
     <%= f.label :salary_year %>
     <% current_year = Time.zone.now.year %>
     <%= f.input :salary_year, input_html: { step: 1, min: 2010, max: current_year, value: current_year }, label: false %>
-    <p><%= t(".salary_year") %></p>
   </div>
   <div>
     <%= f.label :role %>
     <%= f.input :role, collection: role_collection, label: false %>
-    <p><%= t(".role") %></p>
   </div>
   <div>
     <%= f.label :redundancy %>
     <%= f.input :redundancy, collection: redundancy_collection, label: false %>
-    <p><%= t(".redundancy") %></p>
   </div>
 
   <div>
