@@ -4,11 +4,12 @@ en:
     index:
       subtitle: "Diversity, Inclusion and Privilege"
       safe: "DIPpy is a moderated safe space for anonymous conversations about diversity, inclusion, and privilege"
-      calculator: "Check out our privilege calculator!"
+      calculator_html: "Calculate your privilege score with the <a href='/privileges'>privilege calculator</a>"
 
   layouts:
     header:
       title: "DIPpy"
+      privilege: "Privilege calculator"
     footer:
       cookies: "Cookies"
       ts_and_cs: "Terms and conditions"
@@ -16,8 +17,8 @@ en:
 
   privileges:
     index:
-      title: "Privilege score"
-      subtitle: "Compare your privilege with your friends and colleagues"
+      title: "Privilege calculator"
+      subtitle: "Compare your privilege with friends and colleagues"
       preamble: "There is no perfect model for privilege. We look at how your family background (parents, grandparents) in the
       four privilege areas of ability, class, ethnicity, and gender correlate with your work experiences, primarily captured
       through your salary bracket. We plan to refine the model over time as more of you share your data. We do not store any
