@@ -9,7 +9,9 @@ RSpec.feature "Privilege" do
 
       within ".simple_form" do
         select I18n.t("activerecord.attributes.privilege.salaries.thirty_five_to_fifty_five"), from: :privilege_salary
+        select I18n.t("activerecord.attributes.privilege.salaries.thirty_five_to_fifty_five"), from: :privilege_salary
         fill_in :privilege_year, with: 51
+        fill_in :privilege_salary_year, with: Time.zone.now.year - 1
 
         page.find(".btn").click
       end

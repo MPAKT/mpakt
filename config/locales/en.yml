@@ -41,7 +41,9 @@ en:
       redundancy: "Whether or not you have been made redundant. We're interested to find out how different diversity
       scores affect the likelihood of you being made redundant."
       role: "The role or job title for this salary. Salaries are different between industries, this helps us to
-      compare the salaries within the same role or job family."
+      compare the salaries with others in a similar role or job family."
+      country: "The country where this salary was paid. Salaries are different between countries, this helps us to
+      compare the salaries with others from the same country."
     category:
       save: "Save and next"
       last_save: "Calculate my privilege score"
@@ -224,7 +226,7 @@ en:
   activerecord:
     attributes:
       privilege:
-        salary: "Salary"
+        salary: "Salary in US $"
         year: "Age for salary"
         salaries:
           under_twenty: "Up to $20,000"
@@ -237,8 +239,8 @@ en:
         redundancies:
           never: "Never been made redundant"
           voluntary: "Chose voluntary redundancy"
-          once: "Been made redundant once"
-          more_than_once: "Been made redundant more than once"
+          once: "Made redundant once"
+          more_than_once: "Made redundant more than once"
           r_not_say: "Prefer not to say"
       category:
         caste: "Class"

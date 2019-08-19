@@ -8,6 +8,11 @@
     <p><%= t(".convert_html") %></p>
   </div>
   <div>
+    <%= f.label :country %>
+    <div class="input"><%= f.country_select :country_code, { priority_countries: Privilege.priority_countries }, label: false %></div>
+    <p><%= t(".country") %></p>
+  </div>
+  <div>
     <%= f.label :year %>
     <%= f.input :year, input_html: { step: 1, min: 16, max: 109, value: 35 }, label: false %>
     <p><%= t(".salary_age") %></p>
@@ -15,7 +20,7 @@
   <div>
     <%= f.label :salary_year %>
     <% current_year = Time.zone.now.year %>
-    <%= f.input :salary_year, input_html: { step: 1, min: 1980, max: current_year, value: current_year }, label: false %>
+    <%= f.input :salary_year, input_html: { step: 1, min: 2010, max: current_year, value: current_year }, label: false %>
     <p><%= t(".salary_year") %></p>
   </div>
   <div>
