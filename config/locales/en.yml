@@ -56,16 +56,16 @@ en:
       a database of diversity, with primary focus on how it affects your working life. For the moment it has four key areas,
       equally weighted: the areas and weights may change in future as we collect data about privilege and its impact on your
       working life, so please do come back and check your privilege score again."
-      thank_you: "Thank you for visiting DIPpy, and for reading to the end!"
+      thank_you: "Thank you for visiting DIPpy, and for reading to the end. We hope you enjoy your visit!"
 
   layouts:
     header:
       title: "DIPpy"
-      privilege: "Privilege calculator"
+      privilege: "Calculator"
     footer:
       cookies: "Cookies"
-      ts_and_cs: "Terms and conditions"
-      privacy: "Privacy policy"
+      ts_and_cs: "Terms"
+      privacy: "Data privacy"
 
   privileges:
     index:
