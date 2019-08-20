@@ -69,9 +69,9 @@ en:
       the website or sensitive information and introducing viruses, Trojans, worms, logic bombs or other material that
       is malicious or technologically harmful."
       viruses: "Viruses, Hacking and Other Offences"
-      viruses_para1: "By doing any of the prohibited activities mentioned in the last section, you might commit a
-      criminal offence under the Computer Misuse Act 1990 or any other related legislation. We may be bound by law to
-      co-operate in any related investigations."
+      viruses_para1: "If you take part in any activities mentioned in the last section, you might commit a criminal
+      offence under the legislation in countries where we operate. We may be bound by law to co-operate in any
+      related investigations."
       viruses_para2: "While we will make reasonable attempts to exclude harmful viruses and malware from our website,
       we cannot guarantee total exclusion. We recommend that you take appropriate measures to protect yourself before
       downloading any content."
@@ -85,10 +85,9 @@ en:
       limitation_para2: "Nothing within these Terms and Conditions of Use will operate to include any liability for
       death or personal injury arising as result of the negligence of the volunteers who maintain DIPpys"
       law: "Governing Law and Jurisdiction"
-      law_para: "These Terms and Conditions of Use will be governed by the laws of England and Wales and any user of the
-       website agrees to be bound exclusively by the jurisdiction of English courts, should any dispute or claim arise
-       from, or in connection with, them or their subject matter or formation (including non-contractual disputes or
-       claims)."
+      law_para: "These Terms and Conditions of Use will be governed by law and any user of the website agrees to be
+      bound exclusively by the jurisdiction of relevant courts, should any dispute or claim arise from, or in connection
+      with, them or their subject matter or formation (including non-contractual disputes or claims)."
       about_us: "About Us"
       about_us_para: "The DIPpy site is built and maintained by volunteers who may be found anywhere in the world. The
       users of DIPpy are also global. We ask you to respect all volunteers and users of DIPpy."
@@ -96,15 +95,18 @@ en:
       anonymous_para: "DIPpy is an anonymous site"
       anonymous_para_1: "Most parts of the site are fully anonymous, and do not require you to tell us anything about yourself
       in order to visit and read content in DIPpy"
-      anonymous_para_2: "The DIPpy forum is semi-anonymous. In order to contribute the forum, you need to sign in, and you
-      must tell us an email address which we will use to identify you uniquely. This means that when you return to the site,
-      you can see your own posting history. We will not share this email address with other users."
+      anonymous_para_2: "The DIPpy forum is public-anonymous. In order to contribute the forum, you need to register, and you
+      must tell us an email address. This means that when you return to the site, you can see your own posting history.
+      We do not share this email address with other users."
       anonymous_para_3: "We will not share your email address with any third parties, for commercial or any other reasons,
-      except if requested with a recognised court order. The two reasons for your email address is to identify you uniquely,
-       and so that we can send you password reset information if you forget your password"
-      anonymous_para_4: "When you sign up for DIPpy, you create a short user name of your own choice which should not identify
-      you. This is the name which other users will see. In this way, when users see your posts, they can not identify anything
-      else about you except the short user name. Do not share your short user name with anyone."
+      except if requested with a recognised court order. When you provide your email address, we use it internally to
+      identify you uniquely, and so that we can send you password reset information if you forget your password. We
+      do not share your email address with other users."
+      anonymous_para_4: "When you sign up for DIPpy, you create a short user name, choose this carefully, it should not identify
+      you. This is the name which other users will see. In this way, when users see your posts, they can not find out more
+      information about you. Do not tell anyone what your short user name is."
+      age: "Age"
+      age_1: "This site is intended for adults, and we recommend that children under 16 do not visit this site or register with DIPpy."
 
       moderated: "Moderated"
       moderated_para: "DIPpy is a moderated site."
@@ -116,9 +118,9 @@ en:
       it is posted, and to move or delete any content at any time."
       moderated_para_4: "We don't intend this moderation to be onerous for us or frustrating for you: we will only use
                          moderation to remove your content if we believe it is harmful to the users of this site, or to
-                         the site's reputation"
+                         the site's reputation."
       harmful: "Harmful content:"
-      harmful_content: "Harmful content will be removed, and will include posts that are considered:"
+      harmful_content: "Harmful content will be removed, and will include posts that we consider:"
       harmful_content_1: "unlawful"
       harmful_content_2: "defamatory"
       harmful_content_3: "obscene"
@@ -127,7 +129,7 @@ en:
       harmful_content_6: "objectionable"
       harmful_content_7: "violate the legal rights of others"
       harmful_content_8: "could damage a computer"
-      free_para: "DIPpy is a not-for-profit site, we may remove content that appears to include any form of advertisement"
+      free_para: "DIPpy is a not-for-profit site, we may remove content that appears to include any form of advertisement."
 
     privacy:
       title: "Privacy Policy"
@@ -151,7 +153,7 @@ en:
       data centres. By submitting your personal data, you agree to this transfer, storing or processing.
       We will take all steps reasonably necessary to ensure that your data is treated as securely as possible."
       store_2: "All information you provide to us is stored on our secure servers. Where you have set a password, you
-      are responsible for keeping this password confidential. You not share your password with anyone."
+      are responsible for keeping this password confidential. Do not share your password with anyone."
       store_3: "Unfortunately, the transmission of information via the internet is not completely secure. Although we
       do our best to protect your personal data, we cannot guarantee the security of data transmitted to our
       site; any transmission is at your own risk. Once we have received your information, we will use strict procedures
