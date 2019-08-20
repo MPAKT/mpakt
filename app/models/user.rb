@@ -11,5 +11,4 @@ class User < ApplicationRecord
     posts
     posts_and_users
   ]
-
 end
