@@ -62,10 +62,20 @@ en:
     header:
       title: "DIPpy"
       privilege: "Calculator"
+      exit: "Sign out"
+      sign_in: "Log in"
+      sign_up: "Register"
     footer:
       cookies: "Cookies"
       ts_and_cs: "Terms"
       privacy: "Data privacy"
+
+  users:
+    index:
+      title: "Users"
+      email: "Email"
+      short_name: "Short name"
+      moderator: "Permissions"
 
   privileges:
     index:
@@ -302,4 +312,8 @@ en:
         ethnicity: "Ethnicity"
         gender: "Gender"
         ability: "Ability"
-
+      users:
+        moderators:
+          no_permissions: "None"
+          posts: "Posts only"
+          posts_and_users: "Posts and users"

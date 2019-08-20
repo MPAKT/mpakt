@@ -1,6 +1,11 @@
 # README
 
-README for the dippy app
+README for the DIPpy app
+
+## Webpacker
+
+DIPpy uses webpacker, which may need you to install a bunch of stuff with yarn, for more information see
+https://www.botreetechnologies.com/blog/introducing-jquery-in-rails-6-using-webpacker
 
 ## Test
 

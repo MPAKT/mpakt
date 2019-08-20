@@ -59,6 +59,10 @@ body {
   }
 }
 
+.end {
+  float: right;
+}
+
 .privilege {
   min-height: 640px;
 }
@@ -75,6 +79,10 @@ body {
 
 .right-col {
   display: none;
+}
+
+.flash {
+  padding: 10px 20px 0;
 }
 
 @media only screen and (min-width: 800px) {
