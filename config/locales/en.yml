@@ -5,8 +5,7 @@ en:
       subtitle: "Diversity, Inclusion and Privilege"
       safe: "DIPpy is a moderated safe space for anonymous conversations about diversity, inclusion, and privilege.
       It's built and moderated by volunteers, and we do not make any financial revenue from this site."
-      welcome: "Please make everyone feel welcome here, even those with high privilege. Remember we may need their
-       support to help us improve the world for us all."
+      welcome: "Please make everyone feel welcome here, whatever their privilege."
       calculator_html: "Calculate your privilege score with the <a href='/privileges'>privilege calculator</a>"
       why_html: "Why did we build DIPpy and what will you find here? <a href='/goals'>Find out more</a>"
 
