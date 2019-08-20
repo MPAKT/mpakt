@@ -3,3 +3,19 @@ $blue: blue;
 $purple: purple;
 $gold: gold;
 $green: green;
+
+$r-red: rgba(255, 0, 0, 0.5);
+$r-orange: rgba(255, 165, 0, 0.5);
+$r-yellow: rgba(255, 255, 0, 0.5);
+$r-green: rgba(0, 128, 0, 0.5);
+$r-blue: rgba(0, 255, 255, 0.5);
+$r-indigo: rgba(0, 0, 255, 0.5);
+$r-violet: rgba(238, 130, 238, 0.5);
+
+.rainbow {
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $r-red, $r-orange , $r-yellow, $r-green, $r-blue, $r-indigo, $r-violet); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, left, $r-red, $r-orange , $r-yellow, $r-green, $r-blue, $r-indigo, $r-violet); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, left, $r-red, $r-orange , $r-yellow, $r-green, $r-blue, $r-indigo, $r-violet); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, left, $r-red, $r-orange , $r-yellow, $r-green, $r-blue, $r-indigo, $r-violet); /* Standard syntax (must be last) */
+}
