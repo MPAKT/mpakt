@@ -309,4 +309,8 @@ en:
         ethnicity: "Ethnicity"
         gender: "Gender"
         ability: "Ability"
-
+      users:
+        moderators:
+          no_permissions: "None"
+          posts: "Posts only"
+          posts_and_users: "Posts and users"

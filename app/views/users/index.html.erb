@@ -4,6 +4,7 @@
   <thead>
     <th><%= t(".email") %></th>
     <th><%= t(".short_name") %></th>
+    <th><%= t(".last_sign_in") %></th>
     <th><%= t(".moderator") %></th>
   </thead>
 
@@ -11,8 +12,8 @@
     <% @users.each do |user| %>
       <td><%= user.email %></td>
       <td><%= user.short_name %></td>
-      <td><%= user.moderator %></td>
+      <td><%= I18n.l(user.last_sign_in_at.to_date, format: :short) %></td>
+      <td><%= I18n.t("activerecord.attributes.users.moderators.#{user.moderator}") %></td>
     <% end %>
   </tbody>
 </table>
-
