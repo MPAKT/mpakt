@@ -1,0 +1,18 @@
+<h2><%= t(".title") %></h2>
+
+<table>
+  <thead>
+    <th><%= t(".email") %></th>
+    <th><%= t(".short_name") %></th>
+    <th><%= t(".moderator") %></th>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <td><%= user.email %></td>
+      <td><%= user.short_name %></td>
+      <td><%= user.moderator %></td>
+    <% end %>
+  </tbody>
+</table>
+

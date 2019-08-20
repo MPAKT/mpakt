@@ -67,6 +67,13 @@ en:
       ts_and_cs: "Terms"
       privacy: "Data privacy"
 
+  users:
+    index:
+      title: "Users"
+      email: "Email"
+      short_name: "Short name"
+      moderator: "Permissions"
+
   privileges:
     index:
       title: "Privilege calculator"
