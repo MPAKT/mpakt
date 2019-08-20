@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2019_08_20_091132) do
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
     t.integer "moderator", default: 0
+    t.string "short_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

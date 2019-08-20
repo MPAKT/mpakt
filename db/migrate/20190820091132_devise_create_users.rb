@@ -33,6 +33,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       # t.datetime :locked_at
 
       t.integer :moderator, default: 0
+      t.string :short_name
 
       t.timestamps null: false
     end
