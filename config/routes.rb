@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get "/ts_and_cs", to: 'policies#ts_and_cs'
   get "/privacy", to: 'policies#privacy'
   get "/cookies", to: 'policies#cookies'
+  get "/goals", to: 'policies#goals'
 end

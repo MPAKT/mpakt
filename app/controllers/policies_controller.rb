@@ -6,4 +6,6 @@ class PoliciesController < ApplicationController
   def ts_and_cs; end
 
   def privacy; end
+
+  def goals; end
 end
