@@ -63,6 +63,8 @@ en:
       title: "DIPpy"
       privilege: "Calculator"
       exit: "Sign out"
+      sign_in: "Log in"
+      sign_up: "Register"
     footer:
       cookies: "Cookies"
       ts_and_cs: "Terms"
