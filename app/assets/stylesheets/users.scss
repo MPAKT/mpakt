@@ -1,3 +1,16 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.new_user {
+  padding: 4px 0;
+}
+
+.new_user.field, .form-actions {
+  margin: 4px 0;
+}
+
+.devise-links {
+  margin: 4px 0;
+  padding: 4px 0;
+}
+
+.hint {
+  margin-left: 8px;
+}
