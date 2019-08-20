@@ -3,10 +3,4 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, and :omniauthable
   devise :database_authenticatable, :registerable, :trackable,
          :recoverable, :rememberable, :validatable
-
-  #enum moderator %i[
-  #  none
-  #  posts
-  #  posts_and_users
-  #]
 end
