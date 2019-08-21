@@ -16,6 +16,8 @@ en:
       exit: "Log out"
       sign_in: "Log in"
       sign_up: "Register"
+      forum: "Forum"
+      users: "Manage users"
     footer:
       cookies: "Cookies"
       ts_and_cs: "Terms"
@@ -271,3 +273,7 @@ en:
           no_permissions: "None"
           posts: "Posts only"
           posts_and_users: "Posts and users"
+
+  errors:
+    messages:
+      not_authorized: "You do not have access to that page"
