@@ -17,15 +17,25 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
+  color: $light-text;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
 }
 
-p, td, li, span {
-  //font-weight: 300;
+h2 {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+p, td, li, span, a {
   font-size: 14px;
 }
 
@@ -33,4 +43,21 @@ p, td, li, span {
   font-family: 'Caveat Brush', cursive;
   font-weight: 400;
   font-size: 26px;
+  color: black;
+}
+
+.link {
+  color: $lightblue;
+  display: inline;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $lightblue;
+    color: white;
+  }
+}
+
+a, a:visited {
+  text-decoration: none;
+  cursor: pointer;
 }
