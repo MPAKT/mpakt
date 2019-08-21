@@ -9,7 +9,6 @@ body {
 
 .header {
   height: 40px;
-  line-height: 40px;
 
   .menu-holder {
     border-bottom: 1px solid $lightgrey;
@@ -25,14 +24,13 @@ body {
 
 .menu-holder {
   height: 40px;
-  line-height: 40px;
   width: 80%;
   margin: 0 auto;
 
   .link {
     width: 113px;
     height: 40px;
-    line-height: 36px;
+    line-height: 40px;
     display: block;
   }
 
