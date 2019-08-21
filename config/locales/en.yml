@@ -28,9 +28,10 @@ en:
       title: "Users"
       email: "Email"
       short_name: "Name"
-      moderator: "Permissions"
+      moderator: "Moderator"
       last_sign_in: "Last sign in"
       admin: "Admin"
+      save: "Save"
 
   privileges:
     index:

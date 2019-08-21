@@ -12,6 +12,10 @@ input {
   margin-top: 4px;
 }
 
+input.boolean {
+  width: 100%;
+}
+
 .btn {
   padding: 4px 10px;
   min-width: unset;

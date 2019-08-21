@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:create]
 
   authenticated :user do
-    resources :users, only: [:index]
+    resources :users, only: [:index, :update]
   end
 
   get "/ts_and_cs", to: 'policies#ts_and_cs'
