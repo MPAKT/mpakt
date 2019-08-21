@@ -15,6 +15,7 @@ RSpec.feature "User" do
 
       within ".new_user" do
         fill_in :user_email, with: "user@dippy.com"
+        fill_in :user_short_name, with: "shorty"
         fill_in :user_password, with: "123456"
         fill_in :user_password_confirmation, with: "123456"
 
@@ -24,6 +25,11 @@ RSpec.feature "User" do
       within ".flash" do
         expect(page).to have_content I18n.t("devise.registrations.signed_up")
       end
+
+      user = User.first.reload
+      expect(user.short_name).to eq "shorty"
+      expect(user.moderator).to be false
+      expect(user.admin).to be false
 
       within ".menu" do
         click_on I18n.t("layouts.header.exit")
