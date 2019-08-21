@@ -28,7 +28,7 @@ en:
       title: "Users"
       email: "Email"
       short_name: "Name"
-      moderator: "Moderator"
+      volunteer: "Moderator"
       last_sign_in: "Last sign in"
       admin: "Admin"
       save: "Save"
@@ -272,10 +272,6 @@ en:
         ability: "Ability"
       users:
         short_name: "Name"
-        moderators:
-          no_permissions: "None"
-          posts: "Posts only"
-          posts_and_users: "Posts and users"
 
   errors:
     messages:

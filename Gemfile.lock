@@ -274,6 +274,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sucker_punch (2.1.2)
+      concurrent-ruby (~> 1.0)
     thor (0.20.3)
     thread_safe (0.3.6)
     thredded (0.16.13)
@@ -347,6 +349,7 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   simplecov
+  sucker_punch
   thredded
   turbolinks (~> 5)
   tzinfo-data

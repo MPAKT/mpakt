@@ -28,7 +28,7 @@ RSpec.feature "User" do
 
       user = User.first.reload
       expect(user.short_name).to eq "shorty"
-      expect(user.moderator).to be false
+      expect(user.volunteer).to be false
       expect(user.admin).to be false
 
       within ".menu" do
@@ -65,7 +65,7 @@ RSpec.feature "User" do
   context "As an admin" do
     scenario "I can manage other users" do
       user = User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
-      admin = User.create(email: "admin@dippy.com", password: "123456", short_name: "admin", moderator: true, admin: true, last_sign_in_at: Time.zone.now)
+      admin = User.create(email: "admin@dippy.com", password: "123456", short_name: "admin", volunter: true, admin: true, last_sign_in_at: Time.zone.now)
 
       login_as admin
       visit "/"
@@ -85,14 +85,14 @@ RSpec.feature "User" do
       within ".user-#{admin.id}" do
         admin_status = page.find("#user_admin")
         expect(admin_status).to be_checked
-        moderator_status = page.find("#user_moderator")
+        moderator_status = page.find("#user_volunteer")
         expect(moderator_status).to be_checked
       end
 
       within ".user-#{user.id}" do
         admin_status = page.find("#user_admin")
         expect(admin_status).not_to be_checked
-        moderator_status = page.find("#user_moderator")
+        moderator_status = page.find("#user_volunteer")
         expect(moderator_status).not_to be_checked
 
         moderator_status.set true
@@ -104,7 +104,7 @@ RSpec.feature "User" do
       end
 
       within ".user-#{user.id}" do
-        moderator_status = page.find("#user_moderator")
+        moderator_status = page.find("#user_volunteer")
         expect(moderator_status).to be_checked
       end
     end

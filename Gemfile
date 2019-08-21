@@ -42,6 +42,9 @@ gem "country_select"
 # Thredded forum library
 gem "thredded"
 
+# ActiveJob library needed by thredded
+gem "sucker_punch"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

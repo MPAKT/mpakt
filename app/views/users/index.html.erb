@@ -17,7 +17,7 @@
           <td><%= user.email %></td>
           <td><%= user.short_name %></td>
           <td><%= I18n.l(user.last_sign_in_at.to_date, format: :short) %></td>
-          <td><%= f.input :moderator, label: false %></td>
+          <td><%= f.input :volunteer, label: false %></td>
           <td><%= f.input :admin, label: false %></td>
           <td><%= f.submit t(".save"), class:"btn" %></td>
         <% end %>

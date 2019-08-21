@@ -37,7 +37,7 @@ Thredded.avatar_url = ->(user) { Gravatar.src(user.email, 156, 'mm') }
 # and admins and moderators are determined by a flag on the users table.
 
 # The name of the moderator flag column on the users table.
-Thredded.moderator_column = :moderator
+Thredded.moderator_column = :volunteer
 # The name of the admin flag column on the users table.
 Thredded.admin_column = :admin
 
