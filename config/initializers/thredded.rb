@@ -79,7 +79,7 @@ Thredded.layout = 'thredded/application'
 # ==> Email Configuration
 # Email "From:" field will use the following
 # (this is also used as the "To" address for both email notifcations, as all the recipients are on bcc)
-# Thredded.email_from = 'no-reply@example.com'
+Thredded.email_from = 'dippy.moderator@gmail.com'
 
 # Emails going out will prefix the "Subject:" with the following string
 # Thredded.email_outgoing_prefix = '[My Forum] '
@@ -182,7 +182,7 @@ Thredded.layout = 'thredded/application'
 # Thredded.notifiers = [Thredded::EmailNotifier.new]
 #
 # none:
-# Thredded.notifiers = []
+Thredded.notifiers = []
 #
 # add in (must install separate gem (under development) as well):
 # Thredded.notifiers = [Thredded::EmailNotifier.new, Thredded::PushoverNotifier.new(ENV['PUSHOVER_APP_ID'])]
