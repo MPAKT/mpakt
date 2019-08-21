@@ -13,7 +13,7 @@ en:
     header:
       title: "DIPpy"
       privilege: "My privilege"
-      exit: "Sign out"
+      exit: "Log out"
       sign_in: "Log in"
       sign_up: "Register"
     footer:
