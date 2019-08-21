@@ -5,7 +5,7 @@ RSpec.feature "User" do
     scenario "I can sign up and sign in" do
       visit "/"
 
-      within ".menu" do
+      within ".header" do
         click_on I18n.t("layouts.header.sign_in")
       end
 
@@ -31,7 +31,7 @@ RSpec.feature "User" do
       expect(user.volunteer).to be false
       expect(user.admin).to be false
 
-      within ".menu" do
+      within ".header" do
         click_on I18n.t("layouts.header.exit")
       end
 
@@ -39,7 +39,7 @@ RSpec.feature "User" do
         expect(page).to have_content I18n.t("devise.sessions.signed_out")
       end
 
-      within ".menu" do
+      within ".header" do
         click_on I18n.t("layouts.header.sign_in")
       end
 
@@ -65,12 +65,12 @@ RSpec.feature "User" do
   context "As an admin" do
     scenario "I can manage other users" do
       user = User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
-      admin = User.create(email: "admin@dippy.com", password: "123456", short_name: "admin", volunter: true, admin: true, last_sign_in_at: Time.zone.now)
+      admin = User.create(email: "admin@dippy.com", password: "123456", short_name: "admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now)
 
       login_as admin
       visit "/"
 
-      within ".menu" do
+      within ".header" do
         click_on I18n.t("layouts.header.users")
       end
 

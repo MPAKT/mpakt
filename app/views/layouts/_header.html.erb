@@ -1,37 +1,39 @@
 <div class="header">
-  <div class="rainbow"><span class="logo"><%= t(".title") %></span></div>
-</div>
+  <div>
+    <div class="rainbow"><span class="logo"><%= t(".title") %></span></div>
+  </div>
 
-<div class="menu-holder">
-  <% if current_user %>
-    <div class="link-holder end">
-      <%= link_to destroy_user_session_path, method: :delete do %>
-        <div class="link"><%= t(".exit") %></div>
+  <div class="menu-holder">
+    <% if current_user %>
+      <div class="link-holder end">
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <div class="link"><%= t(".exit") %></div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="link-holder end">
+        <%= link_to new_user_session_path do %>
+          <div class="link"><%= t(".sign_in") %></div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="link-holder">
+      <%= link_to privileges_path do %>
+        <div class="link"><%= t(".privilege") %></div>
       <% end %>
     </div>
-  <% else %>
-    <div class="link-holder end">
-      <%= link_to new_user_session_path do %>
-        <div class="link"><%= t(".sign_in") %></div>
+    <div class="link-holder">
+      <%= link_to "/forum" do %>
+        <div class="link"><%= t(".forum") %></div>
       <% end %>
     </div>
-  <% end %>
-
-  <div class="link-holder">
-    <%= link_to privileges_path do %>
-      <div class="link"><%= t(".privilege") %></div>
-    <% end %>
-  </div>
-  <div class="link-holder">
-    <%= link_to "/forum" do %>
-      <div class="link"><%= t(".forum") %></div>
-    <% end %>
-  </div>
-  <div class="link-holder">
-    <% if current_user&.admin? %>
-      <%= link_to users_path do %>
-        <div class="link"><%= t(".users") %></div>
+    <div class="link-holder">
+      <% if current_user&.admin? %>
+        <%= link_to users_path do %>
+          <div class="link"><%= t(".users") %></div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
