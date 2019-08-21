@@ -3,8 +3,8 @@ body {
 }
 
 .main {
-  margin: 20px;
-  margin-bottom: 60px;
+  margin: 20px auto 60px auto;
+  width: 90%;
 }
 
 .header {
@@ -17,14 +17,14 @@ body {
   .logo {
     margin: 0;
     padding-left: 20px;
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
 }
 
 .menu-holder {
   height: 40px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 
   .link {
@@ -62,7 +62,7 @@ body {
 }
 
 .privilege, .policy {
-  max-width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -84,9 +84,13 @@ img {
   max-height: 100%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .left-col {
     width: 50%;
+  }
+
+  .main, .privilege, .policy, .menu-holder {
+    width: 80%;
   }
 
   .right-col {
