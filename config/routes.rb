@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get "/privacy", to: 'policies#privacy'
   get "/cookies", to: 'policies#cookies'
   get "/goals", to: 'policies#goals'
+
+  #mount Thredded::Engine => '/forum'
 end
