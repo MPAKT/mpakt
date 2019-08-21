@@ -24,7 +24,7 @@
     <%= link_to "/forum" do %>
       <div class="link"><%= t(".forum") %></div>
     <% end %>
-    <% if current_user.admin? %>
+    <% if current_user&.admin? %>
       <%= link_to users_path do %>
         <div class="link"><%= t(".users") %></div>
       <% end %>
