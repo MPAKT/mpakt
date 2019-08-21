@@ -1,17 +1,18 @@
 <h2><%= t(".title") %></h2>
 
-<table>
+<table class="users">
   <thead>
     <th><%= t(".email") %></th>
     <th><%= t(".short_name") %></th>
     <th><%= t(".last_sign_in") %></th>
     <th><%= t(".moderator") %></th>
     <th><%= t(".admin") %></th>
+    <th></th>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
+      <tr class="user-<%= user.id %>">
         <%= simple_form_for user, url: user_path(user.id), data: { inline: true } do |f| %>
           <td><%= user.email %></td>
           <td><%= user.short_name %></td>

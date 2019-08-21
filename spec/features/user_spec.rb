@@ -64,8 +64,8 @@ RSpec.feature "User" do
 
   context "As an admin" do
     scenario "I can manage other users" do
-      admin = User.create(email: "admin@dippy.com", password: "12346", short_name: "admin", moderator: true, admin: true)
-      user = User.create(email: "user@dippy.com", password: "12346", short_name: "user")
+      user = User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
+      admin = User.create(email: "admin@dippy.com", password: "123456", short_name: "admin", moderator: true, admin: true, last_sign_in_at: Time.zone.now)
 
       login_as admin
       visit "/"
@@ -74,13 +74,39 @@ RSpec.feature "User" do
         click_on I18n.t("layouts.header.users")
       end
 
-      #today = I18n.l(Time.zone.now.to_date, format: :short)
+      today = I18n.l(Time.zone.now.to_date, format: :short)
       within ".users" do
         rows = page.all("tr")
-        expect(rows.count).to eq 2
-        expect(rows[0]).to eq "admin@dippy.com admin true true"
+        expect(rows.count).to eq 3
+        expect(rows[1]).to have_content "admin@dippy.com admin #{today}"
+        expect(rows[2]).to have_content "user@dippy.com user #{today}"
+      end
+
+      within ".user-#{admin.id}" do
+        admin_status = page.find("#user_admin")
+        expect(admin_status).to be_checked
+        moderator_status = page.find("#user_moderator")
+        expect(moderator_status).to be_checked
+      end
+
+      within ".user-#{user.id}" do
+        admin_status = page.find("#user_admin")
+        expect(admin_status).not_to be_checked
+        moderator_status = page.find("#user_moderator")
+        expect(moderator_status).not_to be_checked
+
+        moderator_status.set true
+        click_on I18n.t("users.index.save")
+      end
+
+      within ".flash" do
+        expect(page).to have_content I18n.t("users.update.success", email: user.email)
+      end
+
+      within ".user-#{user.id}" do
+        moderator_status = page.find("#user_moderator")
+        expect(moderator_status).to be_checked
       end
     end
   end
-
 end

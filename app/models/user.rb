@@ -7,4 +7,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :short_name, presence: true
+
+  delegate :to_s, to: :short_name
 end

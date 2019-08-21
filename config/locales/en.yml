@@ -32,6 +32,8 @@ en:
       last_sign_in: "Last sign in"
       admin: "Admin"
       save: "Save"
+    update:
+      success: "Updated permissions for %{email}"
 
   privileges:
     index:
