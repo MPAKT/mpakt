@@ -13,11 +13,10 @@
        url('caveat-brush/caveat-brush-v5-latin-regular.svg#CaveatBrush') format('svg'); /* Legacy iOS */
 }
 
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
-  color: $light-text;
+  color: $lighttext;
   -webkit-font-smoothing: antialiased;
 }
 
