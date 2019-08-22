@@ -2,6 +2,7 @@ select, input {
   padding: 4px;
   border-radius: 4px;
   border-width: 1px;
+  margin-top: 4px;
 }
 
 select, .input {
@@ -10,6 +11,10 @@ select, .input {
 
 input {
   margin-top: 4px;
+}
+
+input.boolean {
+  width: 100%;
 }
 
 .btn {
@@ -26,4 +31,8 @@ input {
   .btn {
     margin-top: 16px;
   }
+}
+
+.required abbr {
+  text-decoration: none;
 }

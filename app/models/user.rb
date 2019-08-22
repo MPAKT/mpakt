@@ -6,9 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :trackable,
          :recoverable, :rememberable, :validatable
 
-  enum moderator: %i[
-    no_permissions
-    posts
-    posts_and_users
-  ]
+  validates :short_name, presence: true
+
+  delegate :to_s, to: :short_name
 end

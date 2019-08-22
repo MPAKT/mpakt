@@ -58,12 +58,14 @@ en:
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
       new:
         sign_up: "Register"
+        private: "Your email address is held securely and will not be shared"
+        public: "Your short name is public and will be seen by other users, we suggest that you use a handle which does not identify the real you"
     sessions:
       signed_in: "Welcome back to DIPpy"
       signed_out: "You have signed out, please close your tab or browser"
       already_signed_out: "You have signed out, please close your tab or browser"
       new:
-        sign_in: "Log in"
+        sign_in: "Sign in"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
@@ -71,7 +73,7 @@ en:
     shared:
       links:
         sign_up: "Register"
-        sign_in: "Log in"
+        sign_in: "Sign in"
         forgot_password: "Forgot password"
 
   errors:
