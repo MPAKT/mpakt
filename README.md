@@ -7,6 +7,13 @@ README for the DIPpy app
 DIPpy uses webpacker, which may need you to install a bunch of stuff with yarn, for more information see
 https://www.botreetechnologies.com/blog/introducing-jquery-in-rails-6-using-webpacker
 
+## Thredded
+
+*WARNING* Thredded seems to crash rails on windows, I have spent some time investigating and it seems to be
+a sadly silent failure somewhere around the junction between thredded, rails render, rails logging, and
+windows. This makes it incredibly difficult to debug. Seems to work fine on linux so have stopped
+investigating.
+
 ## Test
 
 ### Execute test suite
