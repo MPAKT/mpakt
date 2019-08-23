@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.feature "User" do
-  context "As a user" do
+  context "As a new user" do
     scenario "I can sign up and sign in" do
       visit "/"
 
@@ -62,10 +62,91 @@ RSpec.feature "User" do
     end
   end
 
+  context "As a user" do
+    let(:user) { User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now) }
+
+    scenario "I can edit my profile" do
+      login_as user
+      visit "/"
+
+      within ".header" do
+        click_on I18n.t("layouts.header.forum")
+      end
+
+      within ".thredded--navigation" do
+        click_on "user"
+      end
+
+      within ".edit_user" do
+        fill_in :user_short_name, with: "changed"
+        fill_in :user_password, with: "123456"
+        fill_in :user_new_password, with: "654321"
+        fill_in :user_new_password_confirmation, with: "654321"
+
+        click_on I18n.t("users.edit.save")
+      end
+
+      within ".flash" do
+        expect(page).to have_content "TODO success"
+      end
+
+      within ".edit_user" do
+        expect(page).to have_content "changed"
+      end
+    end
+
+    scenario "I can not manage users, moderate or administer the forum" do
+      login_as user
+
+      Thredded::Messageboard.create!(name: "Test board")
+      visit "/"
+
+      within ".header" do
+        expect(page).not_to have_content I18n.t("layouts.header.users")
+        click_on I18n.t("layouts.header.forum")
+      end
+
+      within ".thredded--main-section" do
+        expect(page).not_to have_content "Create a New Messageboard Group"
+        expect(page).not_to have_content "Create a New Messageboard"
+      end
+
+      within ".thredded--navigation" do
+        expect(page).not_to have_content "Moderation"
+      end
+    end
+  end
+
+  context "As a moderator" do
+    let(:moderator) { User.create(email: "user@dippy.com", password: "123456", short_name: "moderator", last_sign_in_at: Time.zone.now, volunteer: true) }
+
+    scenario "I can not manage users or forums, I can moderate posts" do
+      login_as moderator
+
+      Thredded::Messageboard.create!(name: "Test board")
+      visit "/"
+
+      within ".header" do
+        expect(page).not_to have_content I18n.t("layouts.header.users")
+        click_on I18n.t("layouts.header.forum")
+      end
+
+      within ".thredded--main-section" do
+        expect(page).not_to have_content "Create a New Messageboard Group"
+        expect(page).not_to have_content "Create a New Messageboard"
+      end
+
+      within ".thredded--navigation" do
+        expect(page).to have_content "Moderation"
+      end
+    end
+  end
+
   context "As an admin" do
+    let(:admin) { User.create(email: "admin@dippy.com", password: "123456", short_name: "admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now) }
+
     scenario "I can manage other users" do
       user = User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
-      admin = User.create(email: "admin@dippy.com", password: "123456", short_name: "admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now)
 
       login_as admin
       visit "/"
@@ -106,6 +187,25 @@ RSpec.feature "User" do
       within ".user-#{user.id}" do
         moderator_status = page.find("#user_volunteer")
         expect(moderator_status).to be_checked
+      end
+    end
+
+    scenario "I can administer and moderate the forums" do
+      login_as admin
+      visit "/forum"
+
+      within ".thredded--main-section" do
+        expect(page).to have_content "Create a New Messageboard Group"
+        click_on "Create a New Messageboard"
+      end
+
+      within ".thredded--main-section" do
+        fill_in :messageboard_name, with: "Test new message board"
+        click_on "Create a New Messageboard"
+      end
+
+      within ".thredded--navigation" do
+        expect(page).to have_content "Moderation"
       end
     end
   end

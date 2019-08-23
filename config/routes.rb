@@ -10,9 +10,6 @@ Rails.application.routes.draw do
   resources :categories, only: [:create]
 
   devise_scope :user do
-  #  get '/users/:id', to: "users#show"
-  #end
-  #authenticated :user do
     resources :users, only: [:index, :show, :update]
   end
 

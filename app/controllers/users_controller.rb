@@ -19,7 +19,6 @@ class UsersController < Devise::RegistrationsController
       redirect_to users_path, notice: t(".success", email: @user.email)
     else
       super
-      #redirect_to user_path(@user), notice: t(".success", email: @user.email)
     end
   end
 
