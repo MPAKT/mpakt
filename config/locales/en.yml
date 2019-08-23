@@ -44,7 +44,6 @@ en:
 
   privileges:
     index:
-      title: "Privilege calculator"
       subtitle: "Compare your privilege with friends and colleagues"
       preamble: "There is no perfect model for privilege. We look at how your family background (parents, grandparents) in the
       four privilege areas of ability, class, ethnicity, and gender correlate with your work experiences, primarily captured
@@ -55,6 +54,7 @@ en:
       retired: "If you have stopped working or never worked, please answer based on your experiences for an adult period you
       remember well, including your health / abilities / gender / education status at the time."
     form:
+      title: "Privilege calculator"
       privacy: "Your privilege score is stored anonymously and securely. We do not share this information with any third party."
       log_out_html: "To make sure of your anonymity, please <a class='link' href='/users/sign_out'>sign out</a>."
       education: "This calculator is intended to analyse careers, it is not recommended if you are still in full time education."
