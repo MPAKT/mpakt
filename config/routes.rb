@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users,
+    controllers: {
+      registrations: 'users'
+    }
+
   root "welcome#index"
 
   resources :privileges, only: [:create, :index]
   resources :categories, only: [:create]
 
-  authenticated :user do
-    resources :users, only: [:index, :update]
+  devise_scope :user do
+    resources :users, only: [:index, :show, :update]
   end
 
   get "/ts_and_cs", to: 'policies#ts_and_cs'

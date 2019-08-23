@@ -33,11 +33,17 @@ en:
       admin: "Admin"
       save: "Save"
     update:
-      success: "Updated permissions for %{email}"
+      success: "Successfully updated %{email}"
+    show:
+      title: "My profile"
+      save: "Save"
+      new_password: "New password"
+      new_password_confirmation: "Confirm new password"
+      moderator: "You have moderator permissions"
+      admin: "You have admin permissions"
 
   privileges:
     index:
-      title: "Privilege calculator"
       subtitle: "Compare your privilege with friends and colleagues"
       preamble: "There is no perfect model for privilege. We look at how your family background (parents, grandparents) in the
       four privilege areas of ability, class, ethnicity, and gender correlate with your work experiences, primarily captured
@@ -48,7 +54,10 @@ en:
       retired: "If you have stopped working or never worked, please answer based on your experiences for an adult period you
       remember well, including your health / abilities / gender / education status at the time."
     form:
-      background: "About your background"
+      title: "Privilege calculator"
+      privacy: "Your privilege score is stored anonymously and securely. We do not share this information with any third party."
+      log_out_html: "To make sure of your anonymity, please <a class='link' href='/users/sign_out'>sign out</a>."
+      education: "This calculator is intended to analyse careers, it is not recommended if you are still in full time education."
       now: "You and your current or last job"
       save: "Save and next"
       full_time: "Use the full time equivalent of your salary if you do not work full time"
@@ -248,10 +257,10 @@ en:
           non_paid: "Home-maker or not in paid work"
           not_say: "Prefer not to say"
         redundancies:
-          never: "Never been made redundant"
-          voluntary: "Chose voluntary redundancy"
-          once: "Made redundant once"
-          more_than_once: "Made redundant more than once"
+          never: "Never"
+          voluntary: "Voluntary"
+          once: "Once"
+          more_than_once: "More than once"
           r_not_say: "Prefer not to say"
         roles:
           manager: "Manager"
