@@ -34,6 +34,13 @@ en:
       save: "Save"
     update:
       success: "Updated permissions for %{email}"
+    show:
+      title: "My profile"
+      save: "Save"
+      new_password: "New password"
+      new_password_confirmation: "Confirm new password"
+      moderator: "You have moderator permissions"
+      admin: "You have admin permissions"
 
   privileges:
     index:
