@@ -94,6 +94,7 @@ RSpec.feature "User" do
     scenario "I can not manage users, moderate or administer the forum" do
       login_as user
 
+      user = User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
       Thredded::Messageboard.create!(name: "Test board")
       visit "/"
 
@@ -116,6 +117,12 @@ RSpec.feature "User" do
       within ".flash" do
         expect(page).to have_content I18n.t("errors.messages.not_authorized")
       end
+
+      visit "/users/#{user.id}"
+
+      within ".flash" do
+        expect(page).to have_content I18n.t("errors.messages.not_authorized")
+      end
     end
   end
 
@@ -125,6 +132,7 @@ RSpec.feature "User" do
     scenario "I can not manage users or forums, I can moderate posts" do
       login_as moderator
 
+      user = User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
       Thredded::Messageboard.create!(name: "Test board")
       visit "/"
 
@@ -143,6 +151,12 @@ RSpec.feature "User" do
       end
 
       visit "/users"
+
+      within ".flash" do
+        expect(page).to have_content I18n.t("errors.messages.not_authorized")
+      end
+
+      visit "/users/#{user.id}"
 
       within ".flash" do
         expect(page).to have_content I18n.t("errors.messages.not_authorized")
