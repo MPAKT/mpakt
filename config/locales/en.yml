@@ -55,7 +55,9 @@ en:
       retired: "If you have stopped working or never worked, please answer based on your experiences for an adult period you
       remember well, including your health / abilities / gender / education status at the time."
     form:
-      background: "About your background"
+      privacy: "Your privilege score is stored anonymously and securely. We do not share this information with any third party."
+      log_out_html: "To make sure of your anonymity, please <a class='link' href='/users/sign_out'>sign out</a>."
+      education: "This calculator is intended to analyse careers, it is not recommended if you are still in full time education."
       now: "You and your current or last job"
       save: "Save and next"
       full_time: "Use the full time equivalent of your salary if you do not work full time"
