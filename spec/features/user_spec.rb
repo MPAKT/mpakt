@@ -14,7 +14,7 @@ RSpec.feature "User" do
       end
 
       within ".new_user" do
-        fill_in :user_email, with: "user@dippy.com"
+        fill_in :user_email, with: "new_user@dippy.com"
         fill_in :user_short_name, with: "shorty"
         fill_in :user_password, with: "123456"
         fill_in :user_password_confirmation, with: "123456"
@@ -44,7 +44,7 @@ RSpec.feature "User" do
       end
 
       within ".new_user" do
-        fill_in :user_email, with: "user@dippy.com"
+        fill_in :user_email, with: "new_user@dippy.com"
         fill_in :user_password, with: "123456"
 
         click_on I18n.t("devise.sessions.new.sign_in")
@@ -94,7 +94,7 @@ RSpec.feature "User" do
     scenario "I can not manage users, moderate or administer the forum" do
       login_as user
 
-      user = User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
+      user = User.create(email: "no_access_user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
       Thredded::Messageboard.create!(name: "Test board")
       visit "/"
 
@@ -127,12 +127,12 @@ RSpec.feature "User" do
   end
 
   context "As a moderator" do
-    let(:moderator) { User.create(email: "user@dippy.com", password: "123456", short_name: "moderator", last_sign_in_at: Time.zone.now, volunteer: true) }
+    let(:moderator) { User.create(email: "moderator@dippy.com", password: "123456", short_name: "moderator", last_sign_in_at: Time.zone.now, volunteer: true) }
 
     scenario "I can not manage users or forums, I can moderate posts" do
       login_as moderator
 
-      user = User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
+      user = User.create!(email: "another_user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
       Thredded::Messageboard.create!(name: "Test board")
       visit "/"
 
@@ -168,7 +168,7 @@ RSpec.feature "User" do
     let(:admin) { User.create(email: "admin@dippy.com", password: "123456", short_name: "admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now) }
 
     scenario "I can manage other users" do
-      user = User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
+      user = User.create(email: "other_user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
 
       login_as admin
       visit "/"
@@ -182,7 +182,7 @@ RSpec.feature "User" do
         rows = page.all("tr")
         expect(rows.count).to eq 3
         expect(rows[1]).to have_content "admin@dippy.com admin #{today}"
-        expect(rows[2]).to have_content "user@dippy.com user #{today}"
+        expect(rows[2]).to have_content "other_user@dippy.com user #{today}"
       end
 
       within ".user-#{admin.id}" do
