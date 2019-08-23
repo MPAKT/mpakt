@@ -51,6 +51,10 @@ body {
 }
 
 .footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
   .menu-holder {
     border-top: 1px solid $lightgrey;
   }

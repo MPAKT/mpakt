@@ -7,12 +7,9 @@ class UsersController < Devise::RegistrationsController
     @users = User.all.order(last_sign_in_at: :desc)
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
+  def show; end
 
   def update
-    @user = User.find(params[:id])
     @user.update(user_params)
 
     if request.referer.ends_with?("users")
@@ -23,7 +20,8 @@ class UsersController < Devise::RegistrationsController
   end
 
   def changes_allowed
-    return if UserPolicy.manage?(current_user)
+    @user = User.find(params[:id]) if params[:id]
+    return if UserPolicy.manage?(current_user, @user)
 
     redirect_to root_url, notice: t("errors.messages.not_authorized")
   end
