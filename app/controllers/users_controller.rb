@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < Devise::RegistrationsController
-  before_action :changes_allowed
+  before_action :changes_allowed, except: [:new, :create]
 
   def index
     @users = User.all.order(last_sign_in_at: :desc)
@@ -12,12 +12,11 @@ class UsersController < Devise::RegistrationsController
   def update
     @user.update(user_params)
 
-    if request.referer.ends_with?("users")
-      redirect_to users_path, notice: t(".success", email: @user.email)
-    else
-      super
-    end
+    redirect_path = request.referer.ends_with?("users") ? users_path : user_path(@user.id)
+    redirect_to redirect_path, notice: t(".success", email: @user.email)
   end
+
+  private
 
   def changes_allowed
     @user = User.find(params[:id]) if params[:id]

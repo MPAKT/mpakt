@@ -53,12 +53,6 @@ RSpec.feature "User" do
       within ".flash" do
         expect(page).to have_content I18n.t("devise.sessions.signed_in")
       end
-
-      visit "/users"
-
-      within ".flash" do
-        expect(page).to have_content I18n.t("errors.messages.not_authorized")
-      end
     end
   end
 
@@ -79,19 +73,21 @@ RSpec.feature "User" do
 
       within ".edit_user" do
         fill_in :user_short_name, with: "changed"
-        fill_in :user_password, with: "123456"
+        fill_in :user_current_password, with: "123456"
         fill_in :user_new_password, with: "654321"
         fill_in :user_new_password_confirmation, with: "654321"
 
-        click_on I18n.t("users.edit.save")
+        click_on I18n.t("users.show.save")
       end
 
       within ".flash" do
-        expect(page).to have_content "TODO success"
+        notice = I18n.t("users.update.success", email: "user@dippy.com")
+        expect(page).to have_content notice
       end
 
       within ".edit_user" do
-        expect(page).to have_content "changed"
+        short_name = page.find("#user_short_name")
+        expect(short_name.value).to eq "changed"
       end
     end
 
@@ -113,6 +109,12 @@ RSpec.feature "User" do
 
       within ".thredded--navigation" do
         expect(page).not_to have_content "Moderation"
+      end
+
+      visit "/users"
+
+      within ".flash" do
+        expect(page).to have_content I18n.t("errors.messages.not_authorized")
       end
     end
   end
@@ -138,6 +140,12 @@ RSpec.feature "User" do
 
       within ".thredded--navigation" do
         expect(page).to have_content "Moderation"
+      end
+
+      visit "/users"
+
+      within ".flash" do
+        expect(page).to have_content I18n.t("errors.messages.not_authorized")
       end
     end
   end

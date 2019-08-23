@@ -33,7 +33,7 @@ en:
       admin: "Admin"
       save: "Save"
     update:
-      success: "Updated permissions for %{email}"
+      success: "Successfully updated %{email}"
     show:
       title: "My profile"
       save: "Save"
