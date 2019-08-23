@@ -255,10 +255,10 @@ en:
           non_paid: "Home-maker or not in paid work"
           not_say: "Prefer not to say"
         redundancies:
-          never: "Never been made redundant"
-          voluntary: "Chose voluntary redundancy"
-          once: "Made redundant once"
-          more_than_once: "Made redundant more than once"
+          never: "Never"
+          voluntary: "Voluntary"
+          once: "Once"
+          more_than_once: "More than once"
           r_not_say: "Prefer not to say"
         roles:
           manager: "Manager"
