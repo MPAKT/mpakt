@@ -42,6 +42,9 @@ gem "country_select"
 # Thredded forum library
 gem "thredded"
 
+# Emoji library
+gem "twemoji"
+
 # ActiveJob library needed by thredded
 gem "sucker_punch"
 
