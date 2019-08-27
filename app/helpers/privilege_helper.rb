@@ -17,7 +17,6 @@ module PrivilegeHelper
     keys = Privilege.roles.keys.sort
     other_index = keys.index("other")
     last_index = keys.count - 1
-    puts "========="
 
     other = keys.delete_at(other_index)
     keys[last_index] = other
