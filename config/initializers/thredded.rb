@@ -118,6 +118,10 @@ Thredded.email_from = 'dippy.moderator@gmail.com'
 # 2. Uncomment the following line:
 # Thredded::ContentFormatter.after_markup_filters.insert(1, HTML::Pipeline::EmojiFilter)
 
+# ===> Emoji using the 'twemoji' gem
+require 'html_pipeline_twemoji'
+Thredded::ContentFormatter.after_markup_filters.insert(1, HTMLPipelineTwemoji)
+
 # Change the HTML sanitization settings used by Thredded.
 # See the Sanitize docs for more information on the underlying library: https://github.com/rgrove/sanitize/#readme
 # E.g. to allow a custom element <custom-element>:
