@@ -14,7 +14,14 @@ module PrivilegeHelper
   end
 
   def role_collection
-    Privilege.roles.keys.map do |role_category|
+    keys = Privilege.roles.keys.sort
+    other_index = keys.index("other")
+    last_index = keys.count - 1
+
+    other = keys.delete_at(other_index)
+    keys[last_index] = other
+
+    keys.map do |role_category|
       [t(role_category, scope: role_category_scope), role_category]
     end
   end
