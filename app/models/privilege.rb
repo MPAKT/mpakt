@@ -27,13 +27,13 @@ class Privilege < ApplicationRecord
     manager
     professional
     technician
-    clerical
+    administrative
     service
     agriculture
     craft
     factory
     armed
-    domestic
+    food
     other
   ]
 
