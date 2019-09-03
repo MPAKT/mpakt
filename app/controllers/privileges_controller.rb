@@ -14,7 +14,7 @@ class PrivilegesController < ApplicationController
   end
 
   def salaries
-    redirect_to root_url, notice: t("errors.messages.not_authorized") unless current_user.admin?
+    redirect_to root_url, notice: t("errors.messages.not_authorized") unless current_user&.admin?
     salary_buckets
   end
 

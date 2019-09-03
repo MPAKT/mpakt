@@ -151,5 +151,56 @@ RSpec.feature "Privilege" do
         expect(page).to have_content "100%"
       end
     end
+
+    scenario "I can not see the salary summary" do
+      visit "/salaries"
+
+      within ".flash" do
+        expect(page).to have_content I18n.t("errors.messages.not_authorized")
+      end
+    end
+
   end
+
+  context "As an authenticated user" do
+    let(:user) { User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now) }
+    scenario "I can not see the salary summary" do
+      login_as user
+
+      visit "/"
+
+      within ".header" do
+        expect(page).not_to have_content I18n.t("layouts.header.salaries")
+      end
+
+      visit "/salaries"
+
+      within ".flash" do
+        expect(page).to have_content I18n.t("errors.messages.not_authorized")
+      end
+    end
+  end
+
+  context "As an authenticated admin" do
+    let(:admin) { User.create(email: "admin@dippy.com", password: "123456", short_name: "admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now) }
+
+    scenario "I can see the salary summary" do
+      privilege = Privilege.create(salary: 5)
+      4.times do |index|
+        Category.create(privilege_id: privilege.id, subtype: index, a: 2, b: 2, c: 2, d: 2)
+      end
+
+      login_as admin
+      visit "/"
+
+      within ".header" do
+        click_on I18n.t("layouts.header.salaries")
+      end
+
+      within ".salaries" do
+        expect(page).to have_content "7.00 7.0 7 7 [7]"
+      end
+    end
+  end
+
 end
