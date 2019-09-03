@@ -33,6 +33,17 @@ module PrivilegeHelper
     end
   end
 
+  def mean(bucket)
+    return 0 if bucket.length == 0
+    bucket.sum / bucket.size.to_f
+  end
+
+  def median(bucket)
+    len = bucket.length
+    return 0 if len == 0
+    (bucket[(len - 1) / 2] + bucket[len / 2]) / 2.0
+  end
+
   private
 
   def salary_range_scope
