@@ -1,0 +1,28 @@
+<h3><%= t(".title") %></h3>
+
+<table class="salaries">
+  <thead>
+    <tr>
+      <th><%= t(".salary") %></th>
+      <th><%= t(".mean") %></th>
+      <th><%= t(".median") %></th>
+      <th><%= t(".highest") %></th>
+      <th><%= t(".lowest") %></th>
+      <th><%= t(".scores") %></th>
+    </tr>
+  </thead>
+
+
+
+  <% @salaries.each_with_index do |bucket, index| %>
+    <tr>
+      <% salary_range = Privilege.salaries.key(index) %>
+      <td><%= I18n.t("activerecord.attributes.privilege.salaries.#{salary_range}") %></td>
+      <td><%= number_with_precision(mean(bucket), precision: 2) %></td>
+      <td><%= median(bucket) %></td>
+      <td><%= bucket.first %></td>
+      <td><%= bucket.last %></td>
+      <td><%= bucket %></td>
+    </tr>
+  <% end %>
+</table>

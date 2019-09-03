@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     resources :users, only: [:index, :show, :update]
+    get "/salaries", to: 'privileges#salaries'
   end
 
   get "/ts_and_cs", to: 'policies#ts_and_cs'

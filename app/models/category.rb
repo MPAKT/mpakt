@@ -11,7 +11,7 @@ class Category < ApplicationRecord
   ]
 
   def percent_for_subtype
-    score = value_for_subtype
+    score = value_for_subtype || 25
     score * 100 / 25
   end
 

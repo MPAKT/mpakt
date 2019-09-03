@@ -28,12 +28,17 @@
         <div class="link"><%= t(".forum") %></div>
       <% end %>
     </div>
-    <div class="link-holder">
-      <% if current_user&.admin? %>
+    <% if current_user&.admin? %>
+      <div class="link-holder">
         <%= link_to users_path do %>
           <div class="link"><%= t(".users") %></div>
         <% end %>
-      <% end %>
-    </div>
+      </div>
+      <div class="link-holder">
+        <%= link_to salaries_path do %>
+          <div class="link"><%= t(".salaries") %></div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
