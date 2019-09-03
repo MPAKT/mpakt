@@ -34,14 +34,14 @@ module PrivilegeHelper
   end
 
   def mean(bucket)
-    return 0 if bucket.length == 0
+    return 0 if bucket.empty?
     bucket.sum / bucket.size.to_f
   end
 
   def median(bucket)
-    len = bucket.length
-    return 0 if len == 0
-    (bucket[(len - 1) / 2] + bucket[len / 2]) / 2.0
+    length = bucket.length
+    return 0 if length.zero?
+    (bucket[(length - 1) / 2] + bucket[length / 2]) / 2.0
   end
 
   private
