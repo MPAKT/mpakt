@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users,
     controllers: {
       registrations: 'users'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     resources :users, only: [:index, :show, :update]
+    resources :blogs
     get "/salaries", to: 'privileges#salaries'
   end
 

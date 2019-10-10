@@ -45,6 +45,10 @@ gem "thredded"
 # Emoji library
 gem "twemoji"
 
+# Wysiwyg editor for cms use, paperclip to store images
+gem "ckeditor"
+gem "paperclip"
+
 # ActiveJob library needed by thredded
 gem "sucker_punch"
 
