@@ -2,6 +2,7 @@
   <%= f.input :title, as: :string %>
   <%= f.input :summary, as: :string %>
   <%= f.input :description, as: :ckeditor, input_html: { ckeditor: { toolbar: 'standard' } } %>
+  <%= f.cktext_area :description, class: 'someclass', ckeditor: { toolbar: 'mini' } %>
 
   <div class="input">
     <%= link_to t(".cancel"), blogs_path, class: "btn secondary" %>

@@ -51,6 +51,9 @@ gem "sucker_punch"
 # Wysiwyg editor for cms use
 gem "ckeditor"
 
+# ckeditor has a dependency on jquery
+gem "jquery-rails"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
