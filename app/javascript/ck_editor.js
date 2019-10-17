@@ -8,10 +8,15 @@ const CkEditor = () => {
     }
 
     console.log("Ck editor load")
-    ClassicEditor.create( document.querySelector( '#blog_description' ) )
-                 .catch( error => {
+    ClassicEditor.create( document.querySelector( '#blog_description' ), {
+    	                    removePlugins: [ 'ImageToolbar', 'ImageCaption', 'ImageStyle', 'MediaEmbed' ],
+    		                  image: {} })
+                  .catch( error => {
                     console.error( error );
-                 });
+                  });
+
+    $().hide();
+
   });
 };
 
