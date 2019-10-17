@@ -53,6 +53,9 @@ en:
       cancel: "Cancel"
       submit: "Save"
       image_info: "For example, https://images.unsplash.com/photo-1544367567-0f2fcb009e0b"
+    show:
+      edit: "Edit"
+      back: "All posts"
 
 
   privileges:

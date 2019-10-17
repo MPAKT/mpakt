@@ -1,5 +1,8 @@
 <% if current_user&.admin? %>
-  <div class="right"><%= link_to t(".edit"), edit_blog_path(@blog), class: "btn" %></div>
+  <div class="right">
+    <%= link_to t(".back"), blogs_path, class: "btn" %>
+    <%= link_to t(".edit"), edit_blog_path(@blog), class: "btn" %>
+  </div>
 <% end %>
 
 <h1><%= @blog.title %></h1>
