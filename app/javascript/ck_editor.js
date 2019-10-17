@@ -8,12 +8,10 @@ const CkEditor = () => {
     }
 
     console.log("Ck editor load")
-    if (typeof CKEDITOR != 'undefined') {
-      if (CKEDITOR.instances['blog_description']) { CKEDITOR.instances['blog_description'].destroy(); }
-      CKEDITOR.replace('blog_description', {"toolbar":"mini"});
-    } else {
-      console.log("CKEDITOR undefined")
-    }
+    ClassicEditor.create( document.querySelector( '#blog_description' ) )
+                 .catch( error => {
+                    console.error( error );
+                 });
   });
 };
 

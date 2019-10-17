@@ -295,7 +295,7 @@ en:
       blog:
         title: "Title"
         summary: "Summary"
-        description: "Description"
+        description: "Blog content"
         image: "Link to image"
 
   errors:
