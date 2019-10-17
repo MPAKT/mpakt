@@ -4,9 +4,11 @@
   <div class="right"><%= link_to t(".create"), new_blog_path, class: "btn" %></div>
 <% end %>
 
-<% @blogs.each do |blog| %>
-  <%= link_to blog_path(blog) do %>
-    <h3><%= blog.title %></h3>
-    <p><%= blog.summary %></p>
+<div class="blogs">
+  <% @blogs.each do |blog| %>
+    <%= link_to blog_path(blog) do %>
+      <h3><%= blog.title %></h3>
+      <span><%= blog.summary %></span>
+    <% end %>
   <% end %>
-<% end %>
+</div>

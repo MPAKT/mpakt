@@ -1,4 +1,4 @@
-.new_blog {
+.new_blog, .edit_blog {
 
   .input {
     margin: 4px 0;
@@ -12,5 +12,11 @@
   input.string {
     display: inline-block;
     width: 400px;
+  }
+}
+
+.blogs {
+  h3 {
+    margin-bottom: 0;
   }
 }

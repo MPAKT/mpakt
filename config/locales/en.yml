@@ -45,7 +45,7 @@ en:
 
   blogs:
     index:
-      title: "Blog"
+      title: "Blog posts"
       create: "Create new post"
     new:
       title: "New post"
