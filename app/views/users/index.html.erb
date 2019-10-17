@@ -12,7 +12,7 @@
 
   <tbody>
     <% @users.each do |user| %>
-      <%= simple_form_for user, url: user_path(user.id), data: { inline: true } do |f| %>
+      <%= simple_form_for user do |f| %>
         <tr class="user-<%= user.id %>">
           <td><%= user.email %></td>
           <td><%= user.short_name %></td>

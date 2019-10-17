@@ -20,6 +20,8 @@ require('jquery')
 
 import Turbolinks from 'turbolinks';
 import CkEditor from '../ck_editor.js';
+import Inline from '../inline.js';
 
 Turbolinks.start();
 CkEditor();
+Inline();
