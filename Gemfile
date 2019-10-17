@@ -48,9 +48,6 @@ gem "twemoji"
 # ActiveJob library needed by thredded
 gem "sucker_punch"
 
-# Wysiwyg editor for cms use
-gem "ckeditor"
-
 # ckeditor has a dependency on jquery
 gem "jquery-rails"
 
