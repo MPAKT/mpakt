@@ -18,6 +18,8 @@
 require("@rails/ujs").start()
 require('jquery')
 
+import Turbolinks from 'turbolinks';
 import CkEditor from '../ck_editor.js';
 
+Turbolinks();
 CkEditor();
