@@ -43,6 +43,16 @@ en:
       moderator: "You have moderator permissions"
       admin: "You have admin permissions"
 
+  blogs:
+    index:
+      title: "Blog"
+    new:
+      title: "Create blog post"
+    form:
+      cancel: "Cancel"
+      submit: "Save"
+
+
   privileges:
     index:
       subtitle: "Compare your privilege with friends and colleagues"
@@ -282,6 +292,11 @@ en:
         ability: "Ability"
       users:
         short_name: "Name"
+      blog:
+        title: "Title"
+        summary: "Summary"
+        description: "Description"
+        image: "Link to image"
 
   errors:
     messages:

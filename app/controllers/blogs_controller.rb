@@ -3,7 +3,11 @@
 class BlogsController < ApplicationController
   before_action :changes_allowed, except: %i[index show]
 
-  def index; end
+  def index
+    @blogs = Blog.all
+  end
+
+  def new; end
 
   def show; end
 
@@ -16,7 +20,7 @@ class BlogsController < ApplicationController
   private
 
   def changes_allowed
-    return true if user.admin?
+    return true if current_user.admin?
     false
   end
 
