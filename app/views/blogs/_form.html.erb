@@ -1,7 +1,7 @@
 <%= simple_form_for blog do |f| %>
   <%= f.input :title, as: :string %>
   <%= f.input :summary, as: :string %>
-  <%= f.input :description, class: "ckeditor" %>
+  <%= f.input :description %>
 
   <div class="input">
     <%= link_to t(".cancel"), blogs_path, class: "btn secondary" %>

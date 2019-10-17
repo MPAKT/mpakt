@@ -21,5 +21,5 @@ require('jquery')
 import Turbolinks from 'turbolinks';
 import CkEditor from '../ck_editor.js';
 
-Turbolinks();
+Turbolinks.start();
 CkEditor();
