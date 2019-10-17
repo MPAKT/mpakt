@@ -17,3 +17,7 @@
 
 require("@rails/ujs").start()
 require('jquery')
+
+import CkEditor from '../ck_editor.js';
+
+CkEditor();
