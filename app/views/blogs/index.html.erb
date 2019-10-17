@@ -1,9 +1,12 @@
-<%= t(".title") %>
+<h1><%= t(".title") %></h1>
 
 <% if current_user&.admin? %>
-  <%= link_to t(".create"), new_blog_path %>
+  <div class="right"><%= link_to t(".create"), new_blog_path, class: "btn" %></div>
 <% end %>
 
 <% @blogs.each do |blog| %>
-  <h3><%= blog.title %></h3>
+  <%= link_to blog_path(blog) do %>
+    <h3><%= blog.title %></h3>
+    <p><%= blog.summary %></p>
+  <% end %>
 <% end %>

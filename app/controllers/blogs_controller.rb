@@ -9,9 +9,14 @@ class BlogsController < ApplicationController
 
   def new; end
 
-  def show; end
+  def show
+    @blog = Blog.find(params[:id])
+  end
 
-  def create; end
+  def create
+    @blog = Blog.create(blog_params)
+    redirect_to blogs_path
+  end
 
   def update; end
 
@@ -24,8 +29,7 @@ class BlogsController < ApplicationController
     false
   end
 
-  def blogs_params
+  def blog_params
     params.require(:blog).permit(:title, :summary, :description, :image)
   end
 end
-
