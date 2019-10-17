@@ -48,6 +48,9 @@ gem "twemoji"
 # ActiveJob library needed by thredded
 gem "sucker_punch"
 
+# Wysiwyg editor for cms use
+gem "ckeditor"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
