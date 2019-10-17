@@ -49,4 +49,22 @@ RSpec.feature "Blog" do
       end
     end
   end
+
+  context "As an user" do
+    let(:user) { User.create(email: "user@dippy.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now) }
+
+    scenario "I can not edit blog posts" do
+      login_as user
+
+      visit "/blogs"
+
+      expect(page).not_to have_content I18n.t("blogs.index.create")
+
+      visit "/blogs/new"
+
+      within ".flash" do
+        expect(page).to have_content I18n.t("errors.messages.not_authorized")
+      end
+    end
+  end
 end

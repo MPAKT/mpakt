@@ -33,8 +33,9 @@ class BlogsController < ApplicationController
   private
 
   def changes_allowed
-    return true if current_user.admin?
-    false
+    return if current_user&.admin?
+
+    redirect_to root_url, notice: t("errors.messages.not_authorized")
   end
 
   def blog_params
