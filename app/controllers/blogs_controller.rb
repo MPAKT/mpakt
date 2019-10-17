@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class BlogsController < ApplicationController
-  before_action :changes_allowed, except: %i[index show]
+  before_action :blogging_allowed, except: %i[index show]
 
   def index
     @blogs = Blog.all
@@ -32,7 +32,7 @@ class BlogsController < ApplicationController
 
   private
 
-  def changes_allowed
+  def blogging_allowed
     return if current_user&.admin?
 
     redirect_to root_url, notice: t("errors.messages.not_authorized")

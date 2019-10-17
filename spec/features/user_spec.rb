@@ -192,6 +192,11 @@ RSpec.feature "User" do
         expect(moderator_status).to be_checked
       end
 
+      puts "=========="
+      puts user.email
+      puts user.id
+      puts "=========="
+
       within ".user-#{user.id}" do
         admin_status = page.find("#user_admin")
         expect(admin_status).not_to be_checked
