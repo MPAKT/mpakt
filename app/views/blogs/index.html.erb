@@ -1,0 +1,14 @@
+<h1><%= t(".title") %></h1>
+
+<% if current_user&.admin? %>
+  <div class="right"><%= link_to t(".create"), new_blog_path, class: "btn" %></div>
+<% end %>
+
+<div class="blogs">
+  <% @blogs.each do |blog| %>
+    <%= link_to blog_path(blog) do %>
+      <h3><%= blog.title %></h3>
+      <span><%= blog.summary %></span>
+    <% end %>
+  <% end %>
+</div>

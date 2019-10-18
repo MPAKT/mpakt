@@ -7,3 +7,29 @@ td, th {
   padding: 4px;
   border: 1px solid grey;
 }
+
+.cell {
+  display: inline-block;
+  width: 80px;
+  border-right: 1px solid grey;
+
+  .input {
+    display: inline-block;
+    min-width: unset;
+    width: 76px;
+    text-align: center;
+    padding: 4px;
+  }
+
+  .btn {
+    margin-left: 13px;
+  }
+}
+
+.cell:last-child {
+  border-right: none;
+}
+
+.split {
+  padding: 0;
+}

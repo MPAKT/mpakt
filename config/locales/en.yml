@@ -9,6 +9,11 @@ en:
       calculator_html: "Calculate your privilege score with the <a class='link' href='/privileges'>privilege calculator</a>"
       why_html: "Why did we build DIPpy and what will you find here? <a class='link' href='/goals'>Find out more</a>"
 
+  success:
+    create: "Created %{name}"
+    update: "Updated %{name}"
+    delete: "Deleted %{name}"
+
   layouts:
     header:
       title: "DIPpy"
@@ -29,7 +34,7 @@ en:
       title: "Users"
       email: "Email"
       short_name: "Name"
-      volunteer: "Moderator"
+      moderator: "Moderator"
       last_sign_in: "Last sign in"
       admin: "Admin"
       save: "Save"
@@ -42,6 +47,23 @@ en:
       new_password_confirmation: "Confirm new password"
       moderator: "You have moderator permissions"
       admin: "You have admin permissions"
+
+  blogs:
+    index:
+      title: "Blog posts"
+      create: "Create new post"
+    new:
+      title: "New post"
+    form:
+      cancel: "Cancel"
+      submit: "Save"
+      image_info: "For example, https://images.unsplash.com/photo-1544367567-0f2fcb009e0b"
+    show:
+      edit: "Edit"
+      back: "All posts"
+    edit:
+      title: "Edit %{name}"
+      delete: "Delete"
 
   privileges:
     index:
@@ -282,6 +304,12 @@ en:
         ability: "Ability"
       users:
         short_name: "Name"
+      blog:
+        title: "Title"
+        summary: "Summary"
+        description: "Blog content"
+        image: "Link to image"
+        publish: "Publish"
 
   errors:
     messages:
