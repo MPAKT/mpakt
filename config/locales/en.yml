@@ -9,6 +9,11 @@ en:
       calculator_html: "Calculate your privilege score with the <a class='link' href='/privileges'>privilege calculator</a>"
       why_html: "Why did we build DIPpy and what will you find here? <a class='link' href='/goals'>Find out more</a>"
 
+  success:
+    create: "Created %{name}"
+    update: "Updated %{name}"
+    delete: "Deleted %{name}"
+
   layouts:
     header:
       title: "DIPpy"
@@ -58,6 +63,7 @@ en:
       back: "All posts"
     edit:
       title: "Edit %{name}"
+      delete: "Delete"
 
   privileges:
     index:

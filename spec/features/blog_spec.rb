@@ -20,6 +20,10 @@ RSpec.feature "Blog" do
         click_on I18n.t("blogs.form.submit")
       end
 
+      within ".flash" do
+        expect(page).to have_content I18n.t("success.create", name: "Test title")
+      end
+
       within ".blog" do
         expect(page).to have_content "Test title"
         expect(page).to have_content "Summary test"
@@ -34,7 +38,12 @@ RSpec.feature "Blog" do
         click_on I18n.t("blogs.form.submit")
       end
 
+      within ".flash" do
+        expect(page).to have_content I18n.t("success.update", name: "Test title")
+      end
+
       within ".blog" do
+        expect(page).to have_content "Test title"
         expect(page).to have_content "Edited"
         expect(page).not_to have_content "Summary test"
       end
@@ -46,7 +55,27 @@ RSpec.feature "Blog" do
       within ".blogs" do
         expect(page).to have_content "Edited"
         expect(page).to have_content "Test title"
+
+        click_on "Test title"
       end
+
+      within ".right" do
+        click_on I18n.t("blogs.show.edit")
+      end
+
+      within ".right" do
+        click_on I18n.t("blogs.edit.delete")
+      end
+
+      within ".flash" do
+        expect(page).to have_content I18n.t("success.delete", name: "Test title")
+      end
+
+      within ".blogs" do
+        expect(page).not_to have_content "Edited"
+        expect(page).not_to have_content "Test title"
+      end
+
     end
   end
 

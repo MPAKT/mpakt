@@ -15,25 +15,26 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
   end
 
-  def create
-    @blog = Blog.create(blog_params)
-    redirect_to blog_path(@blog)
-  end
-
   def edit
     @blog = Blog.find(params[:id])
+  end
+
+  def create
+    @blog = Blog.create(blog_params)
+    redirect_to blog_path(@blog), notice: t("success.create", name: @blog.title)
   end
 
   def update
     @blog = Blog.find(params[:id])
     @blog.update(blog_params)
-    redirect_to blog_path(@blog)
+    redirect_to blog_path(@blog), notice: t("success.update", name: @blog.title)
   end
 
   def destroy
     @blog = Blog.find(params[:id])
+    name = @blog.title
     @blog.destroy
-    redirect_to blogs_path
+    redirect_to blogs_path, notice: t("success.delete", name: name)
   end
 
   private
