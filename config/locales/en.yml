@@ -34,7 +34,7 @@ en:
       title: "Users"
       email: "Email"
       short_name: "Name"
-      volunteer: "Moderator"
+      moderator: "Moderator"
       last_sign_in: "Last sign in"
       admin: "Admin"
       save: "Save"

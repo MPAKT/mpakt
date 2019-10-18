@@ -5,23 +5,27 @@
     <th><%= t(".email") %></th>
     <th><%= t(".short_name") %></th>
     <th><%= t(".last_sign_in") %></th>
-    <th><%= t(".moderator") %></th>
-    <th><%= t(".admin") %></th>
-    <th></th>
+    <th class="split">
+      <span class="cell"><%= t(".moderator") %></span>
+      <span class="cell"><%= t(".admin") %></span>
+      <span class="cell"></span>
+    </th>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
-      <%= simple_form_for user do |f| %>
-        <tr class="user-<%= user.id %>">
-          <td><%= user.email %></td>
-          <td><%= user.short_name %></td>
-          <td><%= I18n.l(user.last_sign_in_at.to_date, format: :short) %></td>
-          <td><%= f.input :volunteer, label: false %></td>
-          <td><%= f.input :admin, label: false %></td>
-          <td><%= f.submit t(".save"), class:"btn" %></td>
-        </tr>
-      <% end %>
+      <tr class="user-<%= user.id %>">
+        <td><%= user.email %></td>
+        <td><%= user.short_name %></td>
+        <td><%= I18n.l(user.last_sign_in_at.to_date, format: :short) %></td>
+        <td class="split">
+          <%= simple_form_for user do |f| %>
+            <span class="cell"><%= f.input :volunteer, label: false %></span>
+            <span class="cell"><%= f.input :admin, label: false %></span>
+            <span class="cell"><%= f.submit t(".save"), class:"btn" %></span>
+          <% end %>
+        </td>
+      </tr>
     <% end %>
   </tbody>
 </table>
