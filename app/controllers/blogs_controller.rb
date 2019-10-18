@@ -4,10 +4,12 @@ class BlogsController < ApplicationController
   before_action :blogging_allowed, except: %i[index show]
 
   def index
-    @blogs = Blog.all
+    @blogs = if current_user&.admin?
+               Blog.all
+             else
+               Blog.live
+             end
   end
-
-  def new; end
 
   def show
     @blog = Blog.find(params[:id])
@@ -28,7 +30,11 @@ class BlogsController < ApplicationController
     redirect_to blog_path(@blog)
   end
 
-  def destroy; end
+  def destroy
+    @blog = Blog.find(params[:id])
+    @blog.destroy
+    redirect_to blogs_path
+  end
 
   private
 
@@ -39,6 +45,6 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title, :summary, :description, :image)
+    params.require(:blog).permit(:title, :summary, :description, :image, :publish)
   end
 end

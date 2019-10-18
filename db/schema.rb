@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_10_17_095742) do
     t.text "summary"
     t.text "description"
     t.string "image"
+    t.boolean "publish"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -56,7 +56,8 @@ en:
     show:
       edit: "Edit"
       back: "All posts"
-
+    edit:
+      title: "Edit %{name}"
 
   privileges:
     index:
@@ -302,6 +303,7 @@ en:
         summary: "Summary"
         description: "Blog content"
         image: "Link to image"
+        publish: "Publish"
 
   errors:
     messages:

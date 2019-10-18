@@ -5,6 +5,7 @@ class CreateBlogs < ActiveRecord::Migration[5.2]
       t.text :summary
       t.text :description
       t.string :image
+      t.boolean :publish
 
       t.timestamps
     end
