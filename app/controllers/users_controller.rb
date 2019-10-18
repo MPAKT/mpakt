@@ -10,9 +10,6 @@ class UsersController < Devise::RegistrationsController
   def show; end
 
   def update
-    puts "==========="
-    puts "Update user"
-    puts "==========="
     @user.update(user_params)
 
     redirect_path = request.referer.ends_with?("users") ? users_path : user_path(@user.id)
@@ -30,15 +27,8 @@ class UsersController < Devise::RegistrationsController
   private
 
   def changes_allowed
-    puts "==========="
-    puts "Changes allowed"
-    puts "-----------"
-
     @user = User.find(params[:id]) if params[:id]
     return if UserPolicy.manage?(current_user, @user)
-
-    puts "No"
-    puts "==========="
 
     redirect_to root_url, notice: t("errors.messages.not_authorized")
   end
