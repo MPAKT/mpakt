@@ -49,6 +49,17 @@
 }
 
 .blog {
+  width: 100%;
+
+  h1, h3, .image-holder {
+    text-align: center;
+  }
+
+  .image-holder {
+    margin: 0 auto;
+    width: 400px;
+  }
+
   img {
     max-width: 100%;
     max-height: 260px;
