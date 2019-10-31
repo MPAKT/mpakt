@@ -10,7 +10,7 @@ RSpec.feature "Blog" do
 
       visit "/blogs"
 
-      within ".right" do
+      within ".main" do
         click_on I18n.t("blogs.index.create")
       end
 

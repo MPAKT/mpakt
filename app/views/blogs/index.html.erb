@@ -1,8 +1,7 @@
-<h1><%= t(".title") %></h1>
-
 <% if current_user&.admin? %>
   <div><%= link_to t(".create"), new_blog_path, class: "btn right" %></div>
 <% end %>
+<h1><%= t(".title") %></h1>
 
 <div class="blogs">
   <% @blogs.each do |blog| %>

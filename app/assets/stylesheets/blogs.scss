@@ -43,7 +43,8 @@
   width: 260px;
   height: 320px;
   display: inline-block;
-  margin: 12px;
+  vertical-align: top;
+  margin: 12px 6px;
   border: 1px solid $lightgrey;
   padding: 12px;
 }
