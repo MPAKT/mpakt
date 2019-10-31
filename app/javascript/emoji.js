@@ -3,6 +3,7 @@ import EmojiButton from 'emoji-button';
 
 const Emoji = () => {
   $(document).on('turbolinks:load', event => {
+    console.log("Page load")
     if ($("#post_content").length > 0) {
       initButton("#post_content");
     }
@@ -22,6 +23,8 @@ const Emoji = () => {
     $emojiHolder.className = "emoji-icon"
     $emojiHolder.innerHTML = "<img src='/assets/images/smiley.png'/>"
     $emojiButton.append($emojiHolder);
+
+    console.log("Will add emojis button next")
 
     emojiable.append($emojiButton);
     const picker = new EmojiButton();
