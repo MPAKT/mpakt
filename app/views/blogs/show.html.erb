@@ -6,7 +6,6 @@
 <% end %>
 
 <div class="blog">
-
   <h1><%= @blog.title %></h1>
   <div class="image-holder">
     <%= image_tag @blog.image.strip if @blog.image %>
@@ -15,3 +14,5 @@
 
   <p><%= @blog.description.html_safe %></p>
 </div>
+
+<span class="emoji">😍🤐😫😙😆</span>
