@@ -10,7 +10,6 @@ const Emoji = () => {
 
   $(document).on('click', '.emojis', event => {
     event.preventDefault();
-    console.log("Clicked emojis")
   });
 
   const initButton = () => {
@@ -21,7 +20,9 @@ const Emoji = () => {
     const picker = new EmojiButton();
 
     picker.on('emoji', emoji => {
-      document.querySelector('input').value += emoji;
+      console.log("Selected emoji")
+      console.log(emoji)
+      $(".blog_summary").find('input')[0].value += emoji;
     });
 
     $emojiButton.addEventListener('click', () => {
