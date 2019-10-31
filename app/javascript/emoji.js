@@ -3,8 +3,11 @@ import EmojiButton from 'emoji-button';
 
 const Emoji = () => {
   $(document).on('turbolinks:load', event => {
-    if ($(".blog_summary").length > 0) {
-      initButton();
+    if ($("#post_content").length > 0) {
+      initButton("#post_content");
+    }
+    if ($("#topic_content").length > 0) {
+      initButton("#topic_content");
     }
   });
 
@@ -12,7 +15,7 @@ const Emoji = () => {
     event.preventDefault();
   });
 
-  const initButton = () => {
+  const initButton = emojiable => {
     const $emojiButton = document.createElement("a");
     $emojiButton.className = "emoji-btn btn"
     const $emojiHolder = document.createElement("span");
@@ -20,15 +23,14 @@ const Emoji = () => {
     $emojiHolder.innerHTML = "<img src='/assets/images/smiley.png'/>"
     $emojiButton.append($emojiHolder);
 
-    $(".blog_summary").append($emojiButton);
+    emojiable.append($emojiButton);
     const picker = new EmojiButton();
 
     picker.on('emoji', emoji => {
       console.log("Selected emoji")
       console.log(emoji)
-      //var emojiString = "<span class=\"emoji\">" + emoji + "</span>"
-      //console.log(emojiString)
-      $(".blog_summary").find('input')[0].value += emoji;
+
+      emojiable.find('textarea')[0].value += emoji;
     });
 
     $emojiButton.addEventListener('click', () => {
