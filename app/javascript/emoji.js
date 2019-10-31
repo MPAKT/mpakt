@@ -30,7 +30,7 @@ const Emoji = () => {
       console.log("Selected emoji")
       console.log(emoji)
 
-      emojiable.find('textarea')[0].value += emoji;
+      emojiable.value += emoji;
     });
 
     $emojiButton.addEventListener('click', () => {
