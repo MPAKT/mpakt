@@ -60,9 +60,13 @@ body {
   }
 }
 
-.right {
+div.right {
   width: 100%;
   text-align: right;
+}
+
+span.right {
+  float: right;
 }
 
 .footer {

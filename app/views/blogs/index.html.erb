@@ -1,14 +1,24 @@
-<h1><%= t(".title") %></h1>
+<h1>
+  <% if current_user&.admin? %>
+    <span class="right"><%= link_to t(".create"), new_blog_path, class: "btn" %></span>
+  <% end %>
+  <%= t(".title") %>
+</h1>
 
-<% if current_user&.admin? %>
-  <div class="right"><%= link_to t(".create"), new_blog_path, class: "btn" %></div>
-<% end %>
 
 <div class="blogs">
   <% @blogs.each do |blog| %>
-    <%= link_to blog_path(blog) do %>
-      <h3><%= blog.title %></h3>
-      <span><%= blog.summary %></span>
-    <% end %>
+    <div class="blog-holder">
+      <%= link_to blog_path(blog) do %>
+        <div>
+          <div class="image-holder">
+            <%= image_tag blog.image.strip if blog.image %>
+          </div>
+          <h3><%= blog.title %></h3>
+          <div><%= blog.summary %></div>
+          <div class="strong"><%= t(".published") if blog.publish? %></div>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </div>
