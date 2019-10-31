@@ -8,7 +8,7 @@
   <% @blogs.each do |blog| %>
     <div class="blog-holder">
       <%= link_to blog_path(blog) do %>
-        <div class="blog">
+        <div>
           <div class="image-holder">
             <%= image_tag blog.image.strip if blog.image %>
           </div>
