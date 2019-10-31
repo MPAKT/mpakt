@@ -20,6 +20,8 @@ require('jquery')
 
 import Turbolinks from 'turbolinks';
 import CkEditor from '../ck_editor.js';
+import Emoji from '../emoji.js';
 
 Turbolinks.start();
 CkEditor();
+Emoji();
