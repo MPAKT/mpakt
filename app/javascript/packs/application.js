@@ -25,3 +25,6 @@ import Emoji from '../emoji.js';
 Turbolinks.start();
 CkEditor();
 Emoji();
+
+// Must happen after the turbolinks start
+require('thredded_imports.js');
