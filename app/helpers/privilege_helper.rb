@@ -35,12 +35,14 @@ module PrivilegeHelper
 
   def mean(bucket)
     return 0 if bucket.empty?
+
     bucket.sum / bucket.size.to_f
   end
 
   def median(bucket)
     length = bucket.length
     return 0 if length.zero?
+
     (bucket[(length - 1) / 2] + bucket[length / 2]) / 2.0
   end
 
@@ -88,11 +90,13 @@ module PrivilegeHelper
 
   def answers_for_ethnicity(question_index)
     return %w[a b c d] if question_index == "e"
+
     %w[a b c d e f]
   end
 
   def answers_for_gender(question_index)
     return %w[a b c d e f] if question_index == "d"
+
     %w[a b c d] if question_index == "a"
   end
 end

@@ -32,6 +32,7 @@ class Category < ApplicationRecord
     score = gender_calculations
 
     return score + 5 if c.blank? || c.zero?
+
     score -= 3 if c == 2 && score.positive?
 
     # Category d is saved in the database, but currently not scored. If we get analysis that show it has an
@@ -48,6 +49,7 @@ class Category < ApplicationRecord
     score = calculations(ability_weights)
 
     return score + 7 if d.blank? || d.zero?
+
     score += 2 if d == 1
 
     score
@@ -57,6 +59,7 @@ class Category < ApplicationRecord
     score = calculations(caste_weights)
 
     return score + 1 if d.blank? || d.zero?
+
     score -= 1 if d == 2 && score.positive?
 
     score
@@ -66,6 +69,7 @@ class Category < ApplicationRecord
     score = calculations(ethnicity_weights, [a, b, c, d])
 
     return score + 1 if e.blank? || e.zero?
+
     score -= 1 if e == 2 && score.positive?
 
     score

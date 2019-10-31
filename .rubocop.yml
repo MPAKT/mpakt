@@ -12,13 +12,10 @@ AllCops:
     - lib/tasks/*
   TargetRubyVersion: 2.3
 
-Rails:
-  Enabled: true
-
 Style/StringLiterals:
   EnforcedStyle: double_quotes
   Enabled: true
 Metrics/LineLength:
   Max: 120
-Documentation:
+Style/Documentation:
   Enabled: false

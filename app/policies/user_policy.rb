@@ -7,6 +7,7 @@ class UserPolicy
     return false unless user
 
     return true if current_user == user
+
     false
   end
 end
