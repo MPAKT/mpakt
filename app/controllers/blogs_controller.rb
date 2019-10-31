@@ -5,9 +5,9 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = if current_user&.admin?
-               Blog.all
+               all_blogs
              else
-               Blog.live
+               Blog.live.order(:title)
              end
   end
 
@@ -40,6 +40,10 @@ class BlogsController < ApplicationController
   end
 
   private
+
+  def all_blogs
+    Blog.live.order(:title) + Blog.where(publish: false).order(:title)
+  end
 
   def blogging_allowed
     return if current_user&.admin?
