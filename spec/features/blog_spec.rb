@@ -8,7 +8,11 @@ RSpec.feature "Blog" do
     scenario "I can create and manage blog posts" do
       login_as admin
 
-      visit "/blogs"
+      visit "/"
+
+      within ".header" do
+        click_on I18n.t("layouts.header.blog")
+      end
 
       within ".main" do
         click_on I18n.t("blogs.index.create")

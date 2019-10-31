@@ -28,6 +28,11 @@
         <div class="link"><%= t(".forum") %></div>
       <% end %>
     </div>
+    <div class="link-holder">
+      <%= link_to "/blog" do %>
+        <div class="link"><%= t(".blog") %></div>
+      <% end %>
+    </div>
     <% if current_user&.admin? %>
       <div class="link-holder">
         <%= link_to users_path do %>
