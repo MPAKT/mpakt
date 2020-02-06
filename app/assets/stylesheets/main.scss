@@ -79,9 +79,26 @@ span.right {
   width: 100%;
   position: fixed;
   bottom: 0;
+  background-color: $darkblue;
+  padding: 50px 30px 30px 30px;
+
+  .link {
+    color: white;
+    font-size: 20px;
+
+    &:hover {
+      background-color: white;
+      color: $darkblue;
+    }
+  }
+
+  .right {
+    float: right;
+  }
 
   .menu-holder {
-    border-top: 1px solid $lightgrey;
+    width: unset;
+    margin: 0 60px 0 0;
   }
 }
 
@@ -115,10 +132,6 @@ img {
 @media only screen and (min-width: 800px) {
   .left-col {
     width: 50%;
-  }
-
-  .main, .policy, .menu-holder, .flash {
-    width: 80%;
   }
 
   .right-col {

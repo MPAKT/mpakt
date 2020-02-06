@@ -25,9 +25,10 @@ en:
       salaries: "Salaries"
       blog: "Blog"
     footer:
-      cookies: "Cookies"
+      help: "Help"
       ts_and_cs: "Terms"
-      privacy: "Data privacy"
+      privacy: "Legal"
+      about_us: "About us"
 
   users:
     index:
