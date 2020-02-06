@@ -36,7 +36,7 @@ RSpec.feature "Ts and Cs" do
         exclude_keys: [:us_1_html, :cookies_1_html]
       )
 
-      expect(page).to have_content "This policy, together with our Terms and Conditions sets out how we process your data. Please read it carefully. By visiting MPAKT. you accept and consent to the practices described in this policy."
+      expect(page).to have_content "This policy, together with our Terms and Conditions sets out how we process your data. Please read it carefully. By visiting MPACT. you accept and consent to the practices described in this policy."
       expect(page).to have_content "Our website uses cookies to distinguish you from other users of our website. This helps us to provide a good experience when you browse our website. For detailed information on the cookies we use see our Cookie policy"
     end
   end

@@ -21,10 +21,10 @@ en:
       ct_purpose: "Purpose"
       ct_type: "Type"
       ct_more: "More information"
-      ct_mpakt: "_mpakt_session"
-      ct_mpakt_type: "Strictly Necessary"
-      ct_mpakt_for: "To authenticate the user in the secure area of MPAKT., this is a strictly necessary cookie."
-      ct_mpakt_more: "Temporary cookie, expires at the end of the session"
+      ct_mpact: "_mpact_session"
+      ct_mpact_type: "Strictly Necessary"
+      ct_mpact_for: "To authenticate the user in the secure area of MPACT., this is a strictly necessary cookie."
+      ct_mpact_more: "Temporary cookie, expires at the end of the session"
       ct_cookies: "cookie_eu_consented"
       ct_cookies_type: "Functionality"
       ct_cookies_for: "Stores the information that you have accepted our cookies. Does not hold any other information."
@@ -32,26 +32,26 @@ en:
 
       note: "Please note that third parties (including, for example, advertising networks and providers of external
       services like web traffic analysis services) may also use cookies, and we have no control over these cookies.
-      Your browser tracks cookies from all your open tabs and you may see cookies that are not relevant to MPAKT."
+      Your browser tracks cookies from all your open tabs and you may see cookies that are not relevant to MPACT."
       block: "You block cookies by activating the setting on your browser that allows you to refuse the setting of all
       or some cookies. However, if you use your browser settings to block all cookies (including essential cookies) you
       may not be able to access all or parts of our site."
 
     ts_and_cs:
-      title: "MPAKT. Terms and Conditions of Use"
+      title: "MPACT. Terms and Conditions of Use"
       summary_title: "Summary"
-      summary: "MPAKT. is a not-for-profit moderated safe space for anonymous conversations about diversity, inclusion, and
-      privilege. We intend your experience of MPAKT. to be smooth and safe. We work with our cloud provider
+      summary: "MPACT. is a not-for-profit moderated safe space for anonymous conversations about diversity, inclusion, and
+      privilege. We intend your experience of MPACT. to be smooth and safe. We work with our cloud provider
       to keep the site alive, look after your data, protect you from data loss, and protect you from data breaches.
       If we discover any part of our site or responsibilities fail to meet our standards, we will post information
       on the site as quickly as possible. Many users visit this site anonymously. We only notify users of a
       security breach if you have signed in and provided us with your contact details, for example an email address."
-      summary_1: "We expect you will be friendly when you use MPAKT. and respect other users. If you sign in, keep your
+      summary_1: "We expect you will be friendly when you use MPACT. and respect other users. If you sign in, keep your
       password safe."
       legal_title: "Legal terms and conditions"
       legal_html: "By using our website, you acknowledge that you have read, understood and accept these Terms and Conditions
       of Use and that you agree to be bound by them. You also accept our <a href='privacy;' target='_blank'>Data Privacy
-      Policy</a>. If you do not agree to these terms of use, you must stop using our website. MPAKT. is a not-for-profit
+      Policy</a>. If you do not agree to these terms of use, you must stop using our website. MPACT. is a not-for-profit
       website operated by volunteers (referred to as 'us', 'we' or 'our')."
       third_party: "Third Parties and Links from our Website to Other Websites"
       third_party_para1: "Our website may contain links to other websites and resources provided by third parties –
@@ -79,42 +79,42 @@ en:
       ip_para1: "By using the website you agree to refrain from copying, downloading, transmitting, reproducing,
       printing, or exploiting for commercial purpose(s) any material contained within the website."
       limitation: "Limitation of Liability"
-      limitation_para1: "MPAKT. will not, under any circumstances, be liable for indirect, special, or
+      limitation_para1: "MPACT. will not, under any circumstances, be liable for indirect, special, or
       consequential damages, including any loss of business, revenue, profits or data in relation to your use of the
       website."
       limitation_para2: "Nothing within these Terms and Conditions of Use will operate to include any liability for
-      death or personal injury arising as result of the negligence of the volunteers who maintain MPAKT."
+      death or personal injury arising as result of the negligence of the volunteers who maintain MPACT."
       law: "Governing Law and Jurisdiction"
       law_para: "These Terms and Conditions of Use will be governed by law and any user of the website agrees to be
       bound exclusively by the jurisdiction of relevant courts, should any dispute or claim arise from, or in connection
       with, them or their subject matter or formation (including non-contractual disputes or claims)."
       about_us: "About Us"
-      about_us_para: "The MPAKT. site is built and maintained by volunteers who may be found anywhere in the world. The
-      users of MPAKT. are also global. We ask you to respect all volunteers and users of MPAKT.."
+      about_us_para: "The MPACT. site is built and maintained by volunteers who may be found anywhere in the world. The
+      users of MPACT. are also global. We ask you to respect all volunteers and users of MPACT.."
       anonymous: "Anonymous"
-      anonymous_para: "MPAKT. is an anonymous site"
+      anonymous_para: "MPACT. is an anonymous site"
       anonymous_para_1: "Most parts of the site are fully anonymous, and do not require you to tell us anything about yourself
-      in order to visit and read content in MPAKT."
-      anonymous_para_2: "The MPAKT. forum is public-anonymous. In order to contribute the forum, you need to register, and you
+      in order to visit and read content in MPACT."
+      anonymous_para_2: "The MPACT. forum is public-anonymous. In order to contribute the forum, you need to register, and you
       must tell us an email address. This means that when you return to the site, you can see your own posting history.
       We do not share this email address with other users."
       anonymous_para_3: "We will not share your email address with any third parties, for commercial or any other reasons,
       except if requested with a recognised court order. When you provide your email address, we use it internally to
       identify you uniquely, and so that we can send you password reset information if you forget your password. We
       do not share your email address with other users."
-      anonymous_para_4: "When you sign up for MPAKT., you create a short user name, choose this carefully, it should not identify
+      anonymous_para_4: "When you sign up for MPACT., you create a short user name, choose this carefully, it should not identify
       you. This is the name which other users will see. In this way, when users see your posts, they can not find out more
       information about you. Do not tell anyone what your short user name is."
       age: "Age"
-      age_1: "This site is intended for adults, and we recommend that children under 16 do not visit this site or register with MPAKT.."
+      age_1: "This site is intended for adults, and we recommend that children under 16 do not visit this site or register with MPACT.."
 
       moderated: "Moderated"
-      moderated_para: "MPAKT. is a moderated site."
+      moderated_para: "MPACT. is a moderated site."
       moderated_para_1: "This site is intended to be a safe space, and to keep your details private. But with anonymity
       comes the risk that users will indulge in inappropriate or harrassing behaviour."
-      moderated_para_2: "Some MPAKT. volunteers administer the site, and are able to remove content if it is considered
+      moderated_para_2: "Some MPACT. volunteers administer the site, and are able to remove content if it is considered
       harmful."
-      moderated_para_3: "The MPAKT. volunteers have absolute discretion over what content is used, how it is managed, where
+      moderated_para_3: "The MPACT. volunteers have absolute discretion over what content is used, how it is managed, where
       it is posted, and to move or delete any content at any time."
       moderated_para_4: "We don't intend this moderation to be onerous for us or frustrating for you: we will only use
                          moderation to remove your content if we believe it is harmful to the users of this site, or to
@@ -129,15 +129,15 @@ en:
       harmful_content_6: "objectionable"
       harmful_content_7: "violate the legal rights of others"
       harmful_content_8: "could damage a computer"
-      free_para: "MPAKT. is a not-for-profit site, we may remove content that appears to include any form of advertisement."
+      free_para: "MPACT. is a not-for-profit site, we may remove content that appears to include any form of advertisement."
 
     privacy:
       title: "Privacy Policy"
-      us_title_html: "MPAKT. is committed to protecting and respecting your privacy."
+      us_title_html: "MPACT. is committed to protecting and respecting your privacy."
       us_1_html: "This policy, together with our <a target='_blank' href='/ts_and_cs'>Terms and Conditions</a> sets out how
-      we process your data. Please read it carefully. By visiting MPAKT. you accept and consent to the practices described in this policy."
+      we process your data. Please read it carefully. By visiting MPACT. you accept and consent to the practices described in this policy."
       information_title: "Information we collect from you"
-      information_1: "We collect and process information about you that you give us by registering with MPAKT., or when you
+      information_1: "We collect and process information about you that you give us by registering with MPACT., or when you
        send us e-mail. It includes information you provide when you participate in discussions on forums, and when you report a
        problem with our site. The information you give us may include your name, e-mail address, and any other information you
        choose to share."
@@ -147,7 +147,7 @@ en:
       <a href='/cookies' target='_blank'>Cookie policy</a>"
       disclosure_title: "Disclosure of your information"
       disclosure: "We only share your information if we are under a duty to disclose or share your personal data in order to
-      comply with any legal obligation, or to protect the safety of MPAKT. users and volunteers."
+      comply with any legal obligation, or to protect the safety of MPACT. users and volunteers."
       store_title: "Where we store your personal data"
       store_1: "The data that we collect from you is transferred to and stored at our cloud provider and their
       data centres. By submitting your personal data, you agree to this transfer, storing or processing.
@@ -162,14 +162,14 @@ en:
       access_1: "You may ask us to let you know what information we hold about you."
       changes_title: "Changes to our privacy policy"
       changes_1: "Any changes we make to our privacy policy in the future will be posted on this page and, if
-       there are major changes, we may also announce them elsewhere in the MPAKT. website. We usually do not send
+       there are major changes, we may also announce them elsewhere in the MPACT. website. We usually do not send
        emails to users, partly because not all users share their email addresses with us. Please check back frequently
        to see any updates or changes to our privacy policy."
       contact_title: "Contact"
-      contact_1: "Contact us by email at mpakt.moderator@gmail.com"
+      contact_1: "Contact us by email at mpact.moderator@gmail.com"
 
     goals:
-      why: "Why did we build MPAKT.? What will you find here?"
+      why: "Why did we build MPACT.? What will you find here?"
       safe_space: "Safe space"
       safe_space_1: "As members of several diversity groups on Facebook, we have seen posts that resonate with the group,
       who follow up with a lot of comments around 'me too' or 'how brave you are'. It seems that a lot of us are too scared
@@ -180,7 +180,7 @@ en:
       But this has the opposite challenge: a busy community has so much traffic that most of it scrolls
       out of sight before we can keep up with it, and the newish threading feature doesn't seem to provide a
       good solution."
-      safe_space_3: "For all these reasons, we are building MPAKT. with an anonymous, moderated forum where you can discuss diversity,
+      safe_space_3: "For all these reasons, we are building MPACT. with an anonymous, moderated forum where you can discuss diversity,
       inclusion, and privilege. The forum is not ready yet, it's currently being built, please have patience, we are a volunteer
       organisation."
       more_diversity: "More diversity"
@@ -215,4 +215,4 @@ en:
       a database of diversity, with primary focus on how it affects your working life. For the moment it has four key areas,
       equally weighted: the areas and weights may change in future as we collect data about privilege and its impact on your
       working life, so please do come back and check your privilege score again."
-      thank_you: "Thank you for visiting MPAKT., and for reading to the end. We hope you enjoy your visit!"
+      thank_you: "Thank you for visiting MPACT., and for reading to the end. We hope you enjoy your visit!"
