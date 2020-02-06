@@ -5,6 +5,7 @@ $lightblue: #4A90E2;
 $purple: purple;
 $gold: gold;
 $green: green;
+$darkblue: #39375C;
 
 $fade-black: rgba(0, 0, 0, 0.87);
 $light-text: rgba(0, 0, 0, 0.75);
@@ -16,9 +17,3 @@ $r-green: rgba(0, 128, 0, 0.5);
 $r-blue: rgba(0, 255, 255, 0.5);
 $r-indigo: rgba(0, 0, 255, 0.5);
 $r-violet: rgba(238, 130, 238, 0.5);
-
-.rainbow {
-  background: white; /* For browsers that do not support gradients */
-  background: linear-gradient(to right, left, $r-red, $r-orange , $r-yellow, $r-green, $r-blue, $r-indigo, $r-violet);
-  background: -webkit-linear-gradient(left, $r-red, $r-orange , $r-yellow, $r-green, $r-blue, $r-indigo, $r-violet);
-}
