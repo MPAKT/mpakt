@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.feature "Blog" do
 
   context "As an admin" do
-    let(:admin) { User.create(email: "blog_admin@dippy.com", password: "123456", short_name: "blog_admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now) }
+    let(:admin) { User.create(email: "blog_admin@mpakt.com", password: "123456", short_name: "blog_admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now) }
 
     scenario "I can create and manage blog posts" do
       login_as admin
@@ -84,7 +84,7 @@ RSpec.feature "Blog" do
   end
 
   context "As an user" do
-    let(:user) { User.create(email: "blog@dippy.com", password: "123456", short_name: "blog", last_sign_in_at: Time.zone.now) }
+    let(:user) { User.create(email: "blog@mpakt.com", password: "123456", short_name: "blog", last_sign_in_at: Time.zone.now) }
 
     scenario "I can not edit blog posts" do
       login_as user
