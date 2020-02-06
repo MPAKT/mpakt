@@ -1,5 +1,5 @@
 {
-  "name": "dippy",
+  "name": "mpakt",
   "private": true,
   "dependencies": {
     "@rails/ujs": "^6.0.0",
