@@ -1,18 +1,32 @@
-/* Fonts downloaded from https://google-webfonts-helper.herokuapp.com/ */
+/* Font searched for in https://fonts.google.com/, then downloaded from https://google-webfonts-helper.herokuapp.com/
 
+/* noto-sans-regular - latin */
 @font-face {
-  font-family: 'Caveat Brush';
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('caveat-brush/caveat-brush-v5-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Caveat Brush'), local('CaveatBrush-Regular'),
-       url('caveat-brush/caveat-brush-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('caveat-brush/caveat-brush-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('caveat-brush/caveat-brush-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('caveat-brush/caveat-brush-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('caveat-brush/caveat-brush-v5-latin-regular.svg#CaveatBrush') format('svg'); /* Legacy iOS */
+  src: url('noto-sans/noto-sans-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans'), local('NotoSans'),
+       url('noto-sans/noto-sans-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('noto-sans/noto-sans-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('noto-sans/noto-sans-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('noto-sans/noto-sans-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('noto-sans/noto-sans-v9-latin-regular.svg#NotoSans') format('svg'); /* Legacy iOS */
 }
 
+/* noto-sans-700 - latin */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('noto-sans/noto-sans-v9-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+       url('noto-sans/noto-sans-v9-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('noto-sans/noto-sans-v9-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('noto-sans/noto-sans-v9-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('noto-sans/noto-sans-v9-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('noto-sans/noto-sans-v9-latin-700.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -40,10 +54,10 @@ p, td, li, span, a {
 }
 
 .logo {
-  font-family: 'Caveat Brush', cursive;
-  font-weight: 400;
-  font-size: 26px;
-  color: black;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  color: $darkblue;
 }
 
 .link {
