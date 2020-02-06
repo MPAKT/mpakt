@@ -1,10 +1,20 @@
-<h2><%= t(".subtitle") %></h2>
-<p><%= t(".safe") %></p>
-<p><%= t(".welcome") %></p>
-<p><%= t(".calculator_html") %></p>
+<div class="central">
+  <h2><%= t(".subtitle") %></h2>
+  <h3><%= t(".share") %></h3>
 
-<p><%= t(".why_html") %></p>
-
-<div class="image">
-  <%= image_tag "diversity_bw.png" %>
+    <div>
+      <%= link_to new_user_registration_path do %>
+        <span class="btn"><%= t(".join") %></span>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to new_user_session_path do %>
+        <span class="btn secondary"><%= t(".sign_in") %></span>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to "/forum" do %>
+        <span class="link"><%= t(".explore") %></span>
+      <% end %>
+    </div>
 </div>

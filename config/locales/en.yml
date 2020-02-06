@@ -2,12 +2,11 @@ en:
 
   welcome:
     index:
-      subtitle: "Diversity, Inclusion and Privilege"
-      safe: "MPACT. is a moderated safe space for anonymous conversations about diversity, inclusion, and privilege.
-      It's built and moderated by volunteers, and we do not make any financial revenue from this site."
-      welcome: "Please make everyone feel welcome here, whatever their privilege."
-      calculator_html: "Calculate your privilege score with the <a class='link' href='/privileges'>privilege calculator</a>"
-      why_html: "Why did we build MPACT. and what will you find here? <a class='link' href='/goals'>Find out more</a>"
+      subtitle: "The Network"
+      share: "Share. Inspire. Grow."
+      join: "Join"
+      sign_in: "Sign in"
+      explore: "Explore MPACT."
 
   success:
     create: "Created %{name}"

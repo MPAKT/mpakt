@@ -18,15 +18,21 @@ input.boolean {
 }
 
 .btn {
-  padding: 4px 10px;
-  min-width: unset;
+  display: block;
+  height: 40px;
+  line-height: 40px;
   cursor: pointer;
+  border: 1px solid $darkblue;
+  border-radius: 4px;
+  background-color: $darkblue;
+  color: white;
+  font-size: 20px;
+  margin: 4px;
 }
 
-a.btn {
-  padding: 2px 10px;
-  border: 1px solid grey;
-  border-radius: 4px;
+.secondary {
+  color: $darkblue;
+  background-color: white;
 }
 
 .privilege {

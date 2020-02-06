@@ -31,22 +31,28 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
-  color: $light-text;
+  color: $darkblue;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
   font-weight: 400;
+}
+
+h4 {
   font-size: 16px;
-  color: black;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 26px;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 p, td, li, span, a {
@@ -57,16 +63,17 @@ p, td, li, span, a {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
   font-size: 35px;
-  color: $darkblue;
 }
 
 .link {
-  color: $lightblue;
-  display: inline;
+  display: block;
   cursor: pointer;
+  text-align: center;
+  color: $darkblue;
+  font-stle: italic;
 
   &:hover {
-    background-color: $lightblue;
+    background-color: $darkblue;
     color: white;
   }
 }

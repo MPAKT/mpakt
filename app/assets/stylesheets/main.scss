@@ -18,15 +18,15 @@ body {
 }
 
 .header {
+  margin-top: 30px;
+
   .menu-holder {
     border-bottom: 1px solid $lightgrey;
   }
 
   .logo {
-    margin: 0;
+    margin-left: 60px;
     padding-left: 20px;
-    width: 90%;
-    height: 100%;
   }
 }
 
@@ -58,6 +58,12 @@ body {
     height: 40px;
     width: 113px;
   }
+}
+
+.central {
+  width: 400px;
+  margin: 40px auto;
+  text-align: center;
 }
 
 div.right {
