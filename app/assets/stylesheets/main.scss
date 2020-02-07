@@ -1,9 +1,11 @@
 body {
   margin: 0;
+  background-color: white;
 }
 
 .main {
   width: 100%;
+  margin-bottom: 120px; // Allow for footer
 }
 
 .flash {

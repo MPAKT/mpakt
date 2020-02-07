@@ -59,7 +59,7 @@ en:
   blogs:
     index:
       title: "Blog posts"
-      create: "Create new post"
+      create: "Create post"
     new:
       title: "New post"
     form:

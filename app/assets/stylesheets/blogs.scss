@@ -37,7 +37,7 @@
 
 .blog-holder {
   width: 320px;
-  height: 360px;
+  height: 400px;
   display: inline-block;
   vertical-align: top;
   margin: 0 6px;
@@ -48,13 +48,18 @@
   }
 }
 
-.blog-summary {
+.blog-details {
   margin: 16px;
 }
 
 .blog-date {
   font-style: italic;
   margin-bottom: 16px;
+}
+
+.blog-summary {
+  font-color: $midblue;
+  font-size: 16px;
 }
 
 .blog {

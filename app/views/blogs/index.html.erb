@@ -10,13 +10,15 @@
     <div class="blog-holder">
       <%= link_to blog_path(blog) do %>
         <h3><%= blog.title %></h3>
-        <div class="image-holder">
-          <%= image_tag blog.image.strip if blog.image %>
-        </div>
-        <div class="blog-summary">
+        <% if blog.image.present? %>
+          <div class="image-holder">
+            <%= image_tag blog.image.strip %>
+          </div>
+        <% end %>
+        <div class="blog-details">
           <div class="blog-date"><%= I18n.l(blog.updated_at.to_date, format: :blog) %></div>
 
-          <div><%= blog.summary %></div>
+          <div class="blog-summary"><%= blog.summary %></div>
           <div class="blog-annotations"></div>
         </div>
       <% end %>

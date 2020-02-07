@@ -61,6 +61,22 @@ input {
   font-size: 18px;
 }
 
+a {
+  color: $darkblue;
+
+  &:visited {
+    color: $darkblue;
+  }
+}
+
+a.link {
+  color: white;
+
+  &:visited {
+    color: white;
+  }
+}
+
 .logo {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
