@@ -1,17 +1,22 @@
-<% if current_user&.admin? %>
-  <div class="right">
-    <%= link_to t(".back"), blogs_path, class: "btn" %>
-    <%= link_to t(".edit"), edit_blog_path(@blog), class: "btn" %>
+<div class="body">
+  <% if current_user&.admin? %>
+    <div class="right">
+      <%= link_to t(".back"), blogs_path, class: "btn" %>
+      <%= link_to t(".edit"), edit_blog_path(@blog), class: "btn" %>
+    </div>
+  <% end %>
+
+  <div class="blog">
+    <h1><%= @blog.title %></h1>
+    <div class="image-holder">
+      <%= image_tag @blog.image.strip if @blog.image %>
+    </div>
+    <div class="blog-details">
+      <div class="blog-date"><%= I18n.l(@blog.updated_at.to_date, format: :blog) %></div>
+      <%= @blog.summary %>
+
+      <p><%= @blog.description.html_safe %></p>
+      <div class="blog-annotations"></div>
+    </div>
   </div>
-<% end %>
-
-<div class="blog">
-
-  <h1><%= @blog.title %></h1>
-  <div class="image-holder">
-    <%= image_tag @blog.image.strip if @blog.image %>
-  </div>
-  <h3><%= @blog.summary %></h3>
-
-  <p><%= @blog.description.html_safe %></p>
 </div>

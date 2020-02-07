@@ -63,7 +63,10 @@
 }
 
 .blog {
-  width: 100%;
+  max-width: 100%;
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid $paleblue;
 
   h1, h3, .image-holder {
     text-align: center;
