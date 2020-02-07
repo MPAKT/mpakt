@@ -1,22 +1,23 @@
-<h1>
+
+<div class="body blogs">
   <% if current_user&.admin? %>
-    <span class="right"><%= link_to t(".create"), new_blog_path, class: "btn" %></span>
+    <div class="menu-holder">
+      <span class="right long"><%= link_to t(".create"), new_blog_path, class: "btn link" %></span>
+    </div>
   <% end %>
-  <%= t(".title") %>
-</h1>
 
-
-<div class="blogs">
   <% @blogs.each do |blog| %>
     <div class="blog-holder">
       <%= link_to blog_path(blog) do %>
-        <div>
-          <div class="image-holder">
-            <%= image_tag blog.image.strip if blog.image %>
-          </div>
-          <h3><%= blog.title %></h3>
+        <h3><%= blog.title %></h3>
+        <div class="image-holder">
+          <%= image_tag blog.image.strip if blog.image %>
+        </div>
+        <div class="blog-summary">
+          <div class="blog-date"><%= I18n.l(blog.updated_at.to_date, format: :blog) %></div>
+
           <div><%= blog.summary %></div>
-          <div class="strong"><%= t(".published") if blog.publish? %></div>
+          <div class="blog-annotations"></div>
         </div>
       <% end %>
     </div>

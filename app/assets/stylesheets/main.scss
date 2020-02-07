@@ -19,10 +19,6 @@ body {
 .header {
   margin-top: 30px;
 
-  .menu-holder {
-    border-bottom: 1px solid $lightgrey;
-  }
-
   .logo {
     margin-left: 60px;
     padding-left: 20px;
@@ -55,7 +51,7 @@ body {
 
   a {
     height: 40px;
-    width: 113px;
+    width: 100%;
   }
 }
 
@@ -144,6 +140,11 @@ img {
     p {
       padding-left: 4px;
     }
+  }
+
+  .body {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 

@@ -23,12 +23,8 @@
 }
 
 .blogs {
-  h3 {
-    margin-bottom: 0;
-  }
-
   .image-holder {
-    width: 260px;
+    width: 100%;
     height: 160px;
   }
 
@@ -40,13 +36,25 @@
 }
 
 .blog-holder {
-  width: 260px;
-  height: 320px;
+  width: 320px;
+  height: 360px;
   display: inline-block;
   vertical-align: top;
-  margin: 12px 6px;
-  border: 1px solid $lightgrey;
-  padding: 12px;
+  margin: 0 6px;
+  border: 1px solid $paleblue;
+
+  h3 {
+    margin-left: 16px;
+  }
+}
+
+.blog-summary {
+  margin: 16px;
+}
+
+.blog-date {
+  font-style: italic;
+  margin-bottom: 16px;
 }
 
 .blog {
@@ -54,11 +62,6 @@
 
   h1, h3, .image-holder {
     text-align: center;
-  }
-
-  .image-holder {
-    margin: 0 auto;
-    width: 400px;
   }
 
   img {

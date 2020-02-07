@@ -1,5 +1,9 @@
 en:
 
+  date:
+    formats:
+      blog: "%-e %b, %Y" #20 Oct 2017
+
   welcome:
     index:
       join: "Join"
