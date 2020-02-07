@@ -4,12 +4,6 @@
   </div>
 
   <% if current_user %>
-    <div class="menu-holder">
-      <div class="link-holder end">
-        <%= link_to destroy_user_session_path, method: :delete do %>
-          <div class="link"><%= t(".exit") %></div>
-        <% end %>
-      </div>
-    </div>
+    <%= render "/layouts/menu" %>
   <% end %>
 </div>

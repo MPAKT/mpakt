@@ -1,0 +1,39 @@
+<div class="menu-holder">
+  <div class="link-holder end">
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <div class="link"><%= t(".exit") %></div>
+    <% end %>
+  </div>
+
+  <div class="center menu">
+    <div class="link-holder">
+      <%= link_to "/TODO" do %>
+        <div class="link"><%= t(".card") %></div>
+      <% end %>
+    </div>
+
+    <div class="link-holder">
+      <%= link_to "/TODO" do %>
+        <div class="link"><%= t(".network") %></div>
+      <% end %>
+    </div>
+
+    <div class="link-holder">
+      <%= link_to blogs_path do %>
+        <div class="link"><%= t(".blog") %></div>
+      <% end %>
+    </div>
+
+    <div class="link-holder">
+      <%= link_to "forum" do %>
+        <div class="link"><%= t(".forum") %></div>
+      <% end %>
+    </div>
+
+    <div class="link-holder">
+      <%= link_to "/TODO" do %>
+        <div class="link"><%= t(".messages") %></div>
+      <% end %>
+    </div>
+  </div>
+</div>

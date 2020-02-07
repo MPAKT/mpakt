@@ -18,13 +18,15 @@ en:
     header:
       title: "MPACT."
       privilege: "My privilege"
+    menu:
       exit: "Sign out"
-      sign_in: "Sign in"
-      sign_up: "Register"
       forum: "Forum"
       users: "Manage users"
       salaries: "Salaries"
       blog: "Blog"
+      card: "My Card"
+      network: "Network"
+      messages: "Messages"
     footer:
       help: "Help"
       ts_and_cs: "Terms"
