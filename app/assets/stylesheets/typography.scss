@@ -56,6 +56,11 @@ h1 {
   font-size: 30px;
 }
 
+input {
+  font-family: system-ui, 'Noto Sans', sans-serif;
+  font-size: 18px;
+}
+
 .logo {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
@@ -82,4 +87,21 @@ a, a:visited {
 
 .strong {
   font-weight: bold;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $darkblue;
+  font-size: 18px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $darkblue;
+  font-size: 18px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $darkblue;
+  font-size: 18px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $darkblue;
+  font-size: 18px;
 }
