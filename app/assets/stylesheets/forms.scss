@@ -1,20 +1,12 @@
-select, input {
+select {
   padding: 4px;
   border-radius: 4px;
   border-width: 1px;
   margin-top: 4px;
 }
 
-select, .input {
+select {
   min-width: 180px;
-}
-
-input {
-  margin-top: 4px;
-}
-
-input.boolean {
-  width: 100%;
 }
 
 .btn {
@@ -27,7 +19,7 @@ input.boolean {
   background-color: $darkblue;
   color: white;
   font-size: 20px;
-  margin: 4px;
+  margin-top: 10px;
 }
 
 .secondary {

@@ -2,11 +2,12 @@ en:
 
   welcome:
     index:
-      subtitle: "The Network"
-      share: "Share. Inspire. Grow."
       join: "Join"
       sign_in: "Sign in"
       explore: "Explore MPACT."
+    titles:
+      subtitle: "The Network"
+      share: "Share. Inspire. Grow."
 
   success:
     create: "Created %{name}"

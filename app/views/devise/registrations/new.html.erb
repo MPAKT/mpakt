@@ -1,5 +1,8 @@
 <h2><%= t(".sign_up") %></h2>
 
+  <%= render "welcome/titles" %>
+
+
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
