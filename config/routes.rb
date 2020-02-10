@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users,
     controllers: {
-      registrations: 'users'
+      registrations: 'users',
+      sessions: 'sessions'
     }
 
   root "welcome#index"
@@ -9,14 +10,14 @@ Rails.application.routes.draw do
 
   resources :privileges, only: [:create, :index]
   resources :categories, only: [:create]
-  resources :dashboard, only: [:show]
+  resources :dashboard, only: [:index]
 
   devise_scope :user do
     resources :users, only: [:index, :show, :update]
     resources :blogs
     get "/salaries", to: 'privileges#salaries'
-    root "dashboard#show"
-    get "/", to: "dashboard#show"
+    root "dashboard#index"
+    get "/", to: "dashboard#index"
   end
 
   get "/ts_and_cs", to: 'policies#ts_and_cs'
@@ -24,7 +25,7 @@ Rails.application.routes.draw do
   get "/cookies", to: 'policies#cookies'
   get "/goals", to: 'policies#goals'
   get "/blog", to: 'blogs#index'
-  get "/dashboard", to: 'dashboard#show'
+  get "/dashboard", to: 'dashboard#index'
 
   mount Thredded::Engine => '/forum'
 end

@@ -14,14 +14,14 @@
                   label: false %>
     </div>
 
-    <div class="input">
+    <div class="input minisection">
       <%= f.button :submit, t(".sign_in") %>
     </div>
   <% end %>
 
-  <div>
+  <div class="minisection">
     <%= link_to new_password_path(resource_name) do %>
-      <span class="link"><%= t(".forgot") %></span>
+      <span class="link italic-min"><%= t(".forgot") %></span>
     <% end %>
   </div>
 </div>
