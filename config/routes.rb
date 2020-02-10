@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     }
 
   root "welcome#index"
+  get "/", to: "welcome#index"
 
   resources :privileges, only: [:create, :index]
   resources :categories, only: [:create]
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :show, :update]
     resources :blogs
     get "/salaries", to: 'privileges#salaries'
+    root "dashboard#show"
+    get "/", to: "dashboard#show"
   end
 
   get "/ts_and_cs", to: 'policies#ts_and_cs'

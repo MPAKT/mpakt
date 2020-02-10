@@ -5,7 +5,7 @@
     <% link_path = "/forum/#{@forum_post.messageboard.slug}/#{@forum_post.postable.slug}" %>
     <%= link_to link_path do %>
       <h3><%= @forum_post.postable.title %> | <%= @forum_post.messageboard.name %></h3>
-      <div class="post-date"><%= I18n.l(@forum_post.updated_at.to_date, format: :blog) %></div>
+      <div class="post-date italic-min"><%= I18n.l(@forum_post.updated_at.to_date, format: :blog) %></div>
       <div class="post-content"><%= @forum_post.content %></div>
     <% end %>
   </div>

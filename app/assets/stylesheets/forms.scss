@@ -17,8 +17,8 @@ select {
   border: 1px solid $darkblue;
   border-radius: 4px;
   background-color: $darkblue;
-  color: white;
-  font-size: 20px;
+  color: $offwhite;
+  font-size: 24px;
   margin-top: 10px;
 }
 
@@ -85,7 +85,6 @@ select {
   }
 
   .link {
-    font-style: italic;
     margin-top: 10px;
   }
 }
