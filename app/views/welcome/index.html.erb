@@ -1,19 +1,19 @@
 <div class="central">
   <%= render "welcome/titles" %>
 
-  <div>
+  <div class="section">
     <%= link_to new_user_registration_path do %>
       <span class="btn"><%= t(".join") %></span>
     <% end %>
-  </div>
-  <div>
-    <%= link_to new_user_session_path do %>
-      <span class="btn secondary"><%= t(".sign_in") %></span>
-    <% end %>
-  </div>
-  <div>
-    <%= link_to "/dashboard" do %>
-      <span class="link italic-min"><%= t(".explore") %></span>
-    <% end %>
+    <div class="minisection">
+      <%= link_to new_user_session_path do %>
+        <span class="btn secondary"><%= t(".sign_in") %></span>
+      <% end %>
+    </div>
+    <div class="subsection">
+      <%= link_to "/dashboard" do %>
+        <span class="link italic-min"><%= t(".explore") %></span>
+      <% end %>
+    </div>
   </div>
 </div>

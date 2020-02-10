@@ -1,7 +1,9 @@
 <div class="wide">
-  <%= link_to privileges_path do %>
-    <span class="btn"><%= t(".privilege") %></span>
-  <% end %>
+  <div class="section">
+    <%= link_to privileges_path do %>
+      <span class="btn"><%= t(".privilege") %></span>
+    <% end %>
+  </div>
 
   <div class="latest-post">
     <% link_path = "/forum/#{@forum_post.messageboard.slug}/#{@forum_post.postable.slug}" %>
