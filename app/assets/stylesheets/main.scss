@@ -70,8 +70,9 @@ span.right {
   margin: 0 auto;
 }
 
-.menu {
+.menu, .wide {
   width: 580px;
+  margin: 0 auto;
 }
 
 .footer {
@@ -83,7 +84,7 @@ span.right {
 
   .link {
     color: $offwhite;
-    font-size: 18px;
+    font-size: 24px;
 
     &:hover {
       background-color: white;
@@ -141,11 +142,6 @@ img {
     p {
       padding-left: 4px;
     }
-  }
-
-  .body {
-    width: 80%;
-    margin: 0 auto;
   }
 }
 
