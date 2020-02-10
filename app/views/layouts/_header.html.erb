@@ -1,6 +1,17 @@
 <div class="header">
-  <div>
-    <div><span class="logo"><%= t(".title") %></span></div>
+  <div class="logo">
+    <%= t(".title") %>
+  </div>
+  <div class="link-holder right">
+    <% if current_user %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <span class="link"><%= t(".exit") %></span>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path do %>
+        <span class="link"><%= t(".sign_in") %></span>
+      <% end %>
+    <% end %>
   </div>
 
   <%= render "/layouts/menu" %>

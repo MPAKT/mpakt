@@ -22,8 +22,8 @@ en:
     header:
       title: "MPACT."
       privilege: "My privilege"
-    menu:
       exit: "Sign out"
+    menu:
       forum: "Forum"
       users: "Manage users"
       salaries: "Salaries"
