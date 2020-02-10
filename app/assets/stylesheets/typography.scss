@@ -29,12 +29,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-p {
-  margin: 20px 0;
+input {
+  font-size: 21px;
+  color: $darkblue;
 }
 
-h4 {
-  font-size: 16px;
+p {
+  margin: 20px 0;
 }
 
 h3 {
@@ -51,7 +52,6 @@ h1 {
 
 input {
   font-family: system-ui, 'Myriad', sans-serif;
-  font-size: 18px;
 }
 
 a {
@@ -87,7 +87,6 @@ a.link {
   cursor: pointer;
   text-align: center;
   color: $darkblue;
-  font-size: 18px;
 
   &:hover {
     background-color: $darkblue;

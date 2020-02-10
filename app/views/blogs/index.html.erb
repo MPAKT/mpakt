@@ -1,15 +1,19 @@
 
 <div class="body blogs">
   <% if current_user&.admin? %>
-    <div class="menu-holder">
-      <span class="right long"><%= link_to t(".create"), new_blog_path, class: "btn link" %></span>
+    <div class="central">
+      <%= link_to new_blog_path do %>
+        <span class="btn"><%= t(".create") %></span>
+      <% end %>
     </div>
   <% end %>
 
   <% @blogs.each do |blog| %>
     <div class="blog-holder">
       <%= link_to blog_path(blog) do %>
-        <h3><%= blog.title %></h3>
+        <div class="blog-title">
+          <h3><%= blog.title %></h3>
+        </div>
         <% if blog.image.present? %>
           <div class="image-holder">
             <%= image_tag blog.image.strip %>

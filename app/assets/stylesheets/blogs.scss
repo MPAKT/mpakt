@@ -5,12 +5,12 @@
 
   label {
     display: inline-block;
-    width: 120px;
+    width: 140px;
   }
 
   input.string {
     display: inline-block;
-    width: 400px;
+    width: 436px;
   }
 
   input.boolean {
@@ -40,12 +40,16 @@
   height: 400px;
   display: inline-block;
   vertical-align: top;
-  margin: 0 6px;
+  margin: 20px 6px;
   border: 1px solid $paleblue;
 
   h3 {
-    margin-left: 16px;
+    padding-left: 16px;
   }
+}
+
+.blog-title {
+  border-bottom: 1px solid $paleblue;
 }
 
 .blog-details {

@@ -27,8 +27,15 @@ body {
     display: inline-block;
   }
 
-  .link-holder {
+  .top-holder .link-holder {
     margin-top: 15px;
+  }
+
+  .link {
+    width: 113px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
   }
 }
 
@@ -40,12 +47,6 @@ body {
   float: left;
 }
 
-.link {
-  width: 113px;
-  height: 40px;
-  line-height: 40px;
-  display: block;
-}
 
 .menu-holder {
   height: 40px;
