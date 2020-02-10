@@ -1,22 +1,25 @@
 <div class="menu-holder">
+
   <div class="link-holder end">
-    <%= link_to destroy_user_session_path, method: :delete do %>
-      <div class="link"><%= t(".exit") %></div>
+    <% if current_user %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <div class="link"><%= t(".exit") %></div>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path do %>
+        <div class="link"><%= t(".sign_in") %></div>
+      <% end %>
     <% end %>
   </div>
 
   <div class="center menu">
-    <div class="link-holder">
-      <%= link_to "/TODO" do %>
-        <div class="link"><%= t(".card") %></div>
-      <% end %>
-    </div>
-
-    <div class="link-holder">
-      <%= link_to "/TODO" do %>
-        <div class="link"><%= t(".network") %></div>
-      <% end %>
-    </div>
+    <% if current_user %>
+      <div class="link-holder">
+        <%= link_to "/TODO" do %>
+          <div class="link"><%= t(".card") %></div>
+        <% end %>
+      </div>
+    <% end %>
 
     <div class="link-holder">
       <%= link_to blogs_path do %>
@@ -31,8 +34,14 @@
     </div>
 
     <div class="link-holder">
-      <%= link_to "/TODO" do %>
-        <div class="link"><%= t(".messages") %></div>
+      <% if current_user %>
+        <%= link_to "/TODO" do %>
+          <div class="link"><%= t(".messages") %></div>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_registration_path do %>
+          <div class="link"><%= t(".join") %></div>
+        <% end %>
       <% end %>
     </div>
   </div>

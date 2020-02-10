@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :privileges, only: [:create, :index]
   resources :categories, only: [:create]
+  resources :dashboard, only: [:show]
 
   devise_scope :user do
     resources :users, only: [:index, :show, :update]
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
   get "/cookies", to: 'policies#cookies'
   get "/goals", to: 'policies#goals'
   get "/blog", to: 'blogs#index'
+  get "/dashboard", to: 'dashboard#show'
 
   mount Thredded::Engine => '/forum'
 end
