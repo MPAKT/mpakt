@@ -73,6 +73,10 @@ en:
       title: "Edit %{name}"
       delete: "Delete"
 
+  dashboard:
+    show:
+      privilege: "Check Your Privilege"
+
   privileges:
     index:
       subtitle: "Compare your privilege with friends and colleagues"
