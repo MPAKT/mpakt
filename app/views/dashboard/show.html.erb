@@ -2,9 +2,11 @@
   <%= link_to t(".privilege"), privileges_path, class: "btn" %>
 
   <div class="latest-post">
-    <% link_to 
-    <h3><%= @forum_post.postable.title %> | <%= @forum_post.messageboard.name %></h3>
-    <div class="post-date"><%= I18n.l(@forum_post.updated_at.to_date, format: :blog) %></div>
-    <div class="post-content"><%= @forum_post.content %></div>
+    <% link_path = "/forum/#{@forum_post.messageboard.slug}/#{@forum_post.postable.slug}" %>
+    <%= link_to link_path do %>
+      <h3><%= @forum_post.postable.title %> | <%= @forum_post.messageboard.name %></h3>
+      <div class="post-date"><%= I18n.l(@forum_post.updated_at.to_date, format: :blog) %></div>
+      <div class="post-content"><%= @forum_post.content %></div>
+    <% end %>
   </div>
 </div>
