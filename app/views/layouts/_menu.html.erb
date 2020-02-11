@@ -15,7 +15,7 @@
     </div>
 
     <div class="link-holder">
-      <%= link_to "forum" do %>
+      <%= link_to "/forum" do %>
         <div class="link"><%= t(".forum") %></div>
       <% end %>
     </div>
@@ -31,5 +31,18 @@
         <% end %>
       <% end %>
     </div>
+
+    <% if current_user&.admin? %>
+      <div class="link-holder">
+        <%= link_to "/salaries" do %>
+          <div class="link"><%= t(".salaries") %></div>
+        <% end %>
+      </div>
+      <div class="link-holder">
+        <%= link_to "/users" do %>
+          <div class="link"><%= t(".users") %></div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>

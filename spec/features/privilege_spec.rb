@@ -170,7 +170,7 @@ RSpec.feature "Privilege" do
       visit "/"
 
       within ".header" do
-        expect(page).not_to have_content I18n.t("layouts.header.salaries")
+        expect(page).not_to have_content I18n.t("layouts.menu.salaries")
       end
 
       visit "/salaries"
@@ -194,7 +194,7 @@ RSpec.feature "Privilege" do
       visit "/"
 
       within ".header" do
-        click_on I18n.t("layouts.header.salaries")
+        click_on I18n.t("layouts.menu.salaries")
       end
 
       within ".salaries" do
