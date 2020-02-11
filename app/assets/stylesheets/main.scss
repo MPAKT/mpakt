@@ -19,10 +19,19 @@ body {
   }
 }
 
+.menu, .wide {
+  width: 590px;
+  margin: 0 auto;
+}
+
+.full {
+  width: 800px;
+  margin: 0 auto;
+}
+
 .header {
   margin-top: 30px;
   width: 100%;
-  //position: fixed;
   top: 0;
 
   .logo {
@@ -51,7 +60,6 @@ body {
   float: left;
 }
 
-
 .menu-holder {
   height: 40px;
   width: 100%;
@@ -69,11 +77,6 @@ body {
 
 .center {
   text-align: center;
-  margin: 0 auto;
-}
-
-.menu, .wide {
-  width: 590px;
   margin: 0 auto;
 }
 
