@@ -11,7 +11,7 @@ RSpec.feature "Blog" do
       visit "/"
 
       within ".header" do
-        click_on I18n.t("layouts.header.blog")
+        click_on I18n.t("layouts.menu.blog")
       end
 
       within ".main" do

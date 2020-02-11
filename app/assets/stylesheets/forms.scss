@@ -31,10 +31,6 @@ select {
   background-color: white;
 }
 
-.form-inputs {
-  border-bottom: 1px solid $fadeblue;
-}
-
 .privilege {
   option {
     max-height: 12px;
@@ -74,7 +70,7 @@ select {
 
   .email, .password, .user_short_name {
     input {
-      padding: 0 8px;
+      padding: 8px;
     }
   }
 

@@ -18,11 +18,13 @@
         <% end %>
       </div>
 
-      <div class="minisection">
-        <%= link_to blog_path(@blog), method: :delete do %>
-          <span class="btn secondary"><%= t(".delete") %></span>
-        <% end %>
-      </div>
+      <% if blog.id %>
+        <div class="minisection">
+          <%= link_to blog_path(blog), method: :delete do %>
+            <span class="btn secondary"><%= t(".delete") %></span>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
