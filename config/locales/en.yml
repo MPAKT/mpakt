@@ -21,7 +21,6 @@ en:
   layouts:
     header:
       title: "MPAKT."
-      privilege: "My privilege"
       exit: "Sign out"
     menu:
       forum: "Forum"
@@ -71,7 +70,7 @@ en:
       edit: "Edit"
 
   dashboard:
-    show:
+    index:
       privilege: "Check Your Privilege"
 
   privileges:

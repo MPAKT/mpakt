@@ -5,12 +5,8 @@ RSpec.feature "User" do
     scenario "I can sign up and sign in" do
       visit "/"
 
-      within ".header" do
-        click_on I18n.t("layouts.header.sign_in")
-      end
-
-      within ".devise-links" do
-        click_on I18n.t("devise.shared.links.sign_up")
+      within ".central" do
+        click_on I18n.t("welcome.index.join")
       end
 
       within ".new_user" do
@@ -19,12 +15,14 @@ RSpec.feature "User" do
         fill_in :user_password, with: "123456"
         fill_in :user_password_confirmation, with: "123456"
 
-        click_on I18n.t("layouts.header.sign_up")
+        click_on I18n.t("devise.registrations.new.sign_up")
       end
 
       within ".flash" do
         expect(page).to have_content I18n.t("devise.registrations.signed_up")
       end
+
+      expect(current_url).to have_content "dashboard"
 
       user = User.first.reload
       expect(user.short_name).to eq "shorty"
@@ -39,8 +37,8 @@ RSpec.feature "User" do
         expect(page).to have_content I18n.t("devise.sessions.signed_out")
       end
 
-      within ".header" do
-        click_on I18n.t("layouts.header.sign_in")
+      within ".central" do
+        click_on I18n.t("welcome.index.sign_in")
       end
 
       within ".new_user" do
@@ -53,6 +51,8 @@ RSpec.feature "User" do
       within ".flash" do
         expect(page).to have_content I18n.t("devise.sessions.signed_in")
       end
+
+      expect(current_url).to have_content "dashboard"
     end
   end
 
@@ -64,7 +64,7 @@ RSpec.feature "User" do
       visit "/"
 
       within ".header" do
-        click_on I18n.t("layouts.header.forum")
+        click_on I18n.t("layouts.menu.forum")
       end
 
       within ".thredded--navigation" do
@@ -99,8 +99,8 @@ RSpec.feature "User" do
       visit "/"
 
       within ".header" do
-        expect(page).not_to have_content I18n.t("layouts.header.users")
-        click_on I18n.t("layouts.header.forum")
+        expect(page).not_to have_content I18n.t("layouts.menu.users")
+        click_on I18n.t("layouts.menu.forum")
       end
 
       within ".thredded--main-section" do
@@ -137,8 +137,8 @@ RSpec.feature "User" do
       visit "/"
 
       within ".header" do
-        expect(page).not_to have_content I18n.t("layouts.header.users")
-        click_on I18n.t("layouts.header.forum")
+        expect(page).not_to have_content I18n.t("layouts.menu.users")
+        click_on I18n.t("layouts.menu.forum")
       end
 
       within ".thredded--main-section" do
@@ -174,7 +174,7 @@ RSpec.feature "User" do
       visit "/"
 
       within ".header" do
-        click_on I18n.t("layouts.header.users")
+        click_on I18n.t("layouts.menu.users")
       end
 
       today = I18n.l(Time.zone.now.to_date, format: :short)
