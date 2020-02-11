@@ -33,7 +33,7 @@ RSpec.feature "Blog" do
         expect(page).to have_content "Summary test"
       end
 
-      within ".right" do
+      within ".central" do
         click_on I18n.t("blogs.show.edit")
       end
 
@@ -52,9 +52,7 @@ RSpec.feature "Blog" do
         expect(page).not_to have_content "Summary test"
       end
 
-      within ".right" do
-        click_on I18n.t("blogs.show.back")
-      end
+      visit "/blogs"
 
       within ".blogs" do
         expect(page).to have_content "Edited"
@@ -63,12 +61,12 @@ RSpec.feature "Blog" do
         click_on "Test title"
       end
 
-      within ".right" do
+      within ".central" do
         click_on I18n.t("blogs.show.edit")
       end
 
-      within ".right" do
-        click_on I18n.t("blogs.edit.delete")
+      within ".form-actions" do
+        click_on I18n.t("blogs.form.delete")
       end
 
       within ".flash" do

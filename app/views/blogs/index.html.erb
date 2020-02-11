@@ -14,7 +14,7 @@
         <div class="blog-title">
           <h3><%= blog.title %></h3>
         </div>
-        <% if blog.image.present? %>
+        <% if blog.image? %>
           <div class="image-holder">
             <%= image_tag blog.image.strip %>
           </div>
