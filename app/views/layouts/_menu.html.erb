@@ -2,7 +2,7 @@
   <div class="center menu">
     <% if current_user %>
       <div class="link-holder">
-        <%= link_to "/TODO" do %>
+        <%= link_to "/users/#{current_user.id}/" do %>
           <div class="link"><%= t(".card") %></div>
         <% end %>
       </div>
@@ -22,7 +22,7 @@
 
     <div class="link-holder">
       <% if current_user %>
-        <%= link_to "/TODO" do %>
+        <%= link_to "/forum/private-topics" do %>
           <div class="link"><%= t(".messages") %></div>
         <% end %>
       <% else %>

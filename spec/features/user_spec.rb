@@ -63,12 +63,8 @@ RSpec.feature "User" do
       login_as user
       visit "/"
 
-      within ".header" do
-        click_on I18n.t("layouts.menu.forum")
-      end
-
-      within ".thredded--navigation" do
-        click_on "user"
+      within ".menu" do
+        click_on I18n.t("layouts.menu.card")
       end
 
       within ".edit_user" do
