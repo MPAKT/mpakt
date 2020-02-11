@@ -163,7 +163,7 @@ RSpec.feature "Privilege" do
   end
 
   context "As an authenticated user" do
-    let(:user) { User.create(email: "user@mpact.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now) }
+    let(:user) { User.create(email: "user@mpakt.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now) }
     scenario "I can not see the salary summary" do
       login_as user
 
@@ -182,7 +182,7 @@ RSpec.feature "Privilege" do
   end
 
   context "As an authenticated admin" do
-    let(:admin) { User.create(email: "admin@mpact.com", password: "123456", short_name: "admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now) }
+    let(:admin) { User.create(email: "admin@mpakt.com", password: "123456", short_name: "admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now) }
 
     scenario "I can see the salary summary" do
       privilege = Privilege.create(salary: 5)

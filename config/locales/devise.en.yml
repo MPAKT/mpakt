@@ -64,7 +64,7 @@ en:
         confirm: "Confirm Password"
 
     sessions:
-      signed_in: "Welcome back to MPACT."
+      signed_in: "Welcome back to MPAKT."
       signed_out: "You have signed out, please close your tab or browser"
       already_signed_out: "You have signed out, please close your tab or browser"
       new:

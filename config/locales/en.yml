@@ -8,7 +8,7 @@ en:
     index:
       join: "Join"
       sign_in: "Sign in"
-      explore: "Explore MPACT."
+      explore: "Explore MPAKT."
     titles:
       subtitle: "The Network"
       share: "Share. Inspire. Grow."
@@ -20,7 +20,7 @@ en:
 
   layouts:
     header:
-      title: "MPACT."
+      title: "MPAKT."
       privilege: "My privilege"
       exit: "Sign out"
     menu:
