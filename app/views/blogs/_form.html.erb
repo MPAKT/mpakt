@@ -1,15 +1,30 @@
-<%= simple_form_for blog do |f| %>
-  <%= f.input :title, as: :string %>
-  <%= f.input :summary, as: :string %>
-  <%= f.input :image, as: :string, placeholder: t(".image_info") %>
+<div class="wide">
+  <%= simple_form_for blog do |f| %>
+    <%= f.input :title, as: :string %>
+    <%= f.input :summary, as: :string %>
+    <%= f.input :image, as: :string, placeholder: t(".image_info") %>
 
-  <%= f.input :description %>
+    <%= f.input :description %>
 
-  <%= f.input :publish %>
 
-  <div class="input">
-    <%= link_to t(".cancel"), blogs_path, class: "btn" %>
-    <%= f.submit t(".submit"), class: "btn" %>
-  </div>
+    <div class="central form-actions">
+      <%= f.input :publish %>
 
-<% end %>
+      <%= f.submit t(".submit"), class: "btn" %>
+
+      <div class="minisection">
+        <%= link_to blogs_path do %>
+          <span class="btn secondary"><%= t(".cancel") %></span>
+        <% end %>
+      </div>
+
+      <% if blog.id %>
+        <div class="minisection">
+          <%= link_to blog_path(blog), method: :delete do %>
+            <span class="btn secondary"><%= t(".delete") %></span>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

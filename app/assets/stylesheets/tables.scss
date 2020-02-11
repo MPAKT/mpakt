@@ -6,11 +6,12 @@ table {
 td, th {
   padding: 4px;
   border: 1px solid grey;
+  font-size: 21px;
 }
 
 .cell {
   display: inline-block;
-  width: 80px;
+  width: 105px;
   border-right: 1px solid grey;
 
   .input {
@@ -22,7 +23,12 @@ td, th {
   }
 
   .btn {
-    margin-left: 13px;
+    height: 30px;
+    line-height: 14px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    padding-bottom: 5px;
   }
 }
 

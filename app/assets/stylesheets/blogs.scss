@@ -5,12 +5,12 @@
 
   label {
     display: inline-block;
-    width: 120px;
+    width: 140px;
   }
 
   input.string {
     display: inline-block;
-    width: 400px;
+    width: 436px;
   }
 
   input.boolean {
@@ -23,12 +23,8 @@
 }
 
 .blogs {
-  h3 {
-    margin-bottom: 0;
-  }
-
   .image-holder {
-    width: 260px;
+    width: 100%;
     height: 160px;
   }
 
@@ -40,25 +36,43 @@
 }
 
 .blog-holder {
-  width: 260px;
-  height: 320px;
+  width: 320px;
+  height: 400px;
   display: inline-block;
   vertical-align: top;
-  margin: 12px 6px;
-  border: 1px solid $lightgrey;
-  padding: 12px;
+  margin: 20px 6px;
+  border: 1px solid $paleblue;
+
+  h3 {
+    padding-left: 16px;
+  }
+}
+
+.blog-title {
+  border-bottom: 1px solid $paleblue;
+}
+
+.blog-details {
+  margin: 16px;
+}
+
+.blog-date {
+  margin-bottom: 16px;
+}
+
+.blog-summary {
+  font-color: $midblue;
+  font-size: 16px;
 }
 
 .blog {
-  width: 100%;
+  max-width: 100%;
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid $paleblue;
 
   h1, h3, .image-holder {
     text-align: center;
-  }
-
-  .image-holder {
-    margin: 0 auto;
-    width: 400px;
   }
 
   img {

@@ -1,10 +1,12 @@
 body {
   margin: 0;
+  background-color: white;
 }
 
 .main {
-  margin: 20px auto 60px auto;
-  width: 90%;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 140px; // Allow for footer
 }
 
 .flash {
@@ -13,21 +15,48 @@ body {
 
   .notice, .alert {
     padding: 4px;
-    border-bottom: 1px solid $lightgrey;
   }
 }
 
+.menu, .wide {
+  width: 590px;
+  margin: 0 auto;
+}
+
+.full {
+  width: 800px;
+  margin: 0 auto;
+}
+
 .header {
-  .menu-holder {
-    border-bottom: 1px solid $lightgrey;
-  }
+  margin-top: 30px;
+  width: 100%;
+  top: 0;
 
   .logo {
-    margin: 0;
+    margin-left: 60px;
     padding-left: 20px;
-    width: 90%;
-    height: 100%;
+    display: inline-block;
   }
+
+  .top-holder .link-holder {
+    margin-top: 15px;
+  }
+
+  .link {
+    width: 98px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+  }
+}
+
+.link-holder {
+  height: 40px;
+  width: 98px;
+  display: inline-block;
+  text-align: center;
+  float: left;
 }
 
 .menu-holder {
@@ -35,47 +64,57 @@ body {
   width: 100%;
   margin: 0 auto;
 
-  .link {
-    width: 113px;
-    height: 40px;
-    line-height: 40px;
-    display: block;
-  }
-
-  .link-holder {
-    height: 40px;
-    width: 113px;
-    display: inline-block;
-    text-align: center;
-    float: left;
-  }
-
-  .end {
-    float: right;
-  }
-
   a {
     height: 40px;
-    width: 113px;
+    width: 100%;
   }
 }
 
-div.right {
-  width: 100%;
-  text-align: right;
+.right {
+  float: right;
 }
 
-span.right {
-  float: right;
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section {
+  margin-top: 50px;
+}
+
+.subsection {
+  margin-top: 20px;
+}
+
+.minisection {
+  margin-top: 10px;
 }
 
 .footer {
   width: 100%;
   position: fixed;
   bottom: 0;
+  background-color: $darkblue;
+  padding: 50px 30px 30px 30px;
+
+  .link {
+    color: $offwhite;
+    font-size: 24px;
+
+    &:hover {
+      background-color: white;
+      color: $darkblue;
+    }
+  }
+
+  .right {
+    float: right;
+  }
 
   .menu-holder {
-    border-top: 1px solid $lightgrey;
+    width: unset;
+    margin: 0 60px 0 0;
   }
 }
 
@@ -107,12 +146,13 @@ img {
 }
 
 @media only screen and (min-width: 800px) {
-  .left-col {
-    width: 50%;
+  .body {
+    width: 80%;
+    margin: 0 auto;
   }
 
-  .main, .policy, .menu-holder, .flash {
-    width: 80%;
+  .left-col {
+    width: 50%;
   }
 
   .right-col {

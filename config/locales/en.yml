@@ -1,13 +1,17 @@
 en:
 
+  date:
+    formats:
+      blog: "%-e %b, %Y" #20 Oct 2017
+
   welcome:
     index:
-      subtitle: "Diversity, Inclusion and Privilege"
-      safe: "MPACT. is a moderated safe space for anonymous conversations about diversity, inclusion, and privilege.
-      It's built and moderated by volunteers, and we do not make any financial revenue from this site."
-      welcome: "Please make everyone feel welcome here, whatever their privilege."
-      calculator_html: "Calculate your privilege score with the <a class='link' href='/privileges'>privilege calculator</a>"
-      why_html: "Why did we build MPACT. and what will you find here? <a class='link' href='/goals'>Find out more</a>"
+      join: "Join"
+      sign_in: "Sign in"
+      explore: "Explore MPAKT."
+    titles:
+      subtitle: "The Network"
+      share: "Share. Inspire. Grow."
 
   success:
     create: "Created %{name}"
@@ -16,23 +20,24 @@ en:
 
   layouts:
     header:
-      title: "MPACT."
-      privilege: "My privilege"
+      title: "MPAKT."
       exit: "Sign out"
-      sign_in: "Sign in"
-      sign_up: "Register"
+    menu:
       forum: "Forum"
-      users: "Manage users"
+      users: "Users"
       salaries: "Salaries"
       blog: "Blog"
+      card: "My Card"
+      network: "Network"
+      messages: "Messages"
     footer:
-      cookies: "Cookies"
+      help: "Help"
       ts_and_cs: "Terms"
-      privacy: "Data privacy"
+      privacy: "Legal"
+      about_us: "About us"
 
   users:
     index:
-      title: "Users"
       email: "Email"
       short_name: "Name"
       moderator: "Moderator"
@@ -42,7 +47,6 @@ en:
     update:
       success: "Successfully updated %{email}"
     show:
-      title: "My profile"
       save: "Save"
       new_password: "New password"
       new_password_confirmation: "Confirm new password"
@@ -51,20 +55,18 @@ en:
 
   blogs:
     index:
-      title: "Blog posts"
-      create: "Create new post"
-    new:
-      title: "New post"
+      create: "Create post"
     form:
       cancel: "Cancel"
       submit: "Save"
       image_info: "For example, https://images.unsplash.com/photo-1544367567-0f2fcb009e0b"
+      delete: "Delete"
     show:
       edit: "Edit"
-      back: "All posts"
-    edit:
-      title: "Edit %{name}"
-      delete: "Delete"
+
+  dashboard:
+    index:
+      privilege: "Check Your Privilege"
 
   privileges:
     index:

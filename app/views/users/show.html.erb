@@ -1,21 +1,21 @@
-<h2><%= t(".title") %></h2>
+<div class="wide">
+  <%= simple_form_for @user, url: user_path(@user.id), data: { inline: true } do |f| %>
+    <div class="left-col">
+      <%= f.label :short_name %>
+      <p><%= f.input :short_name, label: false %></p>
+      <%= f.label :current_password %>
+      <p><%= f.input :current_password, label: false %></p>
+      <%= f.label :new_password %>
+      <p><%= f.input :new_password, label: false %></p>
+      <%= f.label t(".new_password_confirmation") %>
+      <p><%= f.input :new_password_confirmation, label: false %></p>
+      <p><%= f.submit t(".save"), class:"btn" %></p>
+    </div>
 
-<%= simple_form_for @user, url: user_path(@user.id), data: { inline: true } do |f| %>
-  <div class="left-col">
-    <%= f.label :short_name %>
-    <p><%= f.input :short_name, label: false %></p>
-    <%= f.label :current_password %>
-    <p><%= f.input :current_password, label: false %></p>
-    <%= f.label :new_password %>
-    <p><%= f.input :new_password, label: false %></p>
-    <%= f.label t(".new_password_confirmation") %>
-    <p><%= f.input :new_password_confirmation, label: false %></p>
-    <p><%= f.submit t(".save"), class:"btn" %></p>
-  </div>
-
-  <div class="right-col">
-    <p><%= @user.email %></p>
-    <p><%= t(".moderator") if @user.volunteer %></p>
-    <p><%= t(".admin") if @user.admin %></p>
-  </div>
-<% end %>
+    <div class="right-col">
+      <p><%= @user.email %></p>
+      <p><%= t(".moderator") if @user.volunteer %></p>
+      <p><%= t(".admin") if @user.admin %></p>
+    </div>
+  <% end %>
+</div>

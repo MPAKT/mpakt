@@ -2,18 +2,24 @@
 <div class="footer">
   <div class="menu-holder">
     <div class="link-holder">
-      <%= link_to cookies_path do %>
-        <div class="link"><%= t(".cookies") %></div>
+      <%= link_to "/TODO" do %>
+        <div class="link"><%= t(".about_us") %></div>
       <% end %>
     </div>
-    <div class="link-holder">
+
+    <div class="link-holder right">
+      <%= link_to privacy_path do %>
+        <div class="link"><%= t(".privacy") %></div>
+      <% end %>
+    </div>
+    <div class="link-holder right">
       <%= link_to ts_and_cs_path do %>
         <div class="link"><%= t(".ts_and_cs") %></div>
       <% end %>
     </div>
-    <div class="link-holder">
-      <%= link_to privacy_path do %>
-        <div class="link"><%= t(".privacy") %></div>
+    <div class="link-holder right">
+      <%= link_to cookies_path do %>
+        <div class="link"><%= t(".help") %></div>
       <% end %>
     </div>
   </div>

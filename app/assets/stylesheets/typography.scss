@@ -1,59 +1,96 @@
-/* Fonts downloaded from https://google-webfonts-helper.herokuapp.com/ */
+/* Fonts downloaded from https://best-font.com/ and https://fontsup.com and http://fontsgeek.com */
 
 @font-face {
-  font-family: 'Caveat Brush';
+  font-family: 'Frutiger';
   font-style: normal;
-  font-weight: 400;
-  src: url('caveat-brush/caveat-brush-v5-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Caveat Brush'), local('CaveatBrush-Regular'),
-       url('caveat-brush/caveat-brush-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('caveat-brush/caveat-brush-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('caveat-brush/caveat-brush-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('caveat-brush/caveat-brush-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('caveat-brush/caveat-brush-v5-latin-regular.svg#CaveatBrush') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  src: local('Frutiger'), url('frutiger/Frutiger-LT-Std-77-Black-Condensed_18829.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Myriad';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad'), url('myriad/Myriad-Pro-Light-SemiExtended_31641.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Minion';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad'), url('minion/Minion-Pro-Italic.ttf') format('truetype');
+}
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Myriad", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
-  color: $light-text;
+  color: $darkblue;
+  font-size: 21px;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
-  font-weight: 400;
-  font-size: 16px;
-  color: black;
+input {
+  font-size: 21px;
+  color: $darkblue;
+}
+
+p {
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 24px;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 26px;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 35px;
 }
 
-p, td, li, span, a {
-  font-size: 14px;
+input {
+  font-family: system-ui, 'Myriad', sans-serif;
+}
+
+a {
+  color: $darkblue;
+
+  &:visited {
+    color: $darkblue;
+  }
+}
+
+a.link {
+  color: $offwhite;
+
+  &:visited {
+    color: $offwhite;
+  }
 }
 
 .logo {
-  font-family: 'Caveat Brush', cursive;
-  font-weight: 400;
-  font-size: 26px;
-  color: black;
+  font-family: 'Frutiger', sans-serif;
+  font-size: 50px;
+  letter-spacing: 1.5px;
+}
+
+.italic-min {
+  font-family: 'Minion', sans-serif;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .link {
-  color: $lightblue;
-  display: inline;
+  display: block;
   cursor: pointer;
+  text-align: center;
+  color: $darkblue;
 
   &:hover {
-    background-color: $lightblue;
-    color: white;
+    background-color: $darkblue;
+    color: $offwhite;
   }
 }
 
@@ -64,4 +101,21 @@ a, a:visited {
 
 .strong {
   font-weight: bold;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $darkblue;
+  font-size: 18px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $darkblue;
+  font-size: 18px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $darkblue;
+  font-size: 18px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $darkblue;
+  font-size: 18px;
 }

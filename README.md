@@ -1,10 +1,10 @@
 # README
 
-README for the MPACT. app
+README for the MPAKT. app
 
 ## Webpacker
 
-MPACT. uses webpacker, which may need you to install a bunch of stuff with yarn, for more information see
+MPAKT. uses webpacker, which may need you to install a bunch of stuff with yarn, for more information see
 https://www.botreetechnologies.com/blog/introducing-jquery-in-rails-6-using-webpacker
 
 ## Test

@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.feature "Blog" do
 
   context "As an admin" do
-    let(:admin) { User.create(email: "blog_admin@mpact.com", password: "123456", short_name: "blog_admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now) }
+    let(:admin) { User.create(email: "blog_admin@mpakt.com", password: "123456", short_name: "blog_admin", volunteer: true, admin: true, last_sign_in_at: Time.zone.now) }
 
     scenario "I can create and manage blog posts" do
       login_as admin
@@ -11,7 +11,7 @@ RSpec.feature "Blog" do
       visit "/"
 
       within ".header" do
-        click_on I18n.t("layouts.header.blog")
+        click_on I18n.t("layouts.menu.blog")
       end
 
       within ".main" do
@@ -33,7 +33,7 @@ RSpec.feature "Blog" do
         expect(page).to have_content "Summary test"
       end
 
-      within ".right" do
+      within ".central" do
         click_on I18n.t("blogs.show.edit")
       end
 
@@ -52,9 +52,7 @@ RSpec.feature "Blog" do
         expect(page).not_to have_content "Summary test"
       end
 
-      within ".right" do
-        click_on I18n.t("blogs.show.back")
-      end
+      visit "/blogs"
 
       within ".blogs" do
         expect(page).to have_content "Edited"
@@ -63,12 +61,12 @@ RSpec.feature "Blog" do
         click_on "Test title"
       end
 
-      within ".right" do
+      within ".central" do
         click_on I18n.t("blogs.show.edit")
       end
 
-      within ".right" do
-        click_on I18n.t("blogs.edit.delete")
+      within ".form-actions" do
+        click_on I18n.t("blogs.form.delete")
       end
 
       within ".flash" do
@@ -84,7 +82,7 @@ RSpec.feature "Blog" do
   end
 
   context "As an user" do
-    let(:user) { User.create(email: "blog@mpact.com", password: "123456", short_name: "blog", last_sign_in_at: Time.zone.now) }
+    let(:user) { User.create(email: "blog@mpakt.com", password: "123456", short_name: "blog", last_sign_in_at: Time.zone.now) }
 
     scenario "I can not edit blog posts" do
       login_as user
