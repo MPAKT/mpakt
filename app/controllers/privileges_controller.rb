@@ -2,16 +2,11 @@
 
 class PrivilegesController < ApplicationController
   def create
-    @privilege = Privilege.create(privilege_params)
-    redirect_to privileges_path(subtype: 0, privilege_id: @privilege.id)
+    @privilege.update(privilege_params)
+    redirect_to privileges_path(privilege_id: @privilege.id)
   end
 
-  def index
-    @subtype = -1
-    @subtype = params[:subtype].to_i if params[:subtype]
-    @privilege_id = params[:privilege_id]
-    @privilege = Privilege.find(@privilege_id) if @subtype > 3
-  end
+  def new; end
 
   def salaries
     redirect_to root_url, notice: t("errors.messages.not_authorized") unless current_user&.admin?

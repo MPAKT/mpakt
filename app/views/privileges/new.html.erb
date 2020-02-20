@@ -1,0 +1,12 @@
+<div class="wide privilege">
+  <h2><%= t(".title") %></h2>
+  <h3><%= t(".subtitle") %></h3>
+
+  <p><%= t(".preamble") %></p>
+  <p><%= t(".retired") %></p>
+
+  <%= render "privileges/form", privilege: Privilege.new %>
+  <% 4.times do |index| %>
+    <%= render "privileges/category", subtype: index %>
+  <% end %>
+</div>

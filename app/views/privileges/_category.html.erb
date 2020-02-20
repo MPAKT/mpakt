@@ -1,8 +1,8 @@
 <% subtype_name = Category.subtypes.key(subtype) %>
+
 <div class="category <%= subtype_name %>">
   <% category = Category.new(subtype: subtype) %>
   <%= simple_form_for category do |f| %>
-    <%= f.hidden_field :privilege_id, value: privilege_id %>
     <%= f.hidden_field :subtype, value: subtype_name %>
     <h4><%= f.label subtype_name %></h4>
 

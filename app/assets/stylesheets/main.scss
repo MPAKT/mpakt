@@ -118,11 +118,7 @@ body {
   }
 }
 
-.privilege {
-  min-height: 640px;
-}
-
-.privilege, .policy {
+.policy {
   width: 100%;
   margin: 0 auto;
 }
@@ -163,11 +159,5 @@ img {
     p {
       padding-left: 4px;
     }
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .privilege {
-    width: 80%;
   }
 }

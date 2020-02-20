@@ -1,41 +1,23 @@
-<h2><%= t(".title") %></h2>
-
-<p><%= t(".privacy") %></p>
-<p><%= t(".log_out_html") if current_user %></p>
-<p><%= t(".education") %></p>
-
-<h3><%= t(".now") %></h3>
+<h3><%= t(".salary") %></h3>
 
 <%= simple_form_for privilege do |f| %>
   <div>
-    <%= f.label :salary %>
-    <%= f.input :salary, collection: salary_collection, label: false %>
-    <p><%= t(".full_time") %></p>
-    <p><%= t(".convert_html") %></p>
+    <%= f.input :salary, collection: salary_collection, label: false, include_blank: t(".salary_dollar") %>
+  </div>
+  <div class="input">
+    <%= f.country_select :country_code, { priority_countries: Privilege.priority_countries }, label: false, include_blank: t(".age") %>
   </div>
   <div>
-    <%= f.label :country %>
-    <div class="input"><%= f.country_select :country_code, { priority_countries: Privilege.priority_countries }, label: false %></div>
+    <%= f.input :year, input_html: { step: 1, min: 16, max: 109, placeholder: t(".age") }, label: false %>
   </div>
   <div>
-    <%= f.label :year %>
-    <%= f.input :year, input_html: { step: 1, min: 16, max: 109, value: 35 }, label: false %>
-  </div>
-  <div>
-    <%= f.label :salary_year %>
     <% current_year = Time.zone.now.year %>
-    <%= f.input :salary_year, input_html: { step: 1, min: 2010, max: current_year, value: current_year }, label: false %>
+    <%= f.input :salary_year, input_html: { step: 1, min: 2010, max: current_year, placeholder: t(".salary_year") }, label: false %>
   </div>
   <div>
-    <%= f.label :role %>
-    <%= f.input :role, collection: role_collection, label: false %>
+    <%= f.input :role, collection: role_collection, label: false, include_blank: t(".role") %>
   </div>
   <div>
-    <%= f.label :redundancy %>
-    <%= f.input :redundancy, collection: redundancy_collection, label: false %>
-  </div>
-
-  <div>
-    <%= f.submit t(".save"), class:"btn" %>
+    <%= f.input :redundancy, collection: redundancy_collection, label: false, include_blank: t(".redundancy") %>
   </div>
 <% end %>
