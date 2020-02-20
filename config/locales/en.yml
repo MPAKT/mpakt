@@ -5,7 +5,7 @@ en:
       blog: "%-e %b, %Y" #20 Oct 2017
 
   welcome:
-    index:
+    join:
       join: "Join"
       sign_in: "Sign in"
       explore: "Explore MPAKT."

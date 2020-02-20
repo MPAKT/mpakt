@@ -79,7 +79,7 @@ en:
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
     shared:
       links:
-        sign_up: "Register"
+        sign_up: "Join"
         sign_in: "Sign in"
         forgot_password: "Forgot password"
 
