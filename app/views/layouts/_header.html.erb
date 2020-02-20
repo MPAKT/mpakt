@@ -1,6 +1,6 @@
 <div class="header">
   <div class="top-holder">
-    <%= link_to root_path do %>
+    <%= link_to main_app.root_path do %>
       <div class="logo">
         <%= t(".title") %>
       </div>
@@ -8,11 +8,11 @@
 
     <div class="link-holder right">
       <% if current_user %>
-        <%= link_to destroy_user_session_path, method: :delete do %>
+        <%= link_to main_app.destroy_user_session_path, method: :delete do %>
           <span class="link"><%= t(".exit") %></span>
         <% end %>
       <% else %>
-        <%= link_to new_user_session_path do %>
+        <%= link_to main_app.new_user_session_path do %>
           <span class="link"><%= t(".sign_in") %></span>
         <% end %>
       <% end %>
