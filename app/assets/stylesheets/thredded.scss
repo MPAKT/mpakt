@@ -4,3 +4,14 @@
 
 @import "thredded/dependencies";
 @import "thredded/thredded";
+
+// Hide thredded's own links to messages and notification settings
+.thredded--user-navigation--settings, .thredded--user-navigation--private-topics {
+  display: none;
+}
+
+// The messages and notifications settings were making the vertical space right,
+// hiding them caused the search bar to overlap the navigation breadcrumbs, fixed by this workaround
+.thredded--navigation-breadcrumbs {
+  margin-top: 35px;
+}
