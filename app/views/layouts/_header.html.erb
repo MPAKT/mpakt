@@ -16,5 +16,5 @@
     </div>
   </div>
 
-  <%= render "/layouts/menu" %>
+  <%= render "/layouts/menu" unless request.path == "/" %>
 </div>
