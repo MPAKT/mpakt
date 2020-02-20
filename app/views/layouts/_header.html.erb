@@ -1,8 +1,11 @@
 <div class="header">
   <div class="top-holder">
-    <div class="logo">
-      <%= t(".title") %>
-    </div>
+    <%= link_to root_path do %>
+      <div class="logo">
+        <%= t(".title") %>
+      </div>
+    <% end %>
+
     <div class="link-holder right">
       <% if current_user %>
         <%= link_to destroy_user_session_path, method: :delete do %>
@@ -16,5 +19,5 @@
     </div>
   </div>
 
-  <%= render "/layouts/menu" %>
+  <%= render "/layouts/menu" unless request.path == "/" && !current_user %>
 </div>

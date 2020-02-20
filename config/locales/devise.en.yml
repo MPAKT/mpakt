@@ -42,7 +42,8 @@ en:
       updated_not_active: "Your password has been changed successfully"
       new:
         forgot_password: "Forgot password"
-        send: "Send me password reset instructions"
+        send: "Send Password Reset"
+        email: "Email address"
       edit:
         change: "Change password"
         new_password: "New password"
@@ -78,7 +79,7 @@ en:
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
     shared:
       links:
-        sign_up: "Register"
+        sign_up: "Join"
         sign_in: "Sign in"
         forgot_password: "Forgot password"
 

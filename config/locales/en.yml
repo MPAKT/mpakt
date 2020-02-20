@@ -5,7 +5,7 @@ en:
       blog: "%-e %b, %Y" #20 Oct 2017
 
   welcome:
-    index:
+    join:
       join: "Join"
       sign_in: "Sign in"
       explore: "Explore MPAKT."
@@ -30,6 +30,7 @@ en:
       card: "My Card"
       network: "Network"
       messages: "Messages"
+      join: "Join"
     footer:
       help: "Help"
       ts_and_cs: "Terms"
@@ -65,7 +66,7 @@ en:
       edit: "Edit"
 
   dashboard:
-    index:
+    dashboard:
       privilege: "Check Your Privilege"
 
   privileges:

@@ -5,8 +5,8 @@ RSpec.feature "User" do
     scenario "I can sign up and sign in" do
       visit "/"
 
-      within ".central" do
-        click_on I18n.t("welcome.index.join")
+      within ".section" do
+        click_on I18n.t("welcome.join.join")
       end
 
       within ".new_user" do
@@ -37,8 +37,8 @@ RSpec.feature "User" do
         expect(page).to have_content I18n.t("devise.sessions.signed_out")
       end
 
-      within ".central" do
-        click_on I18n.t("welcome.index.sign_in")
+      within ".section" do
+        click_on I18n.t("welcome.join.sign_in")
       end
 
       within ".new_user" do
