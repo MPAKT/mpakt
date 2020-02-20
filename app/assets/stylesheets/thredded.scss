@@ -38,11 +38,10 @@ time {
   font-family: 'Minion', sans-serif;
   font-size: 18px;
   font-style: italic;
-  color: $darkblue;
   border-left: 1px solid $darkblue;
   padding-left: 4px;
 }
 
-.thredded--topics-updated-by {
-  color: $darkblue;
+.thredded--user-navigation--item.thredded--is-current {
+  border: none;
 }

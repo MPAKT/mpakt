@@ -23,10 +23,13 @@
 @import 'posts';
 
 // Override thredded branding colours
+// Text colour
 $thredded-brand: $darkblue;
-//$thredded-background-color: $midblue;
-$thredded-overlay-background-color: $offwhite;
-$thredded-action-color: $offwhite;
+// Text colour on hover
+$thredded-action-color: $midblue;
+// Hover colour for messageboard titles
 $thredded-action-hover-color: $midblue;
+// Background colour for unread counts
+$thredded-badge-inactive-background: $midblue;
 
 @import 'thredded';
