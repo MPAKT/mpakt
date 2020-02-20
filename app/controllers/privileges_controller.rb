@@ -33,6 +33,8 @@ class PrivilegesController < ApplicationController
   end
 
   def privilege_params
-    params.require(:privilege).permit(:salary, :year, :country_code, :redundancy, :role, :salary_year, categories: {})
+    params.require(:privilege).permit(:salary, :year, :country_code, :redundancy, :role,
+                                      :salary_year, :categories, :category,
+                                      categories_attributes: [:a, :b, :c, :d, :e, :subtype])
   end
 end

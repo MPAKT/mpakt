@@ -1,11 +1,10 @@
 <% subtype_name = Category.subtypes.key(subtype) %>
 
 <div class="category <%= subtype_name %>">
-  <% category = Category.new(subtype: subtype) %>
-  <%= f.hidden_field :subtype, value: subtype_name %>
-  <h4><%= f.label subtype_name %></h4>
+  <%= f.simple_fields_for category do |c| %>
+    <%= c.hidden_field :subtype, value: subtype_name %>
+    <h4><%= c.label subtype_name %></h4>
 
-  <%= f.simple_fields_for :categories do |c| %>
     <% questions = ["a", "b", "c", "d"] %>
     <% questions << "e" if subtype_name == "ethnicity" %>
 
@@ -15,5 +14,4 @@
                                include_blank: t("categories.#{subtype_name}.#{question_id}.text") %>
     <% end %>
   <% end %>
-
 </div>

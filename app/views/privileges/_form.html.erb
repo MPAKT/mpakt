@@ -21,8 +21,10 @@
     <%= f.input :redundancy, collection: redundancy_collection, label: false, include_blank: t(".redundancy") %>
   </div>
 
+  <% categories = [] %>
   <% 4.times do |index| %>
-    <%= render "privileges/category", subtype: index, f: f %>
+    <% categories[index] = Category.new(subtype: index) %>
+    <%= render "privileges/category", subtype: index, f: f, category: categories[index] %>
   <% end %>
 
   <%= f.submit t(".save"), class:"btn" %>
