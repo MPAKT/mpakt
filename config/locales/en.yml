@@ -30,6 +30,7 @@ en:
       card: "My Card"
       network: "Network"
       messages: "Messages"
+      join: "Join"
     footer:
       help: "Help"
       ts_and_cs: "Terms"
