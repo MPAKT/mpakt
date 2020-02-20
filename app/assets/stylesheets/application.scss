@@ -23,8 +23,10 @@
 @import 'posts';
 
 // Override thredded branding colours
-// Text colour
+// Text colour for titles ...
 $thredded-brand: $darkblue;
+// ... and contents
+$thredded-text-color: $darkblue;
 // Text colour on hover
 $thredded-action-color: $midblue;
 // Hover colour for messageboard titles
@@ -33,5 +35,7 @@ $thredded-action-hover-color: $midblue;
 $thredded-badge-inactive-background: $midblue;
 // Text colour for (updated-by) time
 $thredded-secondary-text-color: $midblue;
+// Border colour
+$thredded-base-border-color: $paleblue;
 
 @import 'thredded';

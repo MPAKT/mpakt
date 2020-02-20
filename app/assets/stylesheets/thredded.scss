@@ -34,14 +34,25 @@
 // End of workarounds
 
 // Override the thredded scheme
-time {
+time, .thredded--messageboard--byline {
   font-family: 'Minion', sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-style: italic;
-  border-left: 1px solid $darkblue;
-  padding-left: 4px;
 }
 
 .thredded--user-navigation--item.thredded--is-current {
   border: none;
+}
+
+.thredded--messageboard {
+  padding: 0;
+
+  .thredded--messageboard--header {
+    border-bottom: 1px solid $paleblue;
+    padding: 20px;
+  }
+
+  p {
+    margin: 10px 20px;
+  }
 }
