@@ -10,7 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_self
  */
 
 @import 'colors';
@@ -22,3 +21,21 @@
 @import 'tables';
 @import 'blogs';
 @import 'posts';
+
+// Override thredded branding colours
+// Text colour for titles ...
+$thredded-brand: $darkblue;
+// ... and contents
+$thredded-text-color: $darkblue;
+// Text colour on hover
+$thredded-action-color: $midblue;
+// Hover colour for messageboard titles
+$thredded-action-hover-color: $midblue;
+// Background colour for unread counts
+$thredded-badge-inactive-background: $midblue;
+// Text colour for (updated-by) time
+$thredded-secondary-text-color: $midblue;
+// Border colour
+$thredded-base-border-color: $paleblue;
+
+@import 'thredded';

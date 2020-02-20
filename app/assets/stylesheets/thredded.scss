@@ -4,3 +4,63 @@
 
 @import "thredded/dependencies";
 @import "thredded/thredded";
+@import "colors";
+
+// Hide thredded's own links to messages and notification settings
+.thredded--user-navigation--settings, .thredded--user-navigation--private-topics {
+  display: none;
+}
+
+// The messages and notifications settings were helping with the spacing,
+// hiding them caused the search bar to overlap the navigation breadcrumbs
+// Workarounds to fix this problem
+.thredded--navigation-breadcrumbs {
+  margin-top: 35px;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.thredded--navigation--search {
+  margin-right: 80px;
+
+  input[type="search"] {
+    width: 320px;
+    padding: 8px 12px;
+    height: 40px;
+  }
+}
+// End of workarounds
+
+// Override the thredded scheme
+time, .thredded--messageboard--byline {
+  font-family: 'Minion', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.thredded--user-navigation {
+  border: none;
+}
+
+.thredded--user-navigation--item.thredded--is-current {
+  border: none;
+}
+
+.thredded--messageboard {
+  padding: 0;
+
+  .thredded--messageboard--header {
+    border-bottom: 1px solid $paleblue;
+    padding: 20px;
+  }
+
+  p {
+    margin: 10px 20px;
+  }
+}
+
+a.thredded--button {
+  color: $offwhite;
+}

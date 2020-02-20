@@ -9,7 +9,7 @@
     <% end %>
 
     <div class="link-holder">
-      <%= link_to blogs_path do %>
+      <%= link_to main_app.blogs_path do %>
         <div class="link"><%= t(".blog") %></div>
       <% end %>
     </div>
@@ -26,7 +26,7 @@
           <div class="link"><%= t(".messages") %></div>
         <% end %>
       <% else %>
-        <%= link_to new_user_registration_path do %>
+        <%= link_to main_app.new_user_registration_path do %>
           <div class="link"><%= t(".join") %></div>
         <% end %>
       <% end %>
