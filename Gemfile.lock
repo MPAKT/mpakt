@@ -175,7 +175,7 @@ GEM
     pg (1.1.4)
     pg (1.1.4-x64-mingw32)
     public_suffix (3.1.1)
-    puma (3.12.1)
+    puma (3.12.2)
     pundit (2.1.0)
       activesupport (>= 3.0.0)
     rack (2.2.2)
@@ -357,7 +357,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   pg
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.3)
   rspec-rails
   sass-rails (~> 5.0)
