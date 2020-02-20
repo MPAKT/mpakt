@@ -2,11 +2,15 @@
 
 class PrivilegesController < ApplicationController
   def create
-    @privilege.update(privilege_params)
-    redirect_to privileges_path(privilege_id: @privilege.id)
+    @privilege = Privilege.create(privilege_params)
+    redirect_to privilege_path(@privilege)
   end
 
   def new; end
+
+  def show
+    @privilege = Privilege.find(params[:id])
+  end
 
   def salaries
     redirect_to root_url, notice: t("errors.messages.not_authorized") unless current_user&.admin?
@@ -29,6 +33,6 @@ class PrivilegesController < ApplicationController
   end
 
   def privilege_params
-    params.require(:privilege).permit(:salary, :year, :country_code, :redundancy, :role, :salary_year)
+    params.require(:privilege).permit(:salary, :year, :country_code, :redundancy, :role, :salary_year, categories: {})
   end
 end

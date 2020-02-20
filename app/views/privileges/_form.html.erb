@@ -22,7 +22,7 @@
   </div>
 
   <% 4.times do |index| %>
-    <%= render "privileges/category", subtype: index %>
+    <%= render "privileges/category", subtype: index, f: f %>
   <% end %>
 
   <%= f.submit t(".save"), class:"btn" %>

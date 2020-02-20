@@ -2,18 +2,18 @@
 
 <div class="category <%= subtype_name %>">
   <% category = Category.new(subtype: subtype) %>
-  <%= simple_form_for category do |f| %>
-    <%= f.hidden_field :subtype, value: subtype_name %>
-    <h4><%= f.label subtype_name %></h4>
+  <%= f.hidden_field :subtype, value: subtype_name %>
+  <h4><%= f.label subtype_name %></h4>
 
+  <%= f.simple_fields_for :categories do |c| %>
     <% questions = ["a", "b", "c", "d"] %>
     <% questions << "e" if subtype_name == "ethnicity" %>
 
     <% questions.each do |question_id| %>
-      <%= f.input question_id, label: false,
+      <%= c.input question_id, label: false,
                                collection: category_answers_collection(subtype_name, question_id),
                                include_blank: t("categories.#{subtype_name}.#{question_id}.text") %>
     <% end %>
-
   <% end %>
+
 </div>
