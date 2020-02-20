@@ -19,5 +19,5 @@
     </div>
   </div>
 
-  <%= render "/layouts/menu" unless request.path == "/" %>
+  <%= render "/layouts/menu" unless request.path == "/" && !current_user %>
 </div>
