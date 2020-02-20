@@ -6,7 +6,9 @@
   <p><%= t(".retired") %></p>
 
   <%= render "privileges/form", privilege: Privilege.new %>
-  <% 4.times do |index| %>
-    <%= render "privileges/category", subtype: index %>
-  <% end %>
+
+  <p>
+    <%= t(".privacy") %>
+    <%= t(".optional") %>
+  </p>
 </div>

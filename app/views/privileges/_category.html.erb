@@ -6,18 +6,14 @@
     <%= f.hidden_field :subtype, value: subtype_name %>
     <h4><%= f.label subtype_name %></h4>
 
-    <p><%= t("categories.#{subtype_name}.note_html") %></p>
-
     <% questions = ["a", "b", "c", "d"] %>
     <% questions << "e" if subtype_name == "ethnicity" %>
 
     <% questions.each do |question_id| %>
-      <%= label_tag t("categories.#{subtype_name}.#{question_id}.text") %>
-      <%= f.input question_id, label: false, collection: category_answers_collection(subtype_name, question_id) %>
-      <p><%= t("categories.#{subtype_name}.#{question_id}.description") %></p>
+      <%= f.input question_id, label: false,
+                               collection: category_answers_collection(subtype_name, question_id),
+                               include_blank: t("categories.#{subtype_name}.#{question_id}.text") %>
     <% end %>
 
-    <% save_text = subtype < 3 ? t(".save", name: subtype_name) : t(".last_save") %>
-    <%= f.submit save_text, class:"btn" %>
   <% end %>
 </div>

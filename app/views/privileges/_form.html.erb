@@ -1,4 +1,4 @@
-<h3><%= t(".salary") %></h3>
+<h4><%= t(".salary") %></h4>
 
 <%= simple_form_for privilege do |f| %>
   <div>
@@ -12,7 +12,7 @@
   </div>
   <div>
     <% current_year = Time.zone.now.year %>
-    <%= f.input :salary_year, input_html: { step: 1, min: 2010, max: current_year, placeholder: t(".salary_year") }, label: false %>
+    <%= f.input :salary_year, input_html: { step: 1, min: 2008, max: current_year, placeholder: t(".salary_year") }, label: false %>
   </div>
   <div>
     <%= f.input :role, collection: role_collection, label: false, include_blank: t(".role") %>
@@ -20,4 +20,10 @@
   <div>
     <%= f.input :redundancy, collection: redundancy_collection, label: false, include_blank: t(".redundancy") %>
   </div>
+
+  <% 4.times do |index| %>
+    <%= render "privileges/category", subtype: index %>
+  <% end %>
+
+  <%= f.submit t(".save"), class:"btn" %>
 <% end %>
