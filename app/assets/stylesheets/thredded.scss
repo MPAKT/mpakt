@@ -4,6 +4,7 @@
 
 @import "thredded/dependencies";
 @import "thredded/thredded";
+@import "colors";
 
 // Hide thredded's own links to messages and notification settings
 .thredded--user-navigation--settings, .thredded--user-navigation--private-topics {
@@ -11,7 +12,8 @@
 }
 
 // The messages and notifications settings were helping with the spacing,
-// hiding them caused the search bar to overlap the navigation breadcrumbs, workarounds follow
+// hiding them caused the search bar to overlap the navigation breadcrumbs
+// Workarounds to fix this problem
 .thredded--navigation-breadcrumbs {
   margin-top: 35px;
 
@@ -21,36 +23,24 @@
 }
 
 .thredded--navigation--search {
-  width: 100%;
+  margin-right: 80px;
 
   input[type="search"] {
-    width: 100%;
+    width: 320px;
     padding: 8px 12px;
     height: 40px;
   }
 }
+// End of workarounds
 
-// end of workarounds
-
-*:focus {
-  outline: 0;
-}
-
-// Override the thredded colour scheme
-.thredded--user-navigation--item a:active, .thredded--moderation-navigation--item a:active,
-.thredded--navigation-breadcrumbs a:active, .thredded--user-navigation--item a:focus,
-.thredded--moderation-navigation--item a:focus, .thredded--navigation-breadcrumbs a:focus,
-.thredded--user-navigation--item a:hover, .thredded--moderation-navigation--item a:hover,
-.thredded--navigation-breadcrumbs a:hover {
-  color: white;
-  background-color: $darkblue;
-}
-
+// Override the thredded scheme
 time {
   font-family: 'Minion', sans-serif;
   font-size: 18px;
   font-style: italic;
   color: $darkblue;
+  border-left: 1px solid $darkblue;
+  padding-left: 4px;
 }
 
 .thredded--topics-updated-by {

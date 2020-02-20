@@ -61,10 +61,6 @@ select {
     width: 100%;
     box-sizing: border-box;
     border: 1px solid $fadeblue;
-
-    &:focus {
-      outline: none;
-    }
   }
 
   .email, .password, .user_short_name {
@@ -85,4 +81,10 @@ select {
 .devise-btn {
   line-height: 1px;
   padding-bottom: 4px;
+}
+
+// Override browser default
+
+*:focus {
+  outline: 0;
 }
