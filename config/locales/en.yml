@@ -124,21 +124,21 @@ en:
           c: "I receive disability support"
     caste:
       a:
-        text: "Undergraduate education of first parent"
+        text: "Education of first parent"
         answers:
           a: "Elite university"
           b: "Regular university"
           c: "Community college, polytechnic, or night school"
           d: "No further education after leaving school"
       b:
-        text: "Undergraduate education of second parent"
+        text: "Education of second parent"
         answers:
           a: "Elite university"
           b: "Regular university"
           c: "Community college, polytechnic, or night school"
           d: "No further education after leaving school"
       c:
-        text: "My undergraduate education"
+        text: "My education"
         answers:
           a: "Elite university"
           b: "Regular university"
@@ -149,7 +149,7 @@ en:
         answers:
           a: "Which university and course we were planning to study"
           b: "Whether we would go to university"
-          c: "The best ways to get a job"
+          c: "Getting a job"
     ethnicity:
       a:
         text: "Ethnicity of first grandparent"
