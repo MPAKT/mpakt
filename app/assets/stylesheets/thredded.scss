@@ -4,7 +4,6 @@
 
 @import "thredded/dependencies";
 @import "thredded/thredded";
-@import "colors";
 
 // Hide thredded's own links to messages and notification settings
 .thredded--user-navigation--settings, .thredded--user-navigation--private-topics {
@@ -36,8 +35,12 @@
 // Override the thredded scheme
 time, .thredded--messageboard--byline {
   font-family: 'Minion', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
+}
+
+.thredded--user-navigation {
+  border: none;
 }
 
 .thredded--user-navigation--item.thredded--is-current {
@@ -55,4 +58,8 @@ time, .thredded--messageboard--byline {
   p {
     margin: 10px 20px;
   }
+}
+
+a.thredded--button {
+  color: $offwhite;
 }
