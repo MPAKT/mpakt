@@ -42,7 +42,8 @@ en:
       updated_not_active: "Your password has been changed successfully"
       new:
         forgot_password: "Forgot password"
-        send: "Send me password reset instructions"
+        send: "Send Password Reset"
+        email: "Email address"
       edit:
         change: "Change password"
         new_password: "New password"
