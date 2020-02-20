@@ -95,8 +95,14 @@ a.link {
 }
 
 a, a:visited {
+  color: $darkblue;
   text-decoration: none;
   cursor: pointer;
+}
+
+a:hover {
+  background-color: $darkblue;
+  color: white;
 }
 
 .strong {

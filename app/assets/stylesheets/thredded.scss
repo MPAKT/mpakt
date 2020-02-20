@@ -10,8 +10,49 @@
   display: none;
 }
 
-// The messages and notifications settings were making the vertical space right,
-// hiding them caused the search bar to overlap the navigation breadcrumbs, fixed by this workaround
+// The messages and notifications settings were helping with the spacing,
+// hiding them caused the search bar to overlap the navigation breadcrumbs, workarounds follow
 .thredded--navigation-breadcrumbs {
   margin-top: 35px;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.thredded--navigation--search {
+  width: 100%;
+
+  input[type="search"] {
+    width: 100%;
+    padding: 8px 12px;
+    height: 40px;
+  }
+}
+
+// end of workarounds
+
+*:focus {
+  outline: 0;
+}
+
+// Override the thredded colour scheme
+.thredded--user-navigation--item a:active, .thredded--moderation-navigation--item a:active,
+.thredded--navigation-breadcrumbs a:active, .thredded--user-navigation--item a:focus,
+.thredded--moderation-navigation--item a:focus, .thredded--navigation-breadcrumbs a:focus,
+.thredded--user-navigation--item a:hover, .thredded--moderation-navigation--item a:hover,
+.thredded--navigation-breadcrumbs a:hover {
+  color: white;
+  background-color: $darkblue;
+}
+
+time {
+  font-family: 'Minion', sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  color: $darkblue;
+}
+
+.thredded--topics-updated-by {
+  color: $darkblue;
 }
