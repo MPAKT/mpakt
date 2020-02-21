@@ -81,6 +81,8 @@ en:
       remember well, including your health / abilities / gender / education status at the time."
       privacy: "Your privilege score is stored anonymously and securely. We do not share this information with any third party."
       optional: "All question sets and questions are optional. If you leave out a question, we will score it with the highest privilege."
+      previous: "If you previously completed this form, we saved the data anonymously, so we have no way of knowing it was yours,
+      and we can not show it to you again."
     form:
       salary: "Salary"
       salary_dollar: "Salary in US$"
@@ -93,6 +95,8 @@ en:
       title: "Your results"
       privilege: "%{name} privilege"
       overall: "Combined privilege"
+      privacy: "We save this data anonymously, so we will not show it to you again. If you would like
+      to keep the results, print or capture this page."
 
   # Do not change the order of these, they are directly mapped to the the DB values, in order
   # to improve anonymity of the data in the DB
