@@ -6,7 +6,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :trackable,
          :recoverable, :rememberable, :validatable
 
+  has_one :profile
+
   validates :short_name, presence: true
+  accepts_nested_attributes_for :profile, reject_if: :all_blank, allow_destroy: true
 
   delegate :to_s, to: :short_name
+  delegate :description, :role, :facebook, :twitter, :instagram, :summary, :url, :interests, to: :profile
 end

@@ -1,0 +1,8 @@
+<div class="wide">
+  <%= render "users/form", user: @user, profile: @profile %>
+
+  <h4><%= t(".details") %></h4>
+  <p><%= @user.email %></p>
+  <p><%= t(".moderator") if @user.volunteer %></p>
+  <p><%= t(".admin") if @user.admin %></p>
+</div>

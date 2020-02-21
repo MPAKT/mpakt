@@ -1,21 +1,46 @@
-<div class="wide">
-  <%= simple_form_for @user, url: user_path(@user.id), data: { inline: true } do |f| %>
-    <div class="left-col">
-      <%= f.label :short_name %>
-      <p><%= f.input :short_name, label: false %></p>
-      <%= f.label :current_password %>
-      <p><%= f.input :current_password, label: false %></p>
-      <%= f.label :new_password %>
-      <p><%= f.input :new_password, label: false %></p>
-      <%= f.label t(".new_password_confirmation") %>
-      <p><%= f.input :new_password_confirmation, label: false %></p>
-      <p><%= f.submit t(".save"), class:"btn" %></p>
-    </div>
+<div class="central">
+  <div class="profile">
 
-    <div class="right-col">
-      <p><%= @user.email %></p>
-      <p><%= t(".moderator") if @user.volunteer %></p>
-      <p><%= t(".admin") if @user.admin %></p>
+    <% if current_user == @user %>
+      <div class="right">
+        <%= link_to edit_user_path(@user) do %>
+          <i class="fas fa-edit"></i>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="large"><%= @user.short_name %></div>
+
+    <% if @user.profile %>
+      <div class="italic-min"><%= @user.description %></div>
+      <div><%= @user.role %></div>
+
+      <div class="profile-fields">
+        <div class="subsection">
+          <div class="label"><label><i class="fab fa-facebook-f"></i></label></div>
+          <div class="show"><%= @user.facebook || t(".space_html") %></div>
+
+          <div class="label"><label><i class="fab fa-instagram"></i></label></div>
+          <div class="show"><%= @user.instagram || t(".space_html")  %></div>
+
+          <div class="label"><label><i class="fab fa-twitter"></i></label></div>
+          <div class="show"><%= @user.twitter|| t(".space_html")  %></div>
+
+          <div class="label"><label><%= t(".url") %></div>
+          <div class="show"><%= @user.url || t(".space_html") %></div>
+        </div>
+        <div class="subsection">
+          <div class="label"><label><%= t(".interests") %></div>
+          <div class="show"><%= @user.interests || t(".space_html") %></div>
+
+          <div class="label"><label><%= t(".summary") %></div>
+          <div class="show"><%= @user.summary || t(".space_html") %></div>
+        </div>
+      </div>
+    <% else %>
+      <%= t(".no_profile") %>
+    <% end %>
+
     </div>
-  <% end %>
+  </div>
 </div>

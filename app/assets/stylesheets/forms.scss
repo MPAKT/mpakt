@@ -11,8 +11,8 @@ select {
 
 .btn {
   display: block;
-  height: 40px;
-  line-height: 40px;
+  height: 34px;
+  line-height: 29px;
   cursor: pointer;
   border: 1px solid $darkblue;
   border-radius: 4px;
@@ -70,6 +70,46 @@ select {
 .devise-btn {
   line-height: 1px;
   padding-bottom: 4px;
+}
+
+.edit_user, .profile {
+  .label {
+    width: 260px;
+    margin-left: -280px;
+    margin-right: 20px;
+    height: 35px;
+    padding-top: 8px;
+  }
+
+  label {
+    width: 260px;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .input, .show {
+    margin-top: -36px;
+  }
+
+  .btn {
+    margin-top: 8px;
+  }
+}
+
+label.checkbox {
+  width: unset;
+}
+
+.profile-fields {
+  input[type="text"], input[type="url"] {
+    width: 420px;
+  }
+}
+
+.profile {
+  div {
+    text-align: left;
+  }
 }
 
 // Override browser default

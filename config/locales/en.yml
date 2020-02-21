@@ -47,12 +47,33 @@ en:
       save: "Save"
     update:
       success: "Successfully updated %{email}"
-    show:
+    edit:
+      moderator: "You have moderator permissions"
+      admin: "You have admin permissions"
+      details: "Information about your MPAKT. account"
+    form:
       save: "Save"
       new_password: "New password"
       new_password_confirmation: "Confirm new password"
-      moderator: "You have moderator permissions"
-      admin: "You have admin permissions"
+      name: "Name"
+      shown: "You must provide a display name, all MPAKT. visitors will see it."
+      password: "You can change your password here, we will keep it safe! You can leave the password fields blank if
+      you are not changing it."
+    profile:
+      title: "Profile"
+      shown: "This information will be shown to all signed-in MPAKT. users. Only complete these details if you are comfortable
+      sharing them. Feel free to make stuff up."
+      description: "Short bio"
+      role: "Role, quote, or aliases"
+      url: "My page URL"
+      interests: "Interests"
+      summary: "Summary"
+    show:
+      url: "My page URL"
+      interests: "Interests"
+      summary: "Summary"
+      no_profile: "This user has not created their profile"
+      space_html: "&nbsp;"
 
   blogs:
     index:
