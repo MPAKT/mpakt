@@ -3,6 +3,7 @@
 class PrivilegesController < ApplicationController
   def create
     @privilege = Privilege.create(privilege_params)
+    build_categories(@privilege.id)
     redirect_to privilege_path(@privilege)
   end
 
@@ -19,6 +20,16 @@ class PrivilegesController < ApplicationController
 
   private
 
+  def build_categories(privilege_id)
+    puts "=========="
+    puts categories_params
+    puts categories_params[:category_0]
+    puts "=========="
+    4.times do |index|
+      Category.create(categories_params["category_#{index}"].merge(privilege_id: privilege_id))
+    end
+  end
+
   def salary_buckets
     @salaries = []
     8.times do |index|
@@ -34,7 +45,13 @@ class PrivilegesController < ApplicationController
 
   def privilege_params
     params.require(:privilege).permit(:salary, :year, :country_code, :redundancy, :role,
-                                      :salary_year, :categories, :category,
-                                      categories_attributes: [:a, :b, :c, :d, :e, :subtype])
+                                      :salary_year)
+  end
+
+  def categories_params
+    params.require(:privilege).permit(category_0: [:subtype, :a, :b, :c, :d, :e],
+                                      category_1: [:subtype, :a, :b, :c, :d, :e],
+                                      category_2: [:subtype, :a, :b, :c, :d, :e],
+                                      category_3: [:subtype, :a, :b, :c, :d, :e])
   end
 end
