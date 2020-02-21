@@ -72,6 +72,23 @@ select {
   padding-bottom: 4px;
 }
 
+.edit_user {
+  .label {
+    width: 280px;
+    margin-left: -280px;
+    height: 35px;
+    padding-top: 8px;
+  }
+
+  label {
+    text-align: right;
+  }
+
+  .input {
+    margin-top: -36px;
+  }
+}
+
 // Override browser default
 
 *:focus {

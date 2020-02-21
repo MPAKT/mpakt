@@ -54,9 +54,18 @@ en:
       moderator: "You have moderator permissions"
       admin: "You have admin permissions"
       name: "Display name"
-      shown: "You must provide a display name, this will be shown to all visitors."
-      password: "You can change your password here, we will keep it safe! You can leave the password fields blank if you are not changing it"
-
+      shown: "You must provide a display name, this will be shown to all visitors to MPAKT."
+      password: "You can change your password here, we will keep it safe! You can leave the password fields blank if
+      you are not changing it."
+    profile:
+      title: "Profile"
+      shown: "This information will be shown to all signed-in MPAKT. users. Only complete these details if you are comfortable
+      sharing them. Feel free to make stuff up."
+      description: "Short bio"
+      role: "Role, quote, or aliases"
+      url: "My page URL"
+      interests: "Interests"
+      summary: "Summary"
 
   blogs:
     index:

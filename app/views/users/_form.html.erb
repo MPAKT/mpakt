@@ -1,17 +1,22 @@
 <%= simple_form_for user do |f| %>
-  <hr>
   <h4><%= t(".name") %></h4>
-  <p><%= t(".shown") %></h4>
+  <p><%= t(".shown") %></p>
 
-  <p><%= f.input :short_name, label: false %></p>
+  <div class="label"><%= label_tag t(".name") %></div>
+  <%= f.input :short_name, label: false %>
 
-  <p><%= t(".password") %></h4>
-  <%= f.label :current_password %>
-  <p><%= f.input :current_password, label: false %></p>
-  <%= f.label :new_password %>
-  <p><%= f.input :new_password, label: false %></p>
-  <%= f.label t(".new_password_confirmation") %>
-  <p><%= f.input :new_password_confirmation, label: false %></p>
+  <p><%= t(".password") %></p>
 
-  <p><%= f.submit t(".save"), class:"btn" %></p>
+  <div class="label"><%= f.label :current_password %></div>
+  <%= f.input :current_password, label: false %>
+
+  <div class="label"><%= f.label :new_password %></div>
+  <%= f.input :new_password, label: false %>
+
+  <div class="label"><%= f.label t(".new_password_confirmation") %></div>
+  <%= f.input :new_password_confirmation, label: false %>
+
+  <%= render "users/profile", f: f %>
+
+  <%= f.submit t(".save"), class:"btn" %>
 <% end %>

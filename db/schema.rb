@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_17_095742) do
+ActiveRecord::Schema.define(version: 2020_02_21_113423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,19 @@ ActiveRecord::Schema.define(version: 2019_10_17_095742) do
     t.integer "redundancy"
     t.integer "role"
     t.integer "salary_year"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "url"
+    t.string "facebook"
+    t.string "instagram"
+    t.string "twitter"
+    t.string "description"
+    t.string "role"
+    t.text "summary"
+    t.string "interests"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "thredded_categories", force: :cascade do |t|

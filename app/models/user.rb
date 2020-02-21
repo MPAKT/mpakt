@@ -8,5 +8,7 @@ class User < ApplicationRecord
 
   validates :short_name, presence: true
 
+  has_one :profile
+
   delegate :to_s, to: :short_name
 end

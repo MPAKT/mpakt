@@ -1,6 +1,5 @@
 <div class="wide">
   <%= render "users/form", user: @user %>
-
   <hr>
   <p><%= @user.email %></p>
   <p><%= t(".moderator") if @user.volunteer %></p>
