@@ -12,11 +12,15 @@ class UsersController < Devise::RegistrationsController
   end
 
   def update
-    #@user.update(user_params)
     @user.profile.update_attributes(profile_params)
-    super
-    #redirect_path = request.referer.ends_with?("users") ? users_path : user_path(@user.id)
-    #redirect_to redirect_path, notice: t(".success", email: @user.email)
+    @profile = @user.profile
+
+    if user_params[:password].blank?
+      @user.update(short_name: user_params[:short_name])
+      redirect_to user_path(@user)
+    else
+      super
+    end
   end
 
   def new
@@ -29,6 +33,10 @@ class UsersController < Devise::RegistrationsController
 
   def after_sign_up_path_for(*)
     dashboard_path
+  end
+
+  def after_update_path_for(resource)
+    user_path(resource)
   end
 
   private
