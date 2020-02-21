@@ -21,10 +21,6 @@ class PrivilegesController < ApplicationController
   private
 
   def build_categories(privilege_id)
-    puts "=========="
-    puts categories_params
-    puts categories_params[:category_0]
-    puts "=========="
     4.times do |index|
       Category.create(categories_params["category_#{index}"].merge(privilege_id: privilege_id))
     end
