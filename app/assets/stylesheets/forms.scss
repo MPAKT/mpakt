@@ -96,6 +96,10 @@ select {
   }
 }
 
+label.checkbox {
+  width: unset;
+}
+
 .profile-fields {
   input[type="text"], input[type="url"] {
     width: 420px;

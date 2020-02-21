@@ -12,12 +12,14 @@ class UsersController < Devise::RegistrationsController
   end
 
   def update
-    @user.profile.update_attributes(profile_params)
+    @user.profile.update_attributes(profile_params) if profile_params
     @profile = @user.profile
 
+    # Devise will enforce providing the old password, so let's be nice, just make the update if the
+    # user didn't try to change their password to a new one: also necessary for admin updates
     if user_params[:password].blank?
-      @user.update(short_name: user_params[:short_name])
-      redirect_to user_path(@user)
+      @user.update_attributes(user_params)
+      redirect_to after_update_path_for(@user), notice: t(".success", email: @user.email)
     else
       super
     end
@@ -36,7 +38,11 @@ class UsersController < Devise::RegistrationsController
   end
 
   def after_update_path_for(resource)
-    user_path(resource)
+    if request.referer.ends_with?("users")
+      users_path
+    else
+      user_path(resource)
+    end
   end
 
   private
@@ -64,6 +70,7 @@ class UsersController < Devise::RegistrationsController
   end
 
   def profile_params
+    return unless params[:profile]
     params.require(:profile).permit(:description, :role, :facebook, :twitter, :instagram, :summary, :interests, :url)
   end
 end
