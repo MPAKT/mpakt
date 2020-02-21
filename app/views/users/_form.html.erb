@@ -6,14 +6,14 @@
 
   <p><%= t(".password") %></p>
 
-  <div class="label"><%= f.label :current_password %></div>
+  <div class="label"><%= label_tag :current_password %></div>
   <%= f.input :current_password, label: false %>
 
-  <div class="label"><%= f.label :new_password %></div>
-  <%= f.input :new_password, label: false %>
+  <div class="label"><%= label_tag :new_password %></div>
+  <%= f.input :password, label: false %>
 
-  <div class="label"><%= f.label t(".new_password_confirmation") %></div>
-  <%= f.input :new_password_confirmation, label: false %>
+  <div class="label"><%= label_tag t(".new_password_confirmation") %></div>
+  <%= f.input :password_confirmation, label: false %>
 
   <%= render "users/profile", f: f, profile: profile %>
 

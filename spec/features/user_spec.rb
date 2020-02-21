@@ -87,6 +87,10 @@ RSpec.feature "User" do
       end
     end
 
+    scenario "I can view someone else's profile" do
+
+    end
+
     scenario "I can not manage users, moderate or administer the forum" do
       login_as user
 
