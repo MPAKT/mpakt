@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/", to: "welcome#index"
 
-  resources :privileges, only: [:new, :create, :index, :show]
+  resources :privileges, only: [:new, :create, :show]
   resources :categories, only: [:create]
   resources :dashboard, only: [:index]
 

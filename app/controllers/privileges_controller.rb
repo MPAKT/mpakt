@@ -45,9 +45,9 @@ class PrivilegesController < ApplicationController
   end
 
   def categories_params
-    params.require(:privilege).permit(category_0: [:subtype, :a, :b, :c, :d, :e],
-                                      category_1: [:subtype, :a, :b, :c, :d, :e],
-                                      category_2: [:subtype, :a, :b, :c, :d, :e],
-                                      category_3: [:subtype, :a, :b, :c, :d, :e])
+    params.require(:privilege).permit(category_0: %i[subtype a b c d e],
+                                      category_1: %i[subtype a b c d e],
+                                      category_2: %i[subtype a b c d e],
+                                      category_3: %i[subtype a b c d e])
   end
 end
