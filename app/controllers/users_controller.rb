@@ -57,7 +57,7 @@ class UsersController < Devise::RegistrationsController
     # Also needed for admin updates which don't have a password field to provide
 
     @user.update_attributes(non_password_params)
-    return true
+    true
   end
 
   def changes_allowed
@@ -92,6 +92,7 @@ class UsersController < Devise::RegistrationsController
 
   def profile_params
     return unless params[:profile]
+
     params.require(:profile).permit(:description, :role, :facebook, :twitter, :instagram, :summary, :interests, :url)
   end
 end

@@ -6,6 +6,7 @@ RSpec.feature "User" do
       user = User.create(email: "user@mpakt.com", password: "123456", short_name: "user", last_sign_in_at: Time.zone.now)
       Profile.create(description: "User profile", user_id: user.id)
 
+      visit "/"
       visit "/users/#{user.id}"
 
       expect(page).to have_content "You do not have access to that page"
@@ -13,7 +14,7 @@ RSpec.feature "User" do
 
       visit "/users/#{user.id}/edit"
 
-      expect(page).to have_content "You do not have access to that page"
+      expect(page).to have_content "You need to sign in or sign up before continuing."
       expect(page).not_to have_content "User profile"
     end
   end
@@ -181,12 +182,6 @@ RSpec.feature "User" do
       end
 
       visit "/users"
-
-      within ".flash" do
-        expect(page).to have_content I18n.t("errors.messages.not_authorized")
-      end
-
-      visit "/users/#{user.id}"
 
       within ".flash" do
         expect(page).to have_content I18n.t("errors.messages.not_authorized")
