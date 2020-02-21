@@ -12,5 +12,5 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :profile, reject_if: :all_blank, allow_destroy: true
 
   delegate :to_s, to: :short_name
-  delegate :description, to: :profile
+  delegate :description, :role, :facebook, :twitter, :instagram, :summary, :url, :interests, to: :profile
 end

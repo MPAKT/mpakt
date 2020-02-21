@@ -72,7 +72,7 @@ select {
   padding-bottom: 4px;
 }
 
-.edit_user {
+.edit_user, .profile {
   .label {
     width: 260px;
     margin-left: -280px;
@@ -87,7 +87,7 @@ select {
     text-align: right;
   }
 
-  .input {
+  .input, .show {
     margin-top: -36px;
   }
 
@@ -99,6 +99,12 @@ select {
 .profile-fields {
   input[type="text"], input[type="url"] {
     width: 420px;
+  }
+}
+
+.profile {
+  div {
+    text-align: left;
   }
 }
 
