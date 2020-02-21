@@ -2,28 +2,29 @@
 <p><%= t(".shown") %></p>
 
 <%= simple_fields_for :profile do |ff| %>
+  <div class="profile-fields">
+    <div class="label"><%= label_tag t(".description") %></div>
+    <%= ff.input :description, label: false %>
 
-  <div class="label"><%= label_tag t(".description") %></div>
-  <%= ff.input :description, label: false %>
+    <div class="label"><%= label_tag t(".role") %></div>
+    <%= ff.input :role, label: false %>
 
-  <div class="label"><%= label_tag t(".role") %></div>
-  <%= ff.input :role, label: false %>
+    <div class="label"><label><i class="fab fa-facebook-f"></i></label></div>
+    <%= ff.input :facebook, label: false %>
 
-  <div class="label"><label><i class="fab fa-facebook-f"></i></label></div>
-  <%= ff.input :facebook, label: false %>
+    <div class="label"><label><i class="fab fa-instagram"></i></label></div>
+    <%= ff.input :instagram, label: false %>
 
-  <div class="label"><label><i class="fab fa-instagram"></i></label></div>
-  <%= ff.input :instagram, label: false %>
+    <div class="label"><label><i class="fab fa-twitter"></i></label></div>
+    <%= ff.input :twitter, label: false %>
 
-  <div class="label"><label><i class="fab fa-twitter"></i></label></div>
-  <%= ff.input :twitter, label: false %>
+    <div class="label"><%= label_tag t(".url") %></div>
+    <%= ff.input :url, label: false %>
 
-  <div class="label"><%= label_tag t(".url") %></div>
-  <%= ff.input :url, label: false %>
+    <div class="label"><%= label_tag t(".interests") %></div>
+    <%= ff.input :interests, label: false %>
 
-  <div class="label"><%= label_tag t(".interests") %></div>
-  <%= ff.input :interests, label: false %>
-
-  <div class="label"><%= label_tag t(".summary") %></div>
-  <%= ff.input :summary, label: false %>
+    <div class="label"><%= label_tag t(".summary") %></div>
+    <%= ff.input :summary, label: false %>
+  </div>
 <% end %>

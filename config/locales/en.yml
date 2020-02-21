@@ -47,12 +47,15 @@ en:
       save: "Save"
     update:
       success: "Successfully updated %{email}"
+    edit:
+      moderator: "You have moderator permissions"
+      admin: "You have admin permissions"
+      details: "Information about your MPAKT. account"
     form:
       save: "Save"
       new_password: "New password"
       new_password_confirmation: "Confirm new password"
-      moderator: "You have moderator permissions"
-      admin: "You have admin permissions"
+
       name: "Display name"
       shown: "You must provide a display name, this will be shown to all visitors to MPAKT."
       password: "You can change your password here, we will keep it safe! You can leave the password fields blank if
