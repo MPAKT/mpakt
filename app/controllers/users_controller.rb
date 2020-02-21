@@ -2,6 +2,7 @@
 
 class UsersController < Devise::RegistrationsController
   before_action :changes_allowed, except: %i[new create]
+  before_action :read_allowed, only: %i[show]
 
   def index
     @users = User.all.order(last_sign_in_at: :desc)
@@ -15,10 +16,7 @@ class UsersController < Devise::RegistrationsController
     @user.profile.update_attributes(profile_params) if profile_params
     @profile = @user.profile
 
-    # Devise will enforce providing the old password, so let's be nice, just make the update if the
-    # user didn't try to change their password to a new one: also necessary for admin updates
-    if user_params[:password].blank?
-      @user.update_attributes(user_params)
+    if non_password_update
       redirect_to after_update_path_for(@user), notice: t(".success", email: @user.email)
     else
       super
@@ -31,6 +29,10 @@ class UsersController < Devise::RegistrationsController
 
   def create
     super
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def after_sign_up_path_for(*)
@@ -47,6 +49,17 @@ class UsersController < Devise::RegistrationsController
 
   private
 
+  def non_password_update
+    return false unless account_update_params[:password].blank?
+
+    # Devise will enforce providing the old password, so be nice, make the update if the
+    # user didn't try to change their password to a new one
+    # Also needed for admin updates which don't have a password field to provide
+
+    @user.update_attributes(non_password_params)
+    return true
+  end
+
   def changes_allowed
     @user = User.find(params[:id]) if params[:id]
     return if UserPolicy.manage?(current_user, @user)
@@ -54,8 +67,16 @@ class UsersController < Devise::RegistrationsController
     redirect_to root_url, notice: t("errors.messages.not_authorized")
   end
 
-  def user_params
-    params.require(:user).permit(:admin, :volunteer, :short_name, :password, :password_confirmation, :current_password)
+  def read_allowed
+    return if current_user
+
+    redirect_to root_url, notice: t("errors.messages.not_authorized")
+  end
+
+  # WARNING Use with care, non_password_params will allow you to bypass password requirements
+  # Tried user clean_up_passwords instead, but it sets passwords to "", and does not delete them entirely
+  def non_password_params
+    params.require(:user).permit(:admin, :volunteer, :short_name)
   end
 
   def account_update_params

@@ -1,5 +1,6 @@
 <div class="central">
   <div class="profile">
+
     <div class="right">
       <%= link_to edit_user_path(@user) do %>
         <i class="fas fa-edit"></i>
@@ -7,28 +8,36 @@
     </div>
 
     <div class="large"><%= @user.short_name %></div>
-    <div class="italic-min"><%= @user.description %></div>
-    <div><%= @user.role %></div>
 
-    <div class="profile-fields">
-      <div class="subsection">
-        <div class="label"><label><i class="fab fa-facebook-f"></i></label></div>
-        <div class="show"><%= @user.facebook %></div>
+    <% if @user.profile %>
+      <div class="italic-min"><%= @user.description %></div>
+      <div><%= @user.role %></div>
 
-        <div class="label"><label><i class="fab fa-instagram"></i></label></div>
-        <div class="show"><%= @user.instagram %></div>
+      <div class="profile-fields">
+        <div class="subsection">
+          <div class="label"><label><i class="fab fa-facebook-f"></i></label></div>
+          <div class="show"><%= @user.facebook %></div>
 
-        <div class="label"><label><i class="fab fa-twitter"></i></label></div>
-        <div class="show"><%= @user.twitter %></div>
+          <div class="label"><label><i class="fab fa-instagram"></i></label></div>
+          <div class="show"><%= @user.instagram %></div>
+
+          <div class="label"><label><i class="fab fa-twitter"></i></label></div>
+          <div class="show"><%= @user.twitter %></div>
+
+          <div class="label"><label><%= t(".url") %></div>
+          <div class="show"><%= @user.url %></div>
+        </div>
+        <div class="subsection">
+          <div class="label"><label><%= t(".interests") %></div>
+          <div class="show"><%= @user.interests %></div>
+
+          <div class="label"><label><%= t(".summary") %></div>
+          <div class="show"><%= @user.summary %></div>
+        </div>
       </div>
-      <div class="subsection">
-        <div class="label"><label><%= t(".interests") %></div>
-        <div class="show"><%= @user.interests %></div>
-
-        <div class="label"><label><%= t(".summary") %></div>
-        <div class="show"><%= @user.summary %></div>
-      </div>
-    </div>
+    <% else %>
+      <%= t(".no_profile") %>
+    <% end %>
 
     </div>
   </div>

@@ -55,7 +55,6 @@ en:
       save: "Save"
       new_password: "New password"
       new_password_confirmation: "Confirm new password"
-
       name: "Name"
       shown: "You must provide a display name, all MPAKT. visitors will see it."
       password: "You can change your password here, we will keep it safe! You can leave the password fields blank if
@@ -69,6 +68,11 @@ en:
       url: "My page URL"
       interests: "Interests"
       summary: "Summary"
+    show:
+      url: "My page URL"
+      interests: "Interests"
+      summary: "Summary"
+      no_profile: "This user has not created their profile"
 
   blogs:
     index:
