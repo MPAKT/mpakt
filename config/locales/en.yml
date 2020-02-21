@@ -73,6 +73,7 @@ en:
       interests: "Interests"
       summary: "Summary"
       no_profile: "This user has not created their profile"
+      space_html: "&nbsp;"
 
   blogs:
     index:

@@ -146,6 +146,7 @@ RSpec.feature "User" do
       Profile.create(description: "Another user profile", user_id: another_user.id)
 
 
+      visit "/"
       visit "/users/#{another_user.id}"
 
       within ".profile" do

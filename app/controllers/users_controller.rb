@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < Devise::RegistrationsController
-  before_action :changes_allowed, except: %i[new create]
+  before_action :changes_allowed, except: %i[new create show]
   before_action :read_allowed, only: %i[show]
 
   def index
