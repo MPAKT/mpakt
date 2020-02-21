@@ -16,7 +16,7 @@
   <div class="label"><%= f.label t(".new_password_confirmation") %></div>
   <%= f.input :new_password_confirmation, label: false %>
 
-  <%= render "users/profile", f: f %>
+  <%= render "users/profile", f: f, profile: profile %>
 
   <%= f.submit t(".save"), class:"btn" %>
 <% end %>

@@ -13,8 +13,9 @@ class UsersController < Devise::RegistrationsController
 
   def update
     @user.update(user_params)
+    @user.profile.update_attributes(profile_params)
 
-    redirect_path = request.referer.ends_with?("users") ? users_path : edit_user_path(@user.id)
+    redirect_path = request.referer.ends_with?("users") ? users_path : user_path(@user.id)
     redirect_to redirect_path, notice: t(".success", email: @user.email)
   end
 
@@ -41,5 +42,9 @@ class UsersController < Devise::RegistrationsController
 
   def user_params
     params.require(:user).permit(:admin, :volunteer, :short_name, :password, :password_confirmation)
+  end
+
+  def profile_params
+    params.require(:profile).permit(:description, :role, :facebook, :twitter, :instagram, :summary, :interests, :url)
   end
 end

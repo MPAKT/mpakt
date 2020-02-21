@@ -4,7 +4,7 @@
 <%= simple_fields_for :profile do |ff| %>
   <div class="profile-fields">
     <div class="label"><%= label_tag t(".description") %></div>
-    <%= ff.input :description, label: false %>
+    <%= ff.input :description, label: false, value: profile.description %>
 
     <div class="label"><%= label_tag t(".role") %></div>
     <%= ff.input :role, label: false %>
