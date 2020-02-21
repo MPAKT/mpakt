@@ -12,7 +12,7 @@ class UsersController < Devise::RegistrationsController
   def update
     @user.update(user_params)
 
-    redirect_path = request.referer.ends_with?("users") ? users_path : user_path(@user.id)
+    redirect_path = request.referer.ends_with?("users") ? users_path : edit_user_path(@user.id)
     redirect_to redirect_path, notice: t(".success", email: @user.email)
   end
 

@@ -1,0 +1,17 @@
+<%= simple_form_for user do |f| %>
+  <hr>
+  <h4><%= t(".name") %></h4>
+  <p><%= t(".shown") %></h4>
+
+  <p><%= f.input :short_name, label: false %></p>
+
+  <p><%= t(".password") %></h4>
+  <%= f.label :current_password %>
+  <p><%= f.input :current_password, label: false %></p>
+  <%= f.label :new_password %>
+  <p><%= f.input :new_password, label: false %></p>
+  <%= f.label t(".new_password_confirmation") %>
+  <p><%= f.input :new_password_confirmation, label: false %></p>
+
+  <p><%= f.submit t(".save"), class:"btn" %></p>
+<% end %>

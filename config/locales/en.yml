@@ -47,12 +47,16 @@ en:
       save: "Save"
     update:
       success: "Successfully updated %{email}"
-    show:
+    form:
       save: "Save"
       new_password: "New password"
       new_password_confirmation: "Confirm new password"
       moderator: "You have moderator permissions"
       admin: "You have admin permissions"
+      name: "Display name"
+      shown: "You must provide a display name, this will be shown to all visitors."
+      password: "You can change your password here, we will keep it safe! You can leave the password fields blank if you are not changing it"
+
 
   blogs:
     index:
