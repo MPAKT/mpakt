@@ -2,6 +2,7 @@
 
 class Privilege < ApplicationRecord
   has_many :categories, dependent: :destroy
+  accepts_nested_attributes_for :categories
 
   enum salary: %i[
     under_twenty

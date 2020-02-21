@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/", to: "welcome#index"
 
-  resources :privileges, only: [:create, :index]
-  resources :categories, only: [:create]
+  resources :privileges, only: [:new, :create, :show]
   resources :dashboard, only: [:index]
 
   devise_scope :user do

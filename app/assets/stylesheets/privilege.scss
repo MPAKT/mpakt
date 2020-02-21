@@ -1,0 +1,44 @@
+.privilege {
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-top: 0;
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  option {
+    max-height: 12px;
+    padding: 0;
+  }
+
+  .btn {
+    margin-top: 16px;
+  }
+
+  input[type="number"], select {
+    margin-bottom: 4px;
+    border: 1px solid $paleblue;
+    border-radius: 0;
+    color: $darkblue;
+    height: 32px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 320px;
+  }
+
+  input {
+    padding: 4px;
+  }
+
+  .btn {
+    height: 34px;
+    line-height: 15px;
+  }
+}
+

@@ -1,0 +1,15 @@
+<div class="wide privilege">
+  <h2><%= t(".title") %></h2>
+  <h3><%= t(".subtitle") %></h3>
+
+  <p><%= t(".preamble") %></p>
+  <p><%= t(".retired") %></p>
+
+  <%= render "privileges/form", privilege: Privilege.new %>
+
+  <p>
+    <%= t(".privacy") %>
+    <%= t(".optional") %>
+  </p>
+  <p><%= t(".previous") %></p>
+</div>

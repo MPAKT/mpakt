@@ -1,8 +1,12 @@
 .chart-container {
   display: inline-block;
-  width: 160px;
-  height: 220px;
-  margin: 0 20px;
+  width: 125px;
+  height: 200px;
+  margin: 0 8px;
+
+  h4 {
+    margin: 0;
+  }
 
   .chart {
     width: 100%;
@@ -13,12 +17,12 @@
   .percent {
     font-family: Arial;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 40px;
     width: 100%;
     text-align: center;
     position: relative;
     display: inline-block;
-    top: -113px;
+    top: -90px;
   }
 
   .circle {
@@ -66,11 +70,14 @@
 
 .overall {
   margin: 0 auto;
-  width: 200px;
-  height: 250px;
+  width: 215px;
+  height: 285px;
   display: block;
 
   .percent {
     top: -130px;
+  }
+
+  .chart {
   }
 }

@@ -48,16 +48,38 @@ time, .thredded--messageboard--byline {
   border: none;
 }
 
+.thredded-messageboards-group {
+  padding: 4px;
+}
+
 .thredded--messageboard {
-  padding: 0;
+  padding-right: 6px;
+  border: none;
+
+  &:hover {
+    border: none;
+  }
 
   .thredded--messageboard--header {
-    border-bottom: 1px solid $paleblue;
+    border: 1px solid $paleblue;
     padding: 20px;
+    margin-right: 4px;
+  }
+
+  .thredded--messageboard--byline {
+    border-bottom: 1px solid $paleblue;
   }
 
   p {
-    margin: 10px 20px;
+    border-right: 1px solid $paleblue;
+    border-left: 1px solid $paleblue;
+    margin: 0;
+    margin-right: 4px;
+    padding: 10px 20px;
+  }
+
+  .thredded--messageboard--description:empty {
+    margin-right: 4px;
   }
 }
 

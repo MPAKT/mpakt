@@ -3,14 +3,14 @@
 class PrivilegesController < ApplicationController
   def create
     @privilege = Privilege.create(privilege_params)
-    redirect_to privileges_path(subtype: 0, privilege_id: @privilege.id)
+    build_categories(@privilege.id)
+    redirect_to privilege_path(@privilege)
   end
 
-  def index
-    @subtype = -1
-    @subtype = params[:subtype].to_i if params[:subtype]
-    @privilege_id = params[:privilege_id]
-    @privilege = Privilege.find(@privilege_id) if @subtype > 3
+  def new; end
+
+  def show
+    @privilege = Privilege.find(params[:id])
   end
 
   def salaries
@@ -19,6 +19,12 @@ class PrivilegesController < ApplicationController
   end
 
   private
+
+  def build_categories(privilege_id)
+    4.times do |index|
+      Category.create(categories_params["category_#{index}"].merge(privilege_id: privilege_id))
+    end
+  end
 
   def salary_buckets
     @salaries = []
@@ -34,6 +40,14 @@ class PrivilegesController < ApplicationController
   end
 
   def privilege_params
-    params.require(:privilege).permit(:salary, :year, :country_code, :redundancy, :role, :salary_year)
+    params.require(:privilege).permit(:salary, :year, :country_code, :redundancy, :role,
+                                      :salary_year)
+  end
+
+  def categories_params
+    params.require(:privilege).permit(category_0: %i[subtype a b c d],
+                                      category_1: %i[subtype a b c d],
+                                      category_2: %i[subtype a b c d e],
+                                      category_3: %i[subtype a b c])
   end
 end
