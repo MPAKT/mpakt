@@ -7,7 +7,7 @@ class UsersController < Devise::RegistrationsController
     @users = User.all.order(last_sign_in_at: :desc)
   end
 
-  def show; end
+  def edit; end
 
   def update
     @user.update(user_params)

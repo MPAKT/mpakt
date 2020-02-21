@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :dashboard, only: [:index]
 
   devise_scope :user do
-    resources :users, only: [:index, :show, :update]
+    resources :users, only: [:index, :edit, :update]
     resources :blogs
     get "/salaries", to: 'privileges#salaries'
     root "dashboard#index"

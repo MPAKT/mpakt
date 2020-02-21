@@ -2,7 +2,7 @@
   <div class="center menu">
     <% if current_user %>
       <div class="link-holder">
-        <%= link_to "/users/#{current_user.id}/" do %>
+        <%= link_to edit_user_path(current_user) do %>
           <div class="link"><%= t(".card") %></div>
         <% end %>
       </div>
