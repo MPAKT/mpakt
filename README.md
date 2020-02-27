@@ -1,27 +1,62 @@
-# README
+# Welcome to MPAKT.
 
-README for the MPAKT. app
+## About
 
-## Webpacker
+MPAKT. is technology to enable a friendly, supportive community. You'll find us live at mpakt.app, 
+if we got SSL working.
 
-MPAKT. uses webpacker, which may need you to install a bunch of stuff with yarn, for more information see
-https://www.botreetechnologies.com/blog/introducing-jquery-in-rails-6-using-webpacker
+## Contributing
 
-## Test
+Please do help us! We welcome contributions. MPAKT. is built using Ruby on Rails and PostgreSQL, 
+with HTML templates, SCSS, and a tiny bit of JavaScript.
 
-### Execute test suite
+## Get started
 
-Setup the test database:
+We recommend that you run on a unix machine. It is possible to get some of MPAKT. working on windows,
+but the combination of the thredded dependency with webpacker and rails 5 seems to break some of the
+thredded functions.
 
+### Set up your environment 
+
+Install or update / downdate:
+* Brew
+* Rails 5.2
+* Ruby 2.5
+* Postgres 9.6
+* yarn 1.19
+
+Fork the mpakt repository
+
+Run install and setup
 ```sh
-$ bundle exec rails db:test:prepare
+bundle install
+yarn install
+bundle exec rails db:setup
 ```
 
-Then run the tests:
-
+Start the server
 ```sh
-$ bundle exec bin\test # windows
-(Linux / unix script still todo)
+rails s
+```
+
+If any of this sounds like it's in a foreign language, send us an email to info@mpakt.net
+
+### Run the tests
+
+We use two static code checkers:
+```sh
+rubocop
+rails_best_practices
+```
+
+And we write automated tests in ruby selenium with chromedriver, also see the troubleshooting section below:
+```sh
+bundle exec rspec
+```
+
+A test script is provided which will run all of these together, and calculate coverage
+```sh
+bin/test
 ```
 
 By default the spec tests are run against chromedriver in headless mode.
@@ -29,7 +64,21 @@ If you want to see a test run live, set this environment variable:
 
 `UI_DEBUG=true`
 
-#### Troubleshooting
+Reset to false to turn off the live browser
+
+`UI_DEBUG=false`
+
+## Continuous integration
+
+We do not have continuous integration configured, if you would like it, please volunteer!
+
+## Webpacker
+
+MPAKT. uses webpacker, which may need you to install a bunch of stuff with yarn, 
+for more information see
+https://www.botreetechnologies.com/blog/introducing-jquery-in-rails-6-using-webpacker
+
+## Troubleshooting
 
 1) If you see this error, you need to install chromedriver:
 
@@ -41,26 +90,9 @@ If you want to see a test run live, set this environment variable:
 $ RAILS_ENV=test bundle exec rails webpacker:compile
 ```
 
-### Install chrome driver
-
-#### Unix
+### Install chrome driver on unix
 
 ```
 $ brew install chromedriver
 ```
 
-#### Windows
-
-Download chromedriver from here:
-<http://chromedriver.storage.googleapis.com/index.html>
-
-Extract the contents of the zip to your project location, for example C:\fflow\chromedriver.exe
-
-If you see this error:
-
-```
-[18992:9784:0619/142315.893:ERROR:install_util.cc(589)] Unable to create registry key HKLM\SOFTWARE\Policies\Google\Chrome for reading result=2
-```
-
-Create missing registry keys as documented here:
-<https://github.com/SeleniumHQ/selenium/issues/5966>
