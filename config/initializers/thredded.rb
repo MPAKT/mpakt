@@ -79,7 +79,7 @@ Thredded.layout = 'layouts/application'
 # ==> Email Configuration
 # Email "From:" field will use the following
 # (this is also used as the "To" address for both email notifcations, as all the recipients are on bcc)
-Thredded.email_from = 'mpakt.moderator@gmail.com'
+Thredded.email_from = 'app@mpakt.net'
 
 # Emails going out will prefix the "Subject:" with the following string
 # Thredded.email_outgoing_prefix = '[My Forum] '
