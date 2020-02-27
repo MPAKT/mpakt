@@ -356,6 +356,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
+  nokogiri (>= 1.10.8)
   pg
   puma (~> 3.12)
   rails (~> 5.2.3)
