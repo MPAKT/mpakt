@@ -83,7 +83,7 @@ group :test do
   gem "capybara", ">= 2.15"
   gem "database_cleaner"
   gem "selenium-webdriver"
-  gem "simplecov"
+  gem "simplecov", ">= 0.18.5"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
