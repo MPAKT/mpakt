@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+module MpaktTesting
+  module_function
+
+  def run_all_with_coverage
+    MpaktTesting.run_rubocop
+    MpaktTesting.run_rails_best_practices
+    MpaktTesting.run_rspec
+  end
+
+  def run_rubocop
+    require "rubocop"
+    require "benchmark"
+    cli = RuboCop::CLI.new
+    result = 0
+    time = Benchmark.realtime do
+      result = cli.run
+    end
+    puts "Finished rubocop in #{time} seconds" if cli.options[:debug]
+
+    exit result unless result == 0
+  end
+
+  def run_rails_best_practices
+    require "rails_best_practices"
+    require "benchmark"
+    result = 0
+    time = Benchmark.realtime do
+      analyzer = RailsBestPractices::Analyzer.new(".")
+      analyzer.analyze
+      analyzer.output
+      result = analyzer.runner.errors.size
+    end
+    puts "Finished best practices in #{time} seconds"
+    exit result unless result == 0
+  end
+
+  def run_rspec
+    require "rspec/core"
+    $LOAD_PATH.unshift("spec")
+    require "rails_helper"
+    Dir.glob("spec/**/*_spec.rb").each { |f| require_relative(File.join("..", f)) }
+    RSpec::Core::Runner.invoke
+  end
+end
+
+test_type = ARGV.shift
+
+case test_type
+when "rubocop"
+  MpaktTesting.run_rubocop
+when "rails_best_practices"
+  MpaktTesting.run_rails_best_practices
+when "rspec"
+  MpaktTesting.run_rspec
+else
+  MpaktTesting.run_all_with_coverage
+end
