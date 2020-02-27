@@ -25,9 +25,10 @@ Install or update / downdate:
 * Postgres 9.6
 * yarn 1.19
 
-Fork the mpakt repository
+Fork and clone the mpakt repository, see 
+https://help.github.com/en/github/getting-started-with-github/fork-a-repo
 
-Run install and setup
+Install and setup
 ```sh
 bundle install
 yarn install
@@ -39,7 +40,27 @@ Start the server
 rails s
 ```
 
+Visit the local server at http://localhost:3000/, and if everything has worked, you will see MPAKT.
+
+The first launch may be a little slow, it should speed up in time.
+
 If any of this sounds like it's in a foreign language, send us an email to info@mpakt.net
+
+### Users
+
+You can create new regular users through the "Join" link. But they won't have admin or moderator 
+permissions.
+
+To set the permissions, create a regular users, then update through the rails console as follows:
+
+```sh
+rails c
+
+=>User.all.last.update_attributes(volunteer: true, admin: true)
+=>quit
+```
+
+Sign out, then sign in again, and you should now have admin and moderator permissions
 
 ### Run the tests
 
