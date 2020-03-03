@@ -2,7 +2,7 @@
 
 ## About
 
-MPAKT. is technology to enable a friendly, supportive community. You'll find us live at mpakt.app, 
+MPAKT. is technology to enable a friendly, supportive community. We are a virtual community of black womxn and allys using tech as a tool to connect and empower women of color. We provide a network for growth and healing through resources, discussion, supportive relationships, and opportunities. You'll find us live at mpakt.app, 
 if we got SSL working.
 
 ## Contributing
