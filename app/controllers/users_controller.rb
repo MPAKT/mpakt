@@ -23,14 +23,6 @@ class UsersController < Devise::RegistrationsController
     end
   end
 
-  def new
-    super
-  end
-
-  def create
-    super
-  end
-
   def show
     @user = User.find(params[:id])
   end

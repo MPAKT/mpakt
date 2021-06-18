@@ -44,10 +44,12 @@ class PrivilegesController < ApplicationController
                                       :salary_year)
   end
 
+  # rubocop:disable Naming/VariableNumber
   def categories_params
     params.require(:privilege).permit(category_0: %i[subtype a b c d],
                                       category_1: %i[subtype a b c d],
                                       category_2: %i[subtype a b c d e],
                                       category_3: %i[subtype a b c])
   end
+  # rubocop:enable Naming/VariableNumber
 end

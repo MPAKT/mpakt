@@ -38,11 +38,7 @@ module MpaktTesting
   end
 
   def run_rspec
-    require "rspec/core"
-    $LOAD_PATH.unshift("spec")
-    require "rails_helper"
-    Dir.glob("spec/**/*_spec.rb").each { |f| require_relative(File.join("..", f)) }
-    RSpec::Core::Runner.invoke
+    success = system "bundle exec rspec"
   end
 end
 
