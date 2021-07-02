@@ -344,7 +344,7 @@ DEPENDENCIES
   puma (~> 4.3)
   rails (~> 5.2.6)
   rspec-rails (>= 3.9.2)
-  sassc (~> 2.4)
+  sassc-rails (~> 2.1)
   selenium-webdriver
   simple_form
   simplecov (>= 0.18.5)
