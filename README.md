@@ -2,8 +2,9 @@
 
 ## About
 
-MPAKT. is technology to enable a friendly, supportive community. We are a virtual community of black womxn and allys using tech as a tool to connect and empower women of color. We provide a network for growth and healing through resources, discussion, supportive relationships, and opportunities. You'll find us live at mpakt.app, 
-if we got SSL working.
+MPAKT. is technology to enable a friendly, supportive community. We are a virtual community of people of color, womxn, neuro-diverse, 
+and allies using tech as a tool to connect and empower women of color. We provide a network for growth and healing through resources, 
+discussion, supportive relationships, and opportunities.
 
 ## Contributing
 
@@ -12,18 +13,17 @@ with HTML templates, SCSS, and a tiny bit of JavaScript.
 
 ## Get started
 
-We recommend that you run on a unix machine. It is possible to get some of MPAKT. working on windows,
-but the combination of the thredded dependency with webpacker and rails 5 seems to break some of the
-thredded functions.
+We recommend that you run on a unix operating system. Please don't use windows unless you have mastered thredded + webpacker + rails
+black arts and are able to do so without support.
 
 ### Set up your environment 
 
-Install or update / downdate:
+Install:
 * Brew
 * Rails 5.2
-* Ruby 2.5
-* Postgres 9.6
-* yarn 1.19
+* Ruby 2.6
+* Postgres 12
+* yarn
 
 Fork and clone the mpakt repository, see 
 https://help.github.com/en/github/getting-started-with-github/fork-a-repo
@@ -51,7 +51,7 @@ If any of this sounds like it's in a foreign language, send us an email to info@
 You can create new regular users through the "Join" link. But they won't have admin or moderator 
 permissions.
 
-To set the permissions, create a regular users, then update through the rails console as follows:
+To set the permissions, create a regular user, then update through the rails console as follows:
 
 ```sh
 rails c
@@ -85,13 +85,13 @@ If you want to see a test run live, set this environment variable:
 
 `UI_DEBUG=true`
 
-Reset to false to turn off the live browser
+Set back to false to turn off the live browser
 
 `UI_DEBUG=false`
 
 ## Continuous integration
 
-We do not have continuous integration configured, if you would like it, please volunteer!
+We do not have continuous integration configured, if you would like it, please volunteer to set it up!
 
 ## Webpacker
 
@@ -105,7 +105,8 @@ https://www.botreetechnologies.com/blog/introducing-jquery-in-rails-6-using-webp
 
 `Selenium::WebDriver::Error::WebDriverError: Unable to find Mozilla geckodriver.`
 
-2) If you see a webpacker error that has an empty manifest file then use `bin/test` or compile the JS before running the test suite with this command:
+2) If you see a webpacker error that has an empty manifest file then use `bin/test` or compile the JS before running the 
+   test suite with this command:
 
 ```sh
 $ RAILS_ENV=test bundle exec rails webpacker:compile
