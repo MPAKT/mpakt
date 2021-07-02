@@ -12,7 +12,7 @@ gem "pg"
 # Use Puma as the app server
 gem "puma", "~> 4.3"
 # Use SCSS for stylesheets
-gem "sassc", "~> 2.4"
+gem "sassc-rails", "~> 2.1"
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
 
@@ -85,6 +85,3 @@ group :test do
   gem "selenium-webdriver"
   gem "simplecov", ">= 0.18.5"
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
